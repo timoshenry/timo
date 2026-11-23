@@ -10,8 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          submodules: recursive
+      - name: Fetch contract dependencies (not vendored in this repo)
+        run: |
+          git clone --depth 1 --branch v5.1.0 https://github.com/OpenZeppelin/openzeppelin-contracts contracts/lib/openzeppelin-contracts
+          git clone --depth 1 https://github.com/foundry-rs/forge-std contracts/lib/forge-std
       - uses: foundry-rs/foundry-toolchain@v1
         with:
           version: stable
