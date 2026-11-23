@@ -4,6 +4,8 @@
 
 Built for the [Aevum Builder Challenge #1](https://dorahacks.io/hackathon/qday) (QDay).
 
+**Live demo:** https://timo-blush.vercel.app — connect a wallet on the Aevum testnet to explore events, buy a ticket, or try the organizer flow.
+
 ## The problem
 
 Buying an event ticket with crypto today usually means sending money straight to the
