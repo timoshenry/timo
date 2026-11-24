@@ -11,8 +11,6 @@ import { useNetwork } from "@/lib/network";
 const links = [
   { href: "/", label: "Explore" },
   { href: "/my-tickets", label: "My Tickets" },
-  { href: "/organizer", label: "Organizer" },
-  { href: "/checkout", label: "Checkout" },
   { href: "/activity", label: "Activity" },
   { href: "/docs", label: "Docs" },
 ];
@@ -28,7 +26,7 @@ export function Header() {
       <header className="topbar">
         <div className="shell">
           <Link href="/" className="brand">
-            <span className="brand-mark" aria-hidden="true" />
+            <img src="/logo.svg" alt="" className="brand-mark" aria-hidden="true" />
             <span className="brand-name">TIMO</span>
           </Link>
           <nav className="nav" aria-label="Main">
@@ -42,6 +40,9 @@ export function Header() {
             })}
           </nav>
           <div className="topbar-end">
+            <Link href="/organizer" className="studio-link" aria-current={pathname.startsWith("/organizer") ? "page" : undefined}>
+              Organizer Studio
+            </Link>
             <a className="gh-link" href={repoUrl} target="_blank" rel="noreferrer" title="Source code on GitHub">
               <GitHubIcon />
               <span>GitHub</span>
