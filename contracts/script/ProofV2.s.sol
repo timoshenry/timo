@@ -1,1 +1,139 @@
-Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yNDsKCmltcG9ydCB7U2NyaXB0LCBjb25zb2xlfSBmcm9tICJmb3JnZS1zdGQvU2NyaXB0LnNvbCI7CmltcG9ydCB7VElNT3YyfSBmcm9tICIuLi9zcmMvVElNT3YyLnNvbCI7CmltcG9ydCB7U2lnbmluZ30gZnJvbSAiLi4vdGVzdC9TaWduaW5nLnNvbCI7CmltcG9ydCB7TWVzc2FnZUhhc2hVdGlsc30gZnJvbSAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHMvdXRpbHMvY3J5cHRvZ3JhcGh5L01lc3NhZ2VIYXNoVXRpbHMuc29sIjsKCmludGVyZmFjZSBJVFVTRDggewogICAgZnVuY3Rpb24gRE9NQUlOX1NFUEFSQVRPUigpIGV4dGVybmFsIHZpZXcgcmV0dXJucyAoYnl0ZXMzMik7Cn0KCi8vLyBAbm90aWNlIExpdmUgcHJvb2YgZmxvdyBmb3IgVElNTyB2MiBvbiBBZXZ1bS4gS2V5cyBjb21lIGZyb20gZW52IChPV05FUl9QSywgQlVZRVJfUEssCi8vLyAgICAgICAgIFJFTEFZRVJfUEssIEdVQVJEX1BLLCBUSU1PX1YyLCBNRVRBX0pTT04pOyByb2xlIGFkZHJlc3NlcyBmcm9tCi8vLyAgICAgICAgIHNjcmlwdC9kZW1vLXJvbGVzLWFkZHJlc3Nlcy5qc29uIChwdWJsaWMgYWRkcmVzc2VzIG9ubHkpLiBOb3RoaW5nIHNlY3JldCBpcyBwcmludGVkLgovLy8gICAgICAgICBBOiBjcmVhdGUgLT4gcmVsYXllZCBidXkgLT4gcmVsYXllZCBkdWFsLXNpZ25hdHVyZSBjaGVjay1pbgovLy8gICAgICAgICBCOiBjcmVhdGUgLT4gcmVsYXllZCBidXkgLT4gcmVzY2hlZHVsZSAtPiB2b2x1bnRhcnkgcmVmdW5kIGluc2lkZSB0aGUgd2luZG93Ci8vLyAgICAgICAgIEM6IGNyZWF0ZSAtPiByZWxheWVkIGJ1eSAtPiBjYW5jZWwgLT4gZnVsbCByZWZ1bmQKY29udHJhY3QgUHJvb2ZWMiBpcyBTY3JpcHQgewogICAgdWludDI1NiBvd25lclBrOwogICAgdWludDI1NiBidXllclBrOwogICAgdWludDI1NiByZWxheWVyUGs7CiAgICB1aW50MjU2IGd1YXJkUGs7CiAgICBhZGRyZXNzIGJ1eWVyOwogICAgVElNT3YyIHRpbW87CiAgICBieXRlczMyIGRvbWFpblNlcDsKICAgIHVpbnQ2NCBub3c2NDsKICAgIHN0cmluZyBtZXRhOwoKICAgIGZ1bmN0aW9uIF9wYXJhbXModWludDY0IHNhbGVzRW5kLCB1aW50NjQgZG9vcnMsIHVpbnQ2NCBzdGFydHNBdCwgc3RyaW5nIG1lbW9yeSBuYW1lLCBzdHJpbmcgbWVtb3J5IHJvbGVzSnNvbikKICAgICAgICBpbnRlcm5hbAogICAgICAgIHZpZXcKICAgICAgICByZXR1cm5zIChUSU1PdjIuQ3JlYXRlRXZlbnRQYXJhbXMgbWVtb3J5KQogICAgewogICAgICAgIHJldHVybiBUSU1PdjIuQ3JlYXRlRXZlbnRQYXJhbXMoewogICAgICAgICAgICBwcmljZTogMWU2LAogICAgICAgICAgICBjYXBhY2l0eTogMTAsCiAgICAgICAgICAgIGZlZUJwczogMTAwLAogICAgICAgICAgICBzYWxlc0VuZDogc2FsZXNFbmQsCiAgICAgICAgICAgIGNoZWNrSW5PcGVuc0F0OiBkb29ycywKICAgICAgICAgICAgc3RhcnRzQXQ6IHN0YXJ0c0F0LAogICAgICAgICAgICBib3NzOiB2bS5wYXJzZUpzb25BZGRyZXNzKHJvbGVzSnNvbiwgIi5ib3NzIiksCiAgICAgICAgICAgIG5hbWU6IG5hbWUsCiAgICAgICAgICAgIGltYWdlVXJsOiAiaHR0cHM6Ly90aW1vLWJsdXNoLnZlcmNlbC5hcHAvbG9nby5zdmciLAogICAgICAgICAgICBtZXRhZGF0YVVSSTogbWV0YSwKICAgICAgICAgICAgYWRtaW5zOiB2bS5wYXJzZUpzb25BZGRyZXNzQXJyYXkocm9sZXNKc29uLCAiLmFkbWlucyIpLAogICAgICAgICAgICBndWFyZHM6IHZtLnBhcnNlSnNvbkFkZHJlc3NBcnJheShyb2xlc0pzb24sICIuZ3VhcmRzIikKICAgICAgICB9KTsKICAgIH0KCiAgICBmdW5jdGlvbiBfY3JlYXRlQWxsKCkgaW50ZXJuYWwgcmV0dXJucyAodWludDI1NiwgdWludDI1NiwgdWludDI1NikgewogICAgICAgIHN0cmluZyBtZW1vcnkgcm9sZXNKc29uID0gdm0ucmVhZEZpbGUoInNjcmlwdC9kZW1vLXJvbGVzLWFkZHJlc3Nlcy5qc29uIik7CiAgICAgICAgdm0uc3RhcnRCcm9hZGNhc3Qob3duZXJQayk7CiAgICAgICAgdWludDI1NiBldkEgPSB0aW1vLmNyZWF0ZUV2ZW50KAogICAgICAgICAgICBfcGFyYW1zKG5vdzY0ICsgMSBkYXlzLCBub3c2NCwgbm93NjQgKyAyIGRheXMsICJUSU1PIHYyIExhdW5jaCBOaWdodCIsIHJvbGVzSnNvbikKICAgICAgICApOwogICAgICAgIHVpbnQyNTYgZXZCID0gdGltby5jcmVhdGVFdmVudCgKICAgICAgICAgICAgX3BhcmFtcyhub3c2NCArIDEgZGF5cywgbm93NjQgKyAxIGRheXMsIG5vdzY0ICsgMiBkYXlzLCAiVElNTyB2MiBSZXNjaGVkdWxlIFByb29mIiwgcm9sZXNKc29uKQogICAgICAgICk7CiAgICAgICAgdWludDI1NiBldkMgPSB0aW1vLmNyZWF0ZUV2ZW50KAogICAgICAgICAgICBfcGFyYW1zKG5vdzY0ICsgMSBkYXlzLCBub3c2NCArIDEgZGF5cywgbm93NjQgKyAyIGRheXMsICJUSU1PIHYyIENhbmNlbCBQcm9vZiIsIHJvbGVzSnNvbikKICAgICAgICApOwogICAgICAgIHZtLnN0b3BCcm9hZGNhc3QoKTsKICAgICAgICByZXR1cm4gKGV2QSwgZXZCLCBldkMpOwogICAgfQoKICAgIGZ1bmN0aW9uIF9nYXNsZXNzQnV5KHVpbnQyNTYgZXZlbnRJZCkgaW50ZXJuYWwgcmV0dXJucyAodWludDI1NiB0b2tlbklkKSB7CiAgICAgICAgYnl0ZXMzMiBub25jZSA9IHRpbW8uYXV0aG9yaXphdGlvbk5vbmNlKGV2ZW50SWQsIGJ1eWVyKTsKICAgICAgICBTaWduaW5nLkF1dGggbWVtb3J5IGEgPSBTaWduaW5nLkF1dGgoewogICAgICAgICAgICBmcm9tOiBidXllciwKICAgICAgICAgICAgdG86IGFkZHJlc3ModGltbyksCiAgICAgICAgICAgIHZhbHVlOiAxZTYsCiAgICAgICAgICAgIHZhbGlkQWZ0ZXI6IDAsCiAgICAgICAgICAgIHZhbGlkQmVmb3JlOiBibG9jay50aW1lc3RhbXAgKyAxIGhvdXJzLAogICAgICAgICAgICBub25jZTogbm9uY2UKICAgICAgICB9KTsKICAgICAgICAodWludDggdiwgYnl0ZXMzMiByLCBieXRlczMyIHMpID0gU2lnbmluZy5zaWduUmVjZWl2ZSh2bSwgYnV5ZXJQaywgZG9tYWluU2VwLCBhKTsKICAgICAgICB2bS5zdGFydEJyb2FkY2FzdChyZWxheWVyUGspOwogICAgICAgIHRva2VuSWQgPSB0aW1vLmJ1eVRpY2tldEdhc2xlc3MoZXZlbnRJZCwgYnV5ZXIsIDAsIGJsb2NrLnRpbWVzdGFtcCArIDEgaG91cnMsIHYsIHIsIHMpOwogICAgICAgIHZtLnN0b3BCcm9hZGNhc3QoKTsKICAgIH0KCiAgICBmdW5jdGlvbiBfc2lnKHVpbnQyNTYgcGssIHN0cmluZyBtZW1vcnkgbWVzc2FnZSkgaW50ZXJuYWwgdmlldyByZXR1cm5zIChieXRlcyBtZW1vcnkpIHsKICAgICAgICAodWludDggdiwgYnl0ZXMzMiByLCBieXRlczMyIHMpID0gdm0uc2lnbihwaywgTWVzc2FnZUhhc2hVdGlscy50b0V0aFNpZ25lZE1lc3NhZ2VIYXNoKGJ5dGVzKG1lc3NhZ2UpKSk7CiAgICAgICAgcmV0dXJuIGFiaS5lbmNvZGVQYWNrZWQociwgcywgdik7CiAgICB9CgogICAgZnVuY3Rpb24gX2Zsb3dBKHVpbnQyNTYgZXZBKSBpbnRlcm5hbCB7CiAgICAgICAgdWludDI1NiB0b2tBID0gX2dhc2xlc3NCdXkoZXZBKTsKICAgICAgICBjb25zb2xlLmxvZygiQSB0aWNrZXQ6IiwgdG9rQSk7CiAgICAgICAgdWludDI1NiBleHBpcnkgPSBibG9jay50aW1lc3RhbXAgKyA2MDsKICAgICAgICBieXRlcyBtZW1vcnkgb3duZXJTaWcgPSBfc2lnKGJ1eWVyUGssIHRpbW8uY2hlY2tJbk1lc3NhZ2UodG9rQSwgZXhwaXJ5KSk7CiAgICAgICAgYnl0ZXMgbWVtb3J5IHN0YWZmU2lnID0gX3NpZyhndWFyZFBrLCB0aW1vLnN0YWZmQ2hlY2tJbk1lc3NhZ2UodG9rQSwgZXhwaXJ5KSk7CiAgICAgICAgdm0uc3RhcnRCcm9hZGNhc3QocmVsYXllclBrKTsKICAgICAgICB0aW1vLmNoZWNrSW5SZWxheWVkKHRva0EsIGV4cGlyeSwgb3duZXJTaWcsIHN0YWZmU2lnKTsKICAgICAgICB2bS5zdG9wQnJvYWRjYXN0KCk7CiAgICAgICAgY29uc29sZS5sb2coIkEgY2hlY2tlZCBpbiB2aWEgcmVsYXllciIpOwogICAgfQoKICAgIGZ1bmN0aW9uIF9mbG93Qih1aW50MjU2IGV2QikgaW50ZXJuYWwgewogICAgICAgIHVpbnQyNTYgdG9rQiA9IF9nYXNsZXNzQnV5KGV2Qik7CiAgICAgICAgdm0uc3RhcnRCcm9hZGNhc3Qob3duZXJQayk7CiAgICAgICAgdGltby51cGRhdGVFdmVudFRpbWVzKGV2Qiwgbm93NjQgKyA1IGRheXMsIG5vdzY0ICsgNiBkYXlzIC0gMiBob3Vycywgbm93NjQgKyA2IGRheXMpOwogICAgICAgIHZtLnN0b3BCcm9hZGNhc3QoKTsKICAgICAgICB2bS5zdGFydEJyb2FkY2FzdChidXllclBrKTsKICAgICAgICB0aW1vLmNsYWltUmVmdW5kKHRva0IpOwogICAgICAgIHZtLnN0b3BCcm9hZGNhc3QoKTsKICAgICAgICBjb25zb2xlLmxvZygiQiByZXNjaGVkdWxlZCArIHJlZnVuZGVkOiIsIHRva0IpOwogICAgfQoKICAgIGZ1bmN0aW9uIF9mbG93Qyh1aW50MjU2IGV2QykgaW50ZXJuYWwgewogICAgICAgIHVpbnQyNTYgdG9rQyA9IF9nYXNsZXNzQnV5KGV2Qyk7CiAgICAgICAgdm0uc3RhcnRCcm9hZGNhc3Qob3duZXJQayk7CiAgICAgICAgdGltby5jYW5jZWxFdmVudChldkMpOwogICAgICAgIHZtLnN0b3BCcm9hZGNhc3QoKTsKICAgICAgICB2bS5zdGFydEJyb2FkY2FzdChidXllclBrKTsKICAgICAgICB0aW1vLmNsYWltUmVmdW5kKHRva0MpOwogICAgICAgIHZtLnN0b3BCcm9hZGNhc3QoKTsKICAgICAgICBjb25zb2xlLmxvZygiQyBjYW5jZWxsZWQgKyByZWZ1bmRlZDoiLCB0b2tDKTsKICAgIH0KCiAgICBmdW5jdGlvbiBydW4oKSBleHRlcm5hbCB7CiAgICAgICAgb3duZXJQayA9IHZtLmVudlVpbnQoIk9XTkVSX1BLIik7CiAgICAgICAgYnV5ZXJQayA9IHZtLmVudlVpbnQoIkJVWUVSX1BLIik7CiAgICAgICAgcmVsYXllclBrID0gdm0uZW52VWludCgiUkVMQVlFUl9QSyIpOwogICAgICAgIGd1YXJkUGsgPSB2bS5lbnZVaW50KCJHVUFSRF9QSyIpOwogICAgICAgIGJ1eWVyID0gdm0uYWRkcihidXllclBrKTsKICAgICAgICB0aW1vID0gVElNT3YyKHZtLmVudkFkZHJlc3MoIlRJTU9fVjIiKSk7CiAgICAgICAgbWV0YSA9IHZtLmVudlN0cmluZygiTUVUQV9KU09OIik7CiAgICAgICAgZG9tYWluU2VwID0gSVRVU0Q4KGFkZHJlc3ModGltby50b2tlbigpKSkuRE9NQUlOX1NFUEFSQVRPUigpOwogICAgICAgIG5vdzY0ID0gdWludDY0KGJsb2NrLnRpbWVzdGFtcCk7CgogICAgICAgICh1aW50MjU2IGV2QSwgdWludDI1NiBldkIsIHVpbnQyNTYgZXZDKSA9IF9jcmVhdGVBbGwoKTsKICAgICAgICBjb25zb2xlLmxvZygiRXZlbnRzIEEvQi9DOiIsIGV2QSwgZXZCLCBldkMpOwogICAgICAgIF9mbG93QShldkEpOwogICAgICAgIF9mbG93QihldkIpOwogICAgICAgIF9mbG93QyhldkMpOwogICAgfQp9Cg==
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
+
+import {Script, console} from "forge-std/Script.sol";
+import {TIMOv2} from "../src/TIMOv2.sol";
+import {Signing} from "../test/Signing.sol";
+import {MessageHashUtils} from "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol";
+
+interface ITUSD8 {
+    function DOMAIN_SEPARATOR() external view returns (bytes32);
+}
+
+/// @notice Live proof flow for TIMO v2 on Aevum. Keys come from env (OWNER_PK, BUYER_PK,
+///         RELAYER_PK, GUARD_PK, TIMO_V2, META_JSON); role addresses from
+///         script/demo-roles-addresses.json (public addresses only). Nothing secret is printed.
+///         A: create -> relayed buy -> relayed dual-signature check-in
+///         B: create -> relayed buy -> reschedule -> voluntary refund inside the window
+///         C: create -> relayed buy -> cancel -> full refund
+contract ProofV2 is Script {
+    uint256 ownerPk;
+    uint256 buyerPk;
+    uint256 relayerPk;
+    uint256 guardPk;
+    address buyer;
+    TIMOv2 timo;
+    bytes32 domainSep;
+    uint64 now64;
+    string meta;
+
+    function _params(uint64 salesEnd, uint64 doors, uint64 startsAt, string memory name, string memory rolesJson)
+        internal
+        view
+        returns (TIMOv2.CreateEventParams memory)
+    {
+        return TIMOv2.CreateEventParams({
+            price: 1e6,
+            capacity: 10,
+            feeBps: 100,
+            salesEnd: salesEnd,
+            checkInOpensAt: doors,
+            startsAt: startsAt,
+            boss: vm.parseJsonAddress(rolesJson, ".boss"),
+            name: name,
+            imageUrl: "https://timo-blush.vercel.app/logo.svg",
+            metadataURI: meta,
+            admins: vm.parseJsonAddressArray(rolesJson, ".admins"),
+            guards: vm.parseJsonAddressArray(rolesJson, ".guards")
+        });
+    }
+
+    function _createAll() internal returns (uint256, uint256, uint256) {
+        string memory rolesJson = vm.readFile("script/demo-roles-addresses.json");
+        vm.startBroadcast(ownerPk);
+        uint256 evA = timo.createEvent(
+            _params(now64 + 1 days, now64, now64 + 2 days, "TIMO v2 Launch Night", rolesJson)
+        );
+        uint256 evB = timo.createEvent(
+            _params(now64 + 1 days, now64 + 1 days, now64 + 2 days, "TIMO v2 Reschedule Proof", rolesJson)
+        );
+        uint256 evC = timo.createEvent(
+            _params(now64 + 1 days, now64 + 1 days, now64 + 2 days, "TIMO v2 Cancel Proof", rolesJson)
+        );
+        vm.stopBroadcast();
+        return (evA, evB, evC);
+    }
+
+    function _gaslessBuy(uint256 eventId) internal returns (uint256 tokenId) {
+        bytes32 nonce = timo.authorizationNonce(eventId, buyer);
+        Signing.Auth memory a = Signing.Auth({
+            from: buyer,
+            to: address(timo),
+            value: 1e6,
+            validAfter: 0,
+            validBefore: block.timestamp + 1 hours,
+            nonce: nonce
+        });
+        (uint8 v, bytes32 r, bytes32 s) = Signing.signReceive(vm, buyerPk, domainSep, a);
+        vm.startBroadcast(relayerPk);
+        tokenId = timo.buyTicketGasless(eventId, buyer, 0, block.timestamp + 1 hours, v, r, s);
+        vm.stopBroadcast();
+    }
+
+    function _sig(uint256 pk, string memory message) internal view returns (bytes memory) {
+        (uint8 v, bytes32 r, bytes32 s) = vm.sign(pk, MessageHashUtils.toEthSignedMessageHash(bytes(message)));
+        return abi.encodePacked(r, s, v);
+    }
+
+    function _flowA(uint256 evA) internal {
+        uint256 tokA = _gaslessBuy(evA);
+        console.log("A ticket:", tokA);
+        uint256 expiry = block.timestamp + 60;
+        bytes memory ownerSig = _sig(buyerPk, timo.checkInMessage(tokA, expiry));
+        bytes memory staffSig = _sig(guardPk, timo.staffCheckInMessage(tokA, expiry));
+        vm.startBroadcast(relayerPk);
+        timo.checkInRelayed(tokA, expiry, ownerSig, staffSig);
+        vm.stopBroadcast();
+        console.log("A checked in via relayer");
+    }
+
+    function _flowB(uint256 evB) internal {
+        uint256 tokB = _gaslessBuy(evB);
+        vm.startBroadcast(ownerPk);
+        timo.updateEventTimes(evB, now64 + 5 days, now64 + 6 days - 2 hours, now64 + 6 days);
+        vm.stopBroadcast();
+        vm.startBroadcast(buyerPk);
+        timo.claimRefund(tokB);
+        vm.stopBroadcast();
+        console.log("B rescheduled + refunded:", tokB);
+    }
+
+    function _flowC(uint256 evC) internal {
+        uint256 tokC = _gaslessBuy(evC);
+        vm.startBroadcast(ownerPk);
+        timo.cancelEvent(evC);
+        vm.stopBroadcast();
+        vm.startBroadcast(buyerPk);
+        timo.claimRefund(tokC);
+        vm.stopBroadcast();
+        console.log("C cancelled + refunded:", tokC);
+    }
+
+    function run() external {
+        ownerPk = vm.envUint("OWNER_PK");
+        buyerPk = vm.envUint("BUYER_PK");
+        relayerPk = vm.envUint("RELAYER_PK");
+        guardPk = vm.envUint("GUARD_PK");
+        buyer = vm.addr(buyerPk);
+        timo = TIMOv2(vm.envAddress("TIMO_V2"));
+        meta = vm.envString("META_JSON");
+        domainSep = ITUSD8(address(timo.token())).DOMAIN_SEPARATOR();
+        now64 = uint64(block.timestamp);
+
+        (uint256 evA, uint256 evB, uint256 evC) = _createAll();
+        console.log("Events A/B/C:", evA, evB, evC);
+        _flowA(evA);
+        _flowB(evB);
+        _flowC(evC);
+    }
+}
