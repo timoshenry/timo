@@ -1,16 +1,18 @@
 "use client";
 
-import { erc20Abi, txUrl } from "@aevum-kit/aevum";
+import { authorizationWindow, checkoutTypedData, erc20Abi, txUrl } from "@aevum-kit/aevum";
 import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useState } from "react";
 import type { Address, Hash, PublicClient } from "viem";
 import { useAccount, useConfig, usePublicClient, useReadContract } from "wagmi";
-import { readContract, simulateContract, waitForTransactionReceipt, writeContract } from "wagmi/actions";
+import { readContract, signTypedData, simulateContract, waitForTransactionReceipt, writeContract } from "wagmi/actions";
 import { useNetwork } from "@/lib/network";
 import { explain } from "@/lib/errors";
-import { formatDateTime, formatTUSD8, readEvent, resolveEventTitle, timoAbi } from "@/lib/timo";
+import { formatDateTime, formatTUSD8, isRefundable, readEvent, resolveEventMeta, timoAbi } from "@/lib/timo";
+
+const short = (a: string) => `${a.slice(0, 6)}…${a.slice(-4)}`;
 
 export default function EventDetailPage() {
   const params = useParams<{ id: string }>();
@@ -23,6 +25,7 @@ export default function EventDetailPage() {
   const client = usePublicClient({ chainId: net.chain.id }) as PublicClient | undefined;
 
   const [phase, setPhase] = useState<"idle" | "working" | "done" | "error">("idle");
+  const [mode, setMode] = useState<"relay" | "standard">("relay");
   const [error, setError] = useState<string | null>(null);
   const [txHash, setTxHash] = useState<Hash | null>(null);
 
@@ -33,12 +36,22 @@ export default function EventDetailPage() {
   });
   const ev = event.data;
 
-  const title = useQuery({
-    queryKey: ["timo-title", eventId?.toString(), ev?.metadataURI],
+  const meta = useQuery({
+    queryKey: ["timo-meta", eventId?.toString(), ev?.metadataURI],
     enabled: Boolean(ev),
-    queryFn: () => resolveEventTitle(ev!.metadataURI, ev!.id),
+    queryFn: () => resolveEventMeta(ev!),
     staleTime: 60_000,
   });
+
+  const relay = useQuery({
+    queryKey: ["timo-relay", net.chain.id],
+    queryFn: async () => {
+      const res = await fetch(`/api/relay-timo?chainId=${net.chain.id}`);
+      return (await res.json()) as { enabled: boolean };
+    },
+    staleTime: 30_000,
+  });
+  const relayEnabled = Boolean(relay.data?.enabled);
 
   const tokenAddress = useReadContract({
     address: timo,
@@ -61,43 +74,88 @@ export default function EventDetailPage() {
   const salesOpen = ev ? ev.status === 0 && now <= Number(ev.salesEnd) && ev.sold < ev.capacity : false;
   const enoughBalance = !ev || balance.data === undefined || balance.data >= ev.price;
   const busy = phase === "working";
+  const refundableNow = ev ? isRefundable(ev, now) && ev.status !== 1 : false;
+
+  async function buyRelayed() {
+    if (!address || !timo || !tokenAddress || !ev || !client) return;
+    const nonce = await readContract(config, {
+      address: timo,
+      abi: timoAbi,
+      functionName: "authorizationNonce",
+      args: [ev.id, address],
+      chainId: net.chain.id,
+    });
+    const { validAfter, validBefore } = authorizationWindow(600);
+    const signature = await signTypedData(config, {
+      account: address,
+      ...checkoutTypedData(net.chain.id, tokenAddress, {
+        from: address,
+        to: timo,
+        value: ev.price,
+        validAfter,
+        validBefore,
+        nonce,
+      }),
+    });
+    const res = await fetch("/api/relay-timo", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        kind: "buy",
+        chainId: net.chain.id,
+        eventId: ev.id.toString(),
+        from: address,
+        validAfter: validAfter.toString(),
+        validBefore: validBefore.toString(),
+        signature,
+      }),
+    });
+    const data = (await res.json()) as { hash?: Hash; error?: string };
+    if (!res.ok || !data.hash) throw new Error(data.error ?? "The relayer didn't accept the purchase.");
+    setTxHash(data.hash);
+    const receipt = await client.waitForTransactionReceipt({ hash: data.hash });
+    if (receipt.status !== "success") throw new Error("The transaction reverted on chain. Nothing was charged.");
+  }
+
+  async function buyStandard() {
+    if (!address || !timo || !tokenAddress || !ev) return;
+    const allowance = await readContract(config, {
+      address: tokenAddress,
+      abi: erc20Abi,
+      functionName: "allowance",
+      args: [address, timo],
+      chainId: net.chain.id,
+    });
+    if (allowance < ev.price) {
+      const approveHash = await writeContract(config, {
+        address: tokenAddress,
+        abi: erc20Abi,
+        functionName: "approve",
+        args: [timo, ev.price],
+        chainId: net.chain.id,
+      });
+      await waitForTransactionReceipt(config, { hash: approveHash, chainId: net.chain.id });
+    }
+    const { request } = await simulateContract(config, {
+      account: address,
+      address: timo,
+      abi: timoAbi,
+      functionName: "buyTicket",
+      args: [ev.id],
+      chainId: net.chain.id,
+    });
+    const hash = await writeContract(config, request);
+    setTxHash(hash);
+    const receipt = await waitForTransactionReceipt(config, { hash, chainId: net.chain.id });
+    if (receipt.status !== "success") throw new Error("The transaction reverted on chain. Nothing was charged.");
+  }
 
   async function onBuy() {
-    if (!address || !timo || !tokenAddress || !ev) return;
     setError(null);
     setPhase("working");
     try {
-      // 1. Approve exactly the ticket price, never an unlimited amount.
-      const allowance = await readContract(config, {
-        address: tokenAddress,
-        abi: erc20Abi,
-        functionName: "allowance",
-        args: [address, timo],
-        chainId: net.chain.id,
-      });
-      if (allowance < ev.price) {
-        const approveHash = await writeContract(config, {
-          address: tokenAddress,
-          abi: erc20Abi,
-          functionName: "approve",
-          args: [timo, ev.price],
-          chainId: net.chain.id,
-        });
-        await waitForTransactionReceipt(config, { hash: approveHash, chainId: net.chain.id });
-      }
-      // 2. Buy. Simulate first so a revert surfaces with its reason before gas is spent.
-      const { request } = await simulateContract(config, {
-        account: address,
-        address: timo,
-        abi: timoAbi,
-        functionName: "buyTicket",
-        args: [ev.id],
-        chainId: net.chain.id,
-      });
-      const hash = await writeContract(config, request);
-      setTxHash(hash);
-      const receipt = await waitForTransactionReceipt(config, { hash, chainId: net.chain.id });
-      if (receipt.status !== "success") throw new Error("The transaction reverted on chain. Nothing was charged.");
+      if (mode === "relay" && relayEnabled) await buyRelayed();
+      else await buyStandard();
       setPhase("done");
       void event.refetch();
       void balance.refetch();
@@ -112,7 +170,7 @@ export default function EventDetailPage() {
     if (!onChain) return "Switch network to buy";
     if (!ev) return "Buy ticket";
     if (phase === "done") return "Ticket purchased";
-    if (busy) return "Check your wallet…";
+    if (busy) return mode === "relay" && relayEnabled ? "Sign in your wallet…" : "Check your wallet…";
     return `Buy ticket · ${formatTUSD8(ev.price)} tUSD8`;
   })();
 
@@ -121,7 +179,7 @@ export default function EventDetailPage() {
       <div className="page-head">
         <div>
           <p className="eyebrow">TIMO · Event detail</p>
-          <h1>{eventId === null ? "Event not found" : (title.data ?? `Event #${eventId.toString()}`)}</h1>
+          <h1>{eventId === null ? "Event not found" : (ev?.name || `Event #${eventId.toString()}`)}</h1>
           <p className="lede">Ticket payments are held in escrow by the TIMO contract — never paid straight to the organizer.</p>
         </div>
       </div>
@@ -148,6 +206,11 @@ export default function EventDetailPage() {
               <h2>Event information</h2>
               <span className={`status-pill ${ev.status === 0 ? "good" : "warn"}`}>{ev.statusLabel}</span>
             </div>
+            {ev.imageUrl && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img className="event-img" src={ev.imageUrl} alt="" />
+            )}
+            {meta.data?.description && <p className="sub">{meta.data.description}</p>}
             <dl className="kv">
               <dt>Price</dt>
               <dd>{formatTUSD8(ev.price)} tUSD8</dd>
@@ -159,12 +222,32 @@ export default function EventDetailPage() {
               <dd>{formatTUSD8(ev.escrow)} tUSD8</dd>
               <dt>Starts</dt>
               <dd>{formatDateTime(ev.startsAt)}</dd>
+              <dt>Doors open</dt>
+              <dd>{formatDateTime(ev.checkInOpensAt)}</dd>
               <dt>Sales end</dt>
               <dd>{formatDateTime(ev.salesEnd)}</dd>
+              {meta.data?.venue && (
+                <>
+                  <dt>Venue</dt>
+                  <dd>{meta.data.venue}</dd>
+                </>
+              )}
+              {meta.data?.link && (
+                <>
+                  <dt>Event page</dt>
+                  <dd>
+                    <a href={meta.data.link} target="_blank" rel="noreferrer">
+                      {meta.data.link}
+                    </a>
+                  </dd>
+                </>
+              )}
               <dt>Organizer</dt>
-              <dd>{ev.organizer}</dd>
+              <dd>
+                {short(ev.boss)} <span className="verified-badge">Verified Organizer</span>
+              </dd>
               <dt>Contract</dt>
-              <dd>{timo}</dd>
+              <dd>{short(timo)}</dd>
             </dl>
             {ev.status === 1 && (
               <div className="notice warn" role="status">
@@ -175,10 +258,19 @@ export default function EventDetailPage() {
                 </span>
               </div>
             )}
+            {refundableNow && (
+              <div className="notice warn" role="status">
+                <strong>This event was rescheduled</strong>
+                <span>
+                  If you can&apos;t make the new date, you can claim a full refund from <Link href="/my-tickets">My Tickets</Link> until{" "}
+                  {formatDateTime(ev.refundWindowUntil)}.
+                </span>
+              </div>
+            )}
             {ev.status === 2 && (
               <div className="notice good" role="status">
                 <strong>This event is completed</strong>
-                <span>The organizer has withdrawn the escrow.</span>
+                <span>The escrow has been settled with the organizer.</span>
               </div>
             )}
           </section>
@@ -186,13 +278,26 @@ export default function EventDetailPage() {
           <section className="card stack" aria-label="Buy a ticket" style={{ flex: "1 1 340px" }}>
             <h2>Buy a ticket</h2>
             <p className="sub">
-              Standard flow: approve the exact price, then buy. Your ticket is minted as an NFT and the {formatTUSD8(ev.price)} tUSD8 stays in
-              escrow until the event completes.
+              {relayEnabled
+                ? "Gas-free purchase: sign once and the TIMO relayer submits your purchase and pays the gas. Your ticket is minted as an NFT and the payment stays in escrow until the event completes."
+                : "Standard flow: approve the exact price, then buy. Your ticket is minted as an NFT and the payment stays in escrow until the event completes."}
             </p>
             <dl className="kv" style={{ fontSize: 13 }}>
               <dt>Your balance</dt>
               <dd>{balance.data !== undefined ? `${formatTUSD8(balance.data)} tUSD8` : "—"}</dd>
+              <dt>Mode</dt>
+              <dd>{relayEnabled ? (mode === "relay" ? "Gas-free (relayed)" : "Standard") : "Standard"}</dd>
             </dl>
+            {relayEnabled && (
+              <div className="mode-toggle" role="radiogroup" aria-label="Purchase mode">
+                <button type="button" role="radio" aria-checked={mode === "relay"} className={mode === "relay" ? "active" : ""} onClick={() => setMode("relay")}>
+                  Gas-free
+                </button>
+                <button type="button" role="radio" aria-checked={mode === "standard"} className={mode === "standard" ? "active" : ""} onClick={() => setMode("standard")}>
+                  Standard
+                </button>
+              </div>
+            )}
             {!salesOpen && ev.status === 0 && (
               <div className="notice warn" role="status">
                 <strong>Sales are closed</strong>
@@ -235,7 +340,11 @@ export default function EventDetailPage() {
             >
               {cta}
             </button>
-            <p className="fine">The approval is for the exact ticket price, never unlimited. Gasless purchase (EIP-3009) is supported by the contract but not wired into this page yet.</p>
+            <p className="fine">
+              {mode === "relay" && relayEnabled
+                ? "One signature, no gas, no approval. The signature authorizes exactly this ticket at exactly this price."
+                : "The approval is for the exact ticket price, never unlimited."}
+            </p>
           </section>
         </div>
       )}
