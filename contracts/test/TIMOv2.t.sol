@@ -1,1 +1,370 @@
-Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVApwcmFnbWEgc29saWRpdHkgXjAuOC4yNDsKCmltcG9ydCB7VGVzdH0gZnJvbSAiZm9yZ2Utc3RkL1Rlc3Quc29sIjsKaW1wb3J0IHtUSU1PdjJ9IGZyb20gIi4uL3NyYy9USU1PdjIuc29sIjsKaW1wb3J0IHtNb2NrVVNEOH0gZnJvbSAiLi4vc3JjL21vY2tzL01vY2tVU0Q4LnNvbCI7CmltcG9ydCB7U2lnbmluZ30gZnJvbSAiLi9TaWduaW5nLnNvbCI7CmltcG9ydCB7TWVzc2FnZUhhc2hVdGlsc30gZnJvbSAiQG9wZW56ZXBwZWxpbi9jb250cmFjdHMvdXRpbHMvY3J5cHRvZ3JhcGh5L01lc3NhZ2VIYXNoVXRpbHMuc29sIjsKCmNvbnRyYWN0IFRJTU92MlRlc3QgaXMgVGVzdCB7CiAgICBUSU1PdjIgdGltbzsKICAgIE1vY2tVU0Q4IHVzZDsKCiAgICB1aW50MjU2IG93bmVyUGsgPSAweDBBMTFDRTsKICAgIGFkZHJlc3Mgb3duZXIgPSB2bS5hZGRyKG93bmVyUGspOwogICAgYWRkcmVzcyBmZWVSZWNpcGllbnQgPSBtYWtlQWRkcigiZnVuZHdhbGxldCIpOwogICAgYWRkcmVzcyBib3NzID0gbWFrZUFkZHIoImJvc3MiKTsKICAgIGFkZHJlc3MgYnV5ZXI7CiAgICB1aW50MjU2IGJ1eWVyUGsgPSAweEIwQjsKICAgIGFkZHJlc3MgYnV5ZXIyID0gbWFrZUFkZHIoImJ1eWVyMiIpOwogICAgdWludDI1NiBndWFyZFBrID0gMHg2MDBEOwogICAgdWludDI1NiBhZG1pblBrID0gMHhBRDAxMTsKCiAgICBhZGRyZXNzW10gYWRtaW5zOwogICAgYWRkcmVzc1tdIGd1YXJkczsKCiAgICB1aW50MjU2IGNvbnN0YW50IFBSSUNFID0gMWU2OyAvLyAxIHRVU0Q4CiAgICB1aW50NjQgdDA7CgogICAgZnVuY3Rpb24gc2V0VXAoKSBwdWJsaWMgewogICAgICAgIHZtLndhcnAoMV83NjZfMDAwXzAwMCk7CiAgICAgICAgYnV5ZXIgPSB2bS5hZGRyKGJ1eWVyUGspOwogICAgICAgIHVzZCA9IG5ldyBNb2NrVVNEOCgpOwogICAgICAgIHZtLnByYW5rKG93bmVyKTsKICAgICAgICB0aW1vID0gbmV3IFRJTU92Mih1c2QsIGZlZVJlY2lwaWVudCk7CiAgICAgICAgdDAgPSB1aW50NjQoYmxvY2sudGltZXN0YW1wKTsKICAgICAgICBhZG1pbnMgPSBuZXcgYWRkcmVzc1tdKDIpOwogICAgICAgIGFkbWluc1swXSA9IHZtLmFkZHIoYWRtaW5Qayk7CiAgICAgICAgYWRtaW5zWzFdID0gbWFrZUFkZHIoImFkbWluMiIpOwogICAgICAgIGd1YXJkcyA9IG5ldyBhZGRyZXNzW10oNSk7CiAgICAgICAgZ3VhcmRzWzBdID0gdm0uYWRkcihndWFyZFBrKTsKICAgICAgICBmb3IgKHVpbnQyNTYgaSA9IDE7IGkgPCA1OyBpKyspIGd1YXJkc1tpXSA9IHZtLmFkZHIoMHg2MDAwICsgaSk7CiAgICAgICAgdXNkLm1pbnQoYnV5ZXIsIDEwMGU2KTsKICAgICAgICB1c2QubWludChidXllcjIsIDEwMGU2KTsKICAgICAgICB1c2QubWludChvd25lciwgMTAwZTYpOwogICAgfQoKCiAgICBmdW5jdGlvbiBfcGFyYW1zKHVpbnQzMiBjYXBhY2l0eSwgdWludDE2IGZlZUJwcywgdWludDY0IHNhbGVzRW5kLCB1aW50NjQgZG9vcnMsIHVpbnQ2NCBzdGFydHNBdCkKICAgICAgICBpbnRlcm5hbAogICAgICAgIHZpZXcKICAgICAgICByZXR1cm5zIChUSU1PdjIuQ3JlYXRlRXZlbnRQYXJhbXMgbWVtb3J5KQogICAgewogICAgICAgIHJldHVybiBUSU1PdjIuQ3JlYXRlRXZlbnRQYXJhbXMoewogICAgICAgICAgICBwcmljZTogUFJJQ0UsCiAgICAgICAgICAgIGNhcGFjaXR5OiBjYXBhY2l0eSwKICAgICAgICAgICAgZmVlQnBzOiBmZWVCcHMsCiAgICAgICAgICAgIHNhbGVzRW5kOiBzYWxlc0VuZCwKICAgICAgICAgICAgY2hlY2tJbk9wZW5zQXQ6IGRvb3JzLAogICAgICAgICAgICBzdGFydHNBdDogc3RhcnRzQXQsCiAgICAgICAgICAgIGJvc3M6IGJvc3MsCiAgICAgICAgICAgIG5hbWU6ICJMYXVuY2ggTmlnaHQiLAogICAgICAgICAgICBpbWFnZVVybDogImh0dHBzOi8vaW1nLmV4YW1wbGUveC5wbmciLAogICAgICAgICAgICBtZXRhZGF0YVVSSTogImlwZnM6Ly9tZXRhIiwKICAgICAgICAgICAgYWRtaW5zOiBhZG1pbnMsCiAgICAgICAgICAgIGd1YXJkczogZ3VhcmRzCiAgICAgICAgfSk7CiAgICB9CgogICAgZnVuY3Rpb24gX2NyZWF0ZSh1aW50MzIgY2FwYWNpdHksIHVpbnQxNiBmZWVCcHMsIHVpbnQ2NCBzdGFydHNJbikgaW50ZXJuYWwgcmV0dXJucyAodWludDI1NiBpZCkgewogICAgICAgIHVpbnQ2NCBkb29ycyA9IHQwICsgc3RhcnRzSW4gLSAyIGhvdXJzID4gdDAgPyB0MCArIHN0YXJ0c0luIC0gMiBob3VycyA6IHQwOwogICAgICAgIHZtLnByYW5rKG93bmVyKTsKICAgICAgICBpZCA9IHRpbW8uY3JlYXRlRXZlbnQoX3BhcmFtcyhjYXBhY2l0eSwgZmVlQnBzLCB0MCArIHN0YXJ0c0luIC0gMSBob3VycywgZG9vcnMsIHQwICsgc3RhcnRzSW4pKTsKICAgIH0KCiAgICBmdW5jdGlvbiBfYnV5KHVpbnQyNTYgaWQsIGFkZHJlc3Mgd2hvKSBpbnRlcm5hbCByZXR1cm5zICh1aW50MjU2IHRva2VuSWQpIHsKICAgICAgICB2bS5zdGFydFByYW5rKHdobyk7CiAgICAgICAgdXNkLmFwcHJvdmUoYWRkcmVzcyh0aW1vKSwgUFJJQ0UpOwogICAgICAgIHRva2VuSWQgPSB0aW1vLmJ1eVRpY2tldChpZCk7CiAgICAgICAgdm0uc3RvcFByYW5rKCk7CiAgICB9CgogICAgZnVuY3Rpb24gX3NpZ25Nc2codWludDI1NiBwaywgc3RyaW5nIG1lbW9yeSBtZXNzYWdlKSBpbnRlcm5hbCB2aWV3IHJldHVybnMgKGJ5dGVzIG1lbW9yeSkgewogICAgICAgICh1aW50OCB2LCBieXRlczMyIHIsIGJ5dGVzMzIgcykgPSB2bS5zaWduKHBrLCBNZXNzYWdlSGFzaFV0aWxzLnRvRXRoU2lnbmVkTWVzc2FnZUhhc2goYnl0ZXMobWVzc2FnZSkpKTsKICAgICAgICByZXR1cm4gYWJpLmVuY29kZVBhY2tlZChyLCBzLCB2KTsKICAgIH0KCiAgICAvLyDilIDilIAgQ3JlYXRpb24gJiByb2xlcyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKCiAgICBmdW5jdGlvbiB0ZXN0X0NyZWF0ZUV2ZW50X1N0b3Jlc1JvbGVzQW5kRGF0YSgpIHB1YmxpYyB7CiAgICAgICAgdWludDI1NiBpZCA9IF9jcmVhdGUoMTAwLCAxMDAsIDMgZGF5cyk7CiAgICAgICAgKGFkZHJlc3MgYiwgYWRkcmVzc1tdIG1lbW9yeSBhLCBhZGRyZXNzW10gbWVtb3J5IGcpID0gdGltby5ldmVudFJvbGVzKGlkKTsKICAgICAgICBhc3NlcnRFcShiLCBib3NzKTsKICAgICAgICBhc3NlcnRFcShhLmxlbmd0aCwgMik7CiAgICAgICAgYXNzZXJ0RXEoZy5sZW5ndGgsIDUpOwogICAgICAgIGFzc2VydEVxKHRpbW8ucm9sZU9mKGlkLCBhZG1pbnNbMF0pLCAxKTsKICAgICAgICBhc3NlcnRFcSh0aW1vLnJvbGVPZihpZCwgZ3VhcmRzWzBdKSwgMik7CiAgICAgICAgYXNzZXJ0RXEodGltby5yb2xlT2YoaWQsIGJ1eWVyKSwgMCk7CiAgICAgICAgVElNT3YyLkV2ZW50SW5mbyBtZW1vcnkgZXYgPSB0aW1vLmV2ZW50T2YoaWQpOwogICAgICAgIGFzc2VydEVxKGV2LnByaWNlLCBQUklDRSk7CiAgICAgICAgYXNzZXJ0RXEoZXYuZmVlQnBzLCAxMDApOwogICAgICAgIGFzc2VydEVxKGV2LmJvc3MsIGJvc3MpOwogICAgfQoKICAgIGZ1bmN0aW9uIHRlc3RfQ3JlYXRlRXZlbnRfT25seU93bmVyKCkgcHVibGljIHsKICAgICAgICB2bS5wcmFuayhidXllcik7CiAgICAgICAgdm0uZXhwZWN0UmV2ZXJ0KCk7CiAgICAgICAgdGltby5jcmVhdGVFdmVudChfcGFyYW1zKDEwLCAxMDAsIHQwICsgMSBkYXlzLCB0MCwgdDAgKyAyIGRheXMpKTsKICAgIH0KCiAgICBmdW5jdGlvbiB0ZXN0X0NyZWF0ZUV2ZW50X1JvbGVDb3VudEJvdW5kcygpIHB1YmxpYyB7CiAgICAgICAgYWRkcmVzc1tdIG1lbW9yeSBub0FkbWlucyA9IG5ldyBhZGRyZXNzW10oMCk7CiAgICAgICAgdm0ucHJhbmsob3duZXIpOwogICAgICAgIHZtLmV4cGVjdFJldmVydChUSU1PdjIuSW52YWxpZFJvbGVzLnNlbGVjdG9yKTsKICAgICAgICBUSU1PdjIuQ3JlYXRlRXZlbnRQYXJhbXMgbWVtb3J5IHAgPSBfcGFyYW1zKDEwLCAxMDAsIHQwICsgMSBkYXlzLCB0MCwgdDAgKyAyIGRheXMpOwogICAgICAgIHAuYWRtaW5zID0gbm9BZG1pbnM7CiAgICAgICAgdGltby5jcmVhdGVFdmVudChwKTsKCiAgICAgICAgYWRkcmVzc1tdIG1lbW9yeSBmb3VyR3VhcmRzID0gbmV3IGFkZHJlc3NbXSg0KTsKICAgICAgICBmb3IgKHVpbnQyNTYgaSA9IDA7IGkgPCA0OyBpKyspIGZvdXJHdWFyZHNbaV0gPSBndWFyZHNbaV07CiAgICAgICAgdm0ucHJhbmsob3duZXIpOwogICAgICAgIHZtLmV4cGVjdFJldmVydChUSU1PdjIuSW52YWxpZFJvbGVzLnNlbGVjdG9yKTsKICAgICAgICBUSU1PdjIuQ3JlYXRlRXZlbnRQYXJhbXMgbWVtb3J5IHAyID0gX3BhcmFtcygxMCwgMTAwLCB0MCArIDEgZGF5cywgdDAsIHQwICsgMiBkYXlzKTsKICAgICAgICBwMi5ndWFyZHMgPSBmb3VyR3VhcmRzOwogICAgICAgIHRpbW8uY3JlYXRlRXZlbnQocDIpOwogICAgfQoKICAgIGZ1bmN0aW9uIHRlc3RfQ3JlYXRlRXZlbnRfRHVwbGljYXRlQW5kQm9zc1JvbGVzUmV2ZXJ0KCkgcHVibGljIHsKICAgICAgICBhZGRyZXNzW10gbWVtb3J5IGR1cCA9IG5ldyBhZGRyZXNzW10oNSk7CiAgICAgICAgZHVwWzBdID0gZ3VhcmRzWzBdOwogICAgICAgIGR1cFsxXSA9IGd1YXJkc1swXTsKICAgICAgICBkdXBbMl0gPSBndWFyZHNbMV07CiAgICAgICAgZHVwWzNdID0gZ3VhcmRzWzJdOwogICAgICAgIGR1cFs0XSA9IGd1YXJkc1szXTsKICAgICAgICB2bS5wcmFuayhvd25lcik7CiAgICAgICAgdm0uZXhwZWN0UmV2ZXJ0KGFiaS5lbmNvZGVXaXRoU2VsZWN0b3IoVElNT3YyLkR1cGxpY2F0ZVJvbGUuc2VsZWN0b3IsIGd1YXJkc1swXSkpOwogICAgICAgIFRJTU92Mi5DcmVhdGVFdmVudFBhcmFtcyBtZW1vcnkgcDMgPSBfcGFyYW1zKDEwLCAxMDAsIHQwICsgMSBkYXlzLCB0MCwgdDAgKyAyIGRheXMpOwogICAgICAgIHAzLmd1YXJkcyA9IGR1cDsKICAgICAgICB0aW1vLmNyZWF0ZUV2ZW50KHAzKTsKCiAgICAgICAgYWRkcmVzc1tdIG1lbW9yeSBib3NzR3VhcmQgPSBuZXcgYWRkcmVzc1tdKDUpOwogICAgICAgIGJvc3NHdWFyZFswXSA9IGJvc3M7CiAgICAgICAgZm9yICh1aW50MjU2IGkgPSAxOyBpIDwgNTsgaSsrKSBib3NzR3VhcmRbaV0gPSBndWFyZHNbaV07CiAgICAgICAgdm0ucHJhbmsob3duZXIpOwogICAgICAgIHZtLmV4cGVjdFJldmVydChUSU1PdjIuSW52YWxpZFJvbGVzLnNlbGVjdG9yKTsKICAgICAgICBUSU1PdjIuQ3JlYXRlRXZlbnRQYXJhbXMgbWVtb3J5IHA0ID0gX3BhcmFtcygxMCwgMTAwLCB0MCArIDEgZGF5cywgdDAsIHQwICsgMiBkYXlzKTsKICAgICAgICBwNC5ndWFyZHMgPSBib3NzR3VhcmQ7CiAgICAgICAgdGltby5jcmVhdGVFdmVudChwNCk7CiAgICB9CgogICAgZnVuY3Rpb24gdGVzdF9DcmVhdGVFdmVudF9GZWVDYXBBbmRQcmljZUltbXV0YWJsZSgpIHB1YmxpYyB7CiAgICAgICAgdm0ucHJhbmsob3duZXIpOwogICAgICAgIHZtLmV4cGVjdFJldmVydChUSU1PdjIuRmVlVG9vSGlnaC5zZWxlY3Rvcik7CiAgICAgICAgdGltby5jcmVhdGVFdmVudChfcGFyYW1zKDEwLCAxMDAxLCB0MCArIDEgZGF5cywgdDAsIHQwICsgMiBkYXlzKSk7CiAgICAgICAgLy8gTm8gZnVuY3Rpb24gZXhpc3RzIHRvIGNoYW5nZSBwcmljZS9jYXBhY2l0eS9mZWUvcm9sZXM6IGltbXV0YWJpbGl0eSBpcyBzdHJ1Y3R1cmFsLgogICAgfQoKICAgIC8vIOKUgOKUgCBCdXlpbmcg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACgogICAgZnVuY3Rpb24gdGVzdF9CdXlUaWNrZXRfRXNjcm93QW5kTmZ0KCkgcHVibGljIHsKICAgICAgICB1aW50MjU2IGlkID0gX2NyZWF0ZSgyLCAxMDAsIDMgZGF5cyk7CiAgICAgICAgdWludDI1NiB0b2tlbklkID0gX2J1eShpZCwgYnV5ZXIpOwogICAgICAgIGFzc2VydEVxKHRpbW8ub3duZXJPZih0b2tlbklkKSwgYnV5ZXIpOwogICAgICAgIGFzc2VydEVxKHVzZC5iYWxhbmNlT2YoYWRkcmVzcyh0aW1vKSksIFBSSUNFKTsKICAgICAgICBhc3NlcnRFcSh0aW1vLmV2ZW50T2YoaWQpLmVzY3JvdywgUFJJQ0UpOwogICAgICAgIHN0cmluZyBtZW1vcnkgdXJpID0gdGltby50b2tlblVSSSh0b2tlbklkKTsKICAgICAgICBhc3NlcnRUcnVlKGJ5dGVzKHVyaSkubGVuZ3RoID4gMTAwKTsKICAgIH0KCiAgICBmdW5jdGlvbiB0ZXN0X0J1eVRpY2tldEdhc2xlc3NfUmVsYXllZEJ5VGhpcmRQYXJ0eSgpIHB1YmxpYyB7CiAgICAgICAgdWludDI1NiBpZCA9IF9jcmVhdGUoMiwgMTAwLCAzIGRheXMpOwogICAgICAgIGJ5dGVzMzIgbm9uY2UgPSB0aW1vLmF1dGhvcml6YXRpb25Ob25jZShpZCwgYnV5ZXIpOwogICAgICAgIFNpZ25pbmcuQXV0aCBtZW1vcnkgYSA9IFNpZ25pbmcuQXV0aCh7CiAgICAgICAgICAgIGZyb206IGJ1eWVyLAogICAgICAgICAgICB0bzogYWRkcmVzcyh0aW1vKSwKICAgICAgICAgICAgdmFsdWU6IFBSSUNFLAogICAgICAgICAgICB2YWxpZEFmdGVyOiAwLAogICAgICAgICAgICB2YWxpZEJlZm9yZTogYmxvY2sudGltZXN0YW1wICsgMSBob3VycywKICAgICAgICAgICAgbm9uY2U6IG5vbmNlCiAgICAgICAgfSk7CiAgICAgICAgKHVpbnQ4IHYsIGJ5dGVzMzIgciwgYnl0ZXMzMiBzKSA9IFNpZ25pbmcuc2lnblJlY2VpdmUodm0sIGJ1eWVyUGssIHVzZC5ET01BSU5fU0VQQVJBVE9SKCksIGEpOwogICAgICAgIGFkZHJlc3MgcmVsYXllciA9IG1ha2VBZGRyKCJyZWxheWVyIik7CiAgICAgICAgdm0ucHJhbmsocmVsYXllcik7IC8vIHJlbGF5ZXIgaGFzIG5vIHRVU0Q4IGFuZCBwYXlzIG9ubHkgZ2FzCiAgICAgICAgdWludDI1NiB0b2tlbklkID0gdGltby5idXlUaWNrZXRHYXNsZXNzKGlkLCBidXllciwgMCwgYmxvY2sudGltZXN0YW1wICsgMSBob3Vycywgdiwgciwgcyk7CiAgICAgICAgYXNzZXJ0RXEodGltby5vd25lck9mKHRva2VuSWQpLCBidXllcik7CiAgICAgICAgLy8gUmVwbGF5IG9mIHRoZSBzYW1lIHNpZ25hdHVyZSBtdXN0IGZhaWwgKG5vbmNlIGhhcyBtb3ZlZCBvbikuCiAgICAgICAgdm0ucHJhbmsocmVsYXllcik7CiAgICAgICAgdm0uZXhwZWN0UmV2ZXJ0KCk7CiAgICAgICAgdGltby5idXlUaWNrZXRHYXNsZXNzKGlkLCBidXllciwgMCwgYmxvY2sudGltZXN0YW1wICsgMSBob3Vycywgdiwgciwgcyk7CiAgICB9CgogICAgZnVuY3Rpb24gdGVzdF9CdXlfU29sZE91dEFuZFNhbGVzQ2xvc2VkKCkgcHVibGljIHsKICAgICAgICB1aW50MjU2IGlkID0gX2NyZWF0ZSgxLCAxMDAsIDMgZGF5cyk7CiAgICAgICAgX2J1eShpZCwgYnV5ZXIpOwogICAgICAgIHZtLnN0YXJ0UHJhbmsoYnV5ZXIyKTsKICAgICAgICB1c2QuYXBwcm92ZShhZGRyZXNzKHRpbW8pLCBQUklDRSk7CiAgICAgICAgdm0uZXhwZWN0UmV2ZXJ0KGFiaS5lbmNvZGVXaXRoU2VsZWN0b3IoVElNT3YyLlNvbGRPdXQuc2VsZWN0b3IsIGlkKSk7CiAgICAgICAgdGltby5idXlUaWNrZXQoaWQpOwogICAgICAgIHZtLnN0b3BQcmFuaygpOwoKICAgICAgICB1aW50MjU2IGlkMiA9IF9jcmVhdGUoNSwgMTAwLCAzIGRheXMpOwogICAgICAgIHZtLndhcnAodDAgKyAzIGRheXMgLSAzMCBtaW51dGVzKTsKICAgICAgICB2bS5zdGFydFByYW5rKGJ1eWVyMik7CiAgICAgICAgdm0uZXhwZWN0UmV2ZXJ0KGFiaS5lbmNvZGVXaXRoU2VsZWN0b3IoVElNT3YyLlNhbGVzQ2xvc2VkLnNlbGVjdG9yLCBpZDIpKTsKICAgICAgICB0aW1vLmJ1eVRpY2tldChpZDIpOwogICAgICAgIHZtLnN0b3BQcmFuaygpOwogICAgfQoKICAgIC8vIOKUgOKUgCBDaGVjay1pbiDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKCiAgICBmdW5jdGlvbiB0ZXN0X0NoZWNrSW5fRGlyZWN0QnlHdWFyZCgpIHB1YmxpYyB7CiAgICAgICAgdWludDI1NiBpZCA9IF9jcmVhdGUoMTAsIDEwMCwgMSBob3Vycyk7CiAgICAgICAgdWludDI1NiB0b2tlbklkID0gX2J1eShpZCwgYnV5ZXIpOwogICAgICAgIHVpbnQyNTYgZXhwaXJ5ID0gYmxvY2sudGltZXN0YW1wICsgNjA7CiAgICAgICAgYnl0ZXMgbWVtb3J5IG93bmVyU2lnID0gX3NpZ25Nc2coYnV5ZXJQaywgdGltby5jaGVja0luTWVzc2FnZSh0b2tlbklkLCBleHBpcnkpKTsKICAgICAgICB2bS5wcmFuayhndWFyZHNbMF0pOwogICAgICAgIHRpbW8uY2hlY2tJbih0b2tlbklkLCBleHBpcnksIG93bmVyU2lnKTsKICAgICAgICBhc3NlcnRUcnVlKHRpbW8udGlja2V0T2YodG9rZW5JZCkuY2hlY2tlZEluKTsKICAgICAgICAvLyBDaGVja2VkLWluIHRpY2tldHMgYXJlIGxvY2tlZCBhZ2FpbnN0IHRyYW5zZmVyLgogICAgICAgIHZtLnByYW5rKGJ1eWVyKTsKICAgICAgICB2bS5leHBlY3RSZXZlcnQoYWJpLmVuY29kZVdpdGhTZWxlY3RvcihUSU1PdjIuVGlja2V0TG9ja2VkLnNlbGVjdG9yLCB0b2tlbklkKSk7CiAgICAgICAgdGltby50cmFuc2ZlckZyb20oYnV5ZXIsIGJ1eWVyMiwgdG9rZW5JZCk7CiAgICB9CgogICAgZnVuY3Rpb24gdGVzdF9DaGVja0luX1JlbGF5ZWREdWFsU2lnbmF0dXJlKCkgcHVibGljIHsKICAgICAgICB1aW50MjU2IGlkID0gX2NyZWF0ZSgxMCwgMTAwLCAxIGhvdXJzKTsKICAgICAgICB1aW50MjU2IHRva2VuSWQgPSBfYnV5KGlkLCBidXllcik7CiAgICAgICAgdWludDI1NiBleHBpcnkgPSBibG9jay50aW1lc3RhbXAgKyA2MDsKICAgICAgICBieXRlcyBtZW1vcnkgb3duZXJTaWcgPSBfc2lnbk1zZyhidXllclBrLCB0aW1vLmNoZWNrSW5NZXNzYWdlKHRva2VuSWQsIGV4cGlyeSkpOwogICAgICAgIGJ5dGVzIG1lbW9yeSBzdGFmZlNpZyA9IF9zaWduTXNnKGd1YXJkUGssIHRpbW8uc3RhZmZDaGVja0luTWVzc2FnZSh0b2tlbklkLCBleHBpcnkpKTsKICAgICAgICBhZGRyZXNzIHJlbGF5ZXIgPSBtYWtlQWRkcigicmVsYXllciIpOwogICAgICAgIHZtLnByYW5rKHJlbGF5ZXIpOwogICAgICAgIHRpbW8uY2hlY2tJblJlbGF5ZWQodG9rZW5JZCwgZXhwaXJ5LCBvd25lclNpZywgc3RhZmZTaWcpOwogICAgICAgIGFzc2VydFRydWUodGltby50aWNrZXRPZih0b2tlbklkKS5jaGVja2VkSW4pOwogICAgfQoKICAgIGZ1bmN0aW9uIHRlc3RfQ2hlY2tJbl9Sb2d1ZUd1YXJkQW5kRm9yZ2VkT3duZXJGYWlsKCkgcHVibGljIHsKICAgICAgICB1aW50MjU2IGlkID0gX2NyZWF0ZSgxMCwgMTAwLCAxIGhvdXJzKTsKICAgICAgICB1aW50MjU2IHRva2VuSWQgPSBfYnV5KGlkLCBidXllcik7CiAgICAgICAgdWludDI1NiBleHBpcnkgPSBibG9jay50aW1lc3RhbXAgKyA2MDsKICAgICAgICAvLyBCdXllcjIgKG5vIHJvbGUpIHRyaWVzIHRvIGNoZWNrIGluIHdpdGggYSB2YWxpZCBvd25lciBzaWduYXR1cmUuCiAgICAgICAgYnl0ZXMgbWVtb3J5IG93bmVyU2lnID0gX3NpZ25Nc2coYnV5ZXJQaywgdGltby5jaGVja0luTWVzc2FnZSh0b2tlbklkLCBleHBpcnkpKTsKICAgICAgICB2bS5wcmFuayhidXllcjIpOwogICAgICAgIHZtLmV4cGVjdFJldmVydChhYmkuZW5jb2RlV2l0aFNlbGVjdG9yKFRJTU92Mi5Ob3RTdGFmZi5zZWxlY3RvciwgaWQsIGJ1eWVyMikpOwogICAgICAgIHRpbW8uY2hlY2tJbih0b2tlbklkLCBleHBpcnksIG93bmVyU2lnKTsKICAgICAgICAvLyBHdWFyZCB3aXRoIGEgZm9yZ2VkIG93bmVyIHNpZ25hdHVyZSAoc2lnbmVkIGJ5IGd1YXJkLCBub3QgdGhlIG93bmVyKS4KICAgICAgICBieXRlcyBtZW1vcnkgZm9yZ2VkID0gX3NpZ25Nc2coZ3VhcmRQaywgdGltby5jaGVja0luTWVzc2FnZSh0b2tlbklkLCBleHBpcnkpKTsKICAgICAgICB2bS5wcmFuayhndWFyZHNbMF0pOwogICAgICAgIHZtLmV4cGVjdFJldmVydChhYmkuZW5jb2RlV2l0aFNlbGVjdG9yKFRJTU92Mi5CYWRPd25lclNpZ25hdHVyZS5zZWxlY3RvciwgdG9rZW5JZCkpOwogICAgICAgIHRpbW8uY2hlY2tJbih0b2tlbklkLCBleHBpcnksIGZvcmdlZCk7CiAgICAgICAgLy8gU3RhbGUgc2lnbmF0dXJlIChleHBpcnkgaW4gdGhlIHBhc3QpLgogICAgICAgIGJ5dGVzIG1lbW9yeSBzdGFsZSA9IF9zaWduTXNnKGJ1eWVyUGssIHRpbW8uY2hlY2tJbk1lc3NhZ2UodG9rZW5JZCwgYmxvY2sudGltZXN0YW1wIC0gMSkpOwogICAgICAgIHZtLnByYW5rKGd1YXJkc1swXSk7CiAgICAgICAgdm0uZXhwZWN0UmV2ZXJ0KFRJTU92Mi5TaWduYXR1cmVTdGFsZS5zZWxlY3Rvcik7CiAgICAgICAgdGltby5jaGVja0luKHRva2VuSWQsIGJsb2NrLnRpbWVzdGFtcCAtIDEsIHN0YWxlKTsKICAgIH0KCiAgICBmdW5jdGlvbiB0ZXN0X0NoZWNrSW5fVG9vRWFybHlBbmREb3VibGUoKSBwdWJsaWMgewogICAgICAgIHVpbnQyNTYgaWQgPSBfY3JlYXRlKDEwLCAxMDAsIDMgZGF5cyk7IC8vIGRvb3JzIG9wZW4gYXQgc3RhcnQgLSAyaAogICAgICAgIHVpbnQyNTYgdG9rZW5JZCA9IF9idXkoaWQsIGJ1eWVyKTsKICAgICAgICB1aW50MjU2IGV4cGlyeSA9IGJsb2NrLnRpbWVzdGFtcCArIDYwOwogICAgICAgIGJ5dGVzIG1lbW9yeSBvd25lclNpZyA9IF9zaWduTXNnKGJ1eWVyUGssIHRpbW8uY2hlY2tJbk1lc3NhZ2UodG9rZW5JZCwgZXhwaXJ5KSk7CiAgICAgICAgdm0ucHJhbmsoZ3VhcmRzWzBdKTsKICAgICAgICB2bS5leHBlY3RSZXZlcnQoYWJpLmVuY29kZVdpdGhTZWxlY3RvcihUSU1PdjIuQ2hlY2tJblRvb0Vhcmx5LnNlbGVjdG9yLCB0b2tlbklkKSk7CiAgICAgICAgdGltby5jaGVja0luKHRva2VuSWQsIGV4cGlyeSwgb3duZXJTaWcpOwoKICAgICAgICB2bS53YXJwKHQwICsgMyBkYXlzIC0gMiBob3Vycyk7CiAgICAgICAgdWludDI1NiBleHBpcnkyID0gYmxvY2sudGltZXN0YW1wICsgNjA7CiAgICAgICAgYnl0ZXMgbWVtb3J5IHNpZzIgPSBfc2lnbk1zZyhidXllclBrLCB0aW1vLmNoZWNrSW5NZXNzYWdlKHRva2VuSWQsIGV4cGlyeTIpKTsKICAgICAgICB2bS5wcmFuayhndWFyZHNbMF0pOwogICAgICAgIHRpbW8uY2hlY2tJbih0b2tlbklkLCBleHBpcnkyLCBzaWcyKTsKICAgICAgICB1aW50MjU2IGV4cGlyeTMgPSBibG9jay50aW1lc3RhbXAgKyA2MDsKICAgICAgICBieXRlcyBtZW1vcnkgc2lnMyA9IF9zaWduTXNnKGJ1eWVyUGssIHRpbW8uY2hlY2tJbk1lc3NhZ2UodG9rZW5JZCwgZXhwaXJ5MykpOwogICAgICAgIHZtLnByYW5rKGd1YXJkc1swXSk7CiAgICAgICAgdm0uZXhwZWN0UmV2ZXJ0KGFiaS5lbmNvZGVXaXRoU2VsZWN0b3IoVElNT3YyLkFscmVhZHlDaGVja2VkSW4uc2VsZWN0b3IsIHRva2VuSWQpKTsKICAgICAgICB0aW1vLmNoZWNrSW4odG9rZW5JZCwgZXhwaXJ5Mywgc2lnMyk7CiAgICB9CgogICAgLy8g4pSA4pSAIFJlc2NoZWR1bGUgJiByZWZ1bmRzIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAoKICAgIGZ1bmN0aW9uIHRlc3RfUmVzY2hlZHVsZV9PcGVuc1ZvbHVudGFyeVJlZnVuZFdpbmRvdygpIHB1YmxpYyB7CiAgICAgICAgdWludDI1NiBpZCA9IF9jcmVhdGUoMTAsIDEwMCwgMyBkYXlzKTsKICAgICAgICB1aW50MjU2IHRva2VuSWQgPSBfYnV5KGlkLCBidXllcik7CiAgICAgICAgLy8gTm90IHJlZnVuZGFibGUgYmVmb3JlIGFueSByZXNjaGVkdWxlLgogICAgICAgIHZtLnByYW5rKGJ1eWVyKTsKICAgICAgICB2bS5leHBlY3RSZXZlcnQoYWJpLmVuY29kZVdpdGhTZWxlY3RvcihUSU1PdjIuTm90UmVmdW5kYWJsZS5zZWxlY3RvciwgdG9rZW5JZCkpOwogICAgICAgIHRpbW8uY2xhaW1SZWZ1bmQodG9rZW5JZCk7CgogICAgICAgIHZtLnByYW5rKG93bmVyKTsKICAgICAgICB0aW1vLnVwZGF0ZUV2ZW50VGltZXMoaWQsIHQwICsgNiBkYXlzLCB0MCArIDcgZGF5cyAtIDIgaG91cnMsIHQwICsgNyBkYXlzKTsKICAgICAgICB1aW50MjU2IGJhbEJlZm9yZSA9IHVzZC5iYWxhbmNlT2YoYnV5ZXIpOwogICAgICAgIHZtLnByYW5rKGJ1eWVyKTsKICAgICAgICB0aW1vLmNsYWltUmVmdW5kKHRva2VuSWQpOwogICAgICAgIGFzc2VydEVxKHVzZC5iYWxhbmNlT2YoYnV5ZXIpLCBiYWxCZWZvcmUgKyBQUklDRSk7CiAgICAgICAgYXNzZXJ0RXEodGltby5ldmVudE9mKGlkKS5lc2Nyb3csIDApOwogICAgICAgIC8vIE5GVCBkYXRlIGF0dHJpYnV0ZSBmb2xsb3dzIHRoZSBuZXcgc2NoZWR1bGUuCiAgICAgICAgdWludDI1NiB0b2tlbjIgPSBfYnV5KGlkLCBidXllcjIpOwogICAgICAgIGFzc2VydFRydWUoYnl0ZXModGltby50b2tlblVSSSh0b2tlbjIpKS5sZW5ndGggPiAxMDApOwogICAgfQoKICAgIGZ1bmN0aW9uIHRlc3RfQ2FuY2VsX1RoZW5GdWxsUmVmdW5kX09ubHlPd25lckNhbmNlbHMoKSBwdWJsaWMgewogICAgICAgIHVpbnQyNTYgaWQgPSBfY3JlYXRlKDEwLCAxMDAsIDMgZGF5cyk7CiAgICAgICAgdWludDI1NiB0b2tlbklkID0gX2J1eShpZCwgYnV5ZXIpOwogICAgICAgIHZtLnByYW5rKGJ1eWVyKTsKICAgICAgICB2bS5leHBlY3RSZXZlcnQoKTsgLy8gYnV5ZXJzL29yZ2FuaXplcnMgY2Fubm90IGNhbmNlbDsgb3duZXIgb25seQogICAgICAgIHRpbW8uY2FuY2VsRXZlbnQoaWQpOwogICAgICAgIHZtLnByYW5rKG93bmVyKTsKICAgICAgICB0aW1vLmNhbmNlbEV2ZW50KGlkKTsKICAgICAgICB1aW50MjU2IGJhbEJlZm9yZSA9IHVzZC5iYWxhbmNlT2YoYnV5ZXIpOwogICAgICAgIHZtLnByYW5rKGJ1eWVyKTsKICAgICAgICB0aW1vLmNsYWltUmVmdW5kKHRva2VuSWQpOwogICAgICAgIGFzc2VydEVxKHVzZC5iYWxhbmNlT2YoYnV5ZXIpLCBiYWxCZWZvcmUgKyBQUklDRSk7CiAgICAgICAgLy8gRG91YmxlIHJlZnVuZCBpbXBvc3NpYmxlICh0aWNrZXQgYnVybmVkKS4KICAgICAgICB2bS5wcmFuayhidXllcik7CiAgICAgICAgdm0uZXhwZWN0UmV2ZXJ0KCk7CiAgICAgICAgdGltby5jbGFpbVJlZnVuZCh0b2tlbklkKTsKICAgIH0KCiAgICAvLyDilIDilIAgV2l0aGRyYXcgJiBmZWUgc3BsaXQg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACgogICAgZnVuY3Rpb24gdGVzdF9XaXRoZHJhd19TcGxpdHNGZWVUb0Z1bmR3YWxsZXQoKSBwdWJsaWMgewogICAgICAgIHVpbnQyNTYgaWQgPSBfY3JlYXRlKDEwMCwgMTAwLCAxIGRheXMpOyAvLyAxJSBmZWUKICAgICAgICBmb3IgKHVpbnQyNTYgaSA9IDA7IGkgPCA0OyBpKyspIF9idXkoaWQsIGkgJSAyID09IDAgPyBidXllciA6IGJ1eWVyMik7CiAgICAgICAgLy8gVG9vIGVhcmx5LgogICAgICAgIHZtLnByYW5rKG93bmVyKTsKICAgICAgICB2bS5leHBlY3RSZXZlcnQoVElNT3YyLlRvb0Vhcmx5VG9XaXRoZHJhdy5zZWxlY3Rvcik7CiAgICAgICAgdGltby53aXRoZHJhdyhpZCk7CiAgICAgICAgdm0ud2FycCh0MCArIDEgZGF5cyArIDI0IGhvdXJzKTsKICAgICAgICB1aW50MjU2IGJvc3NCZWZvcmUgPSB1c2QuYmFsYW5jZU9mKGJvc3MpOwogICAgICAgIHVpbnQyNTYgZmVlQmVmb3JlID0gdXNkLmJhbGFuY2VPZihmZWVSZWNpcGllbnQpOwogICAgICAgIHZtLnByYW5rKG93bmVyKTsKICAgICAgICB0aW1vLndpdGhkcmF3KGlkKTsKICAgICAgICBhc3NlcnRFcSh1c2QuYmFsYW5jZU9mKGJvc3MpLCBib3NzQmVmb3JlICsgNCAqIFBSSUNFIC0gKDQgKiBQUklDRSkgLyAxMDApOwogICAgICAgIGFzc2VydEVxKHVzZC5iYWxhbmNlT2YoZmVlUmVjaXBpZW50KSwgZmVlQmVmb3JlICsgKDQgKiBQUklDRSkgLyAxMDApOwogICAgICAgIGFzc2VydEVxKHVzZC5iYWxhbmNlT2YoYWRkcmVzcyh0aW1vKSksIDApOwogICAgICAgIC8vIFNlY29uZCB3aXRoZHJhdyByZXZlcnRzLgogICAgICAgIHZtLnByYW5rKG93bmVyKTsKICAgICAgICB2bS5leHBlY3RSZXZlcnQoYWJpLmVuY29kZVdpdGhTZWxlY3RvcihUSU1PdjIuQWxyZWFkeVdpdGhkcmF3bi5zZWxlY3RvciwgaWQpKTsKICAgICAgICB0aW1vLndpdGhkcmF3KGlkKTsKICAgIH0KCiAgICBmdW5jdGlvbiB0ZXN0X1dpdGhkcmF3X0NhbmNlbGxlZEV2ZW50UmV2ZXJ0cygpIHB1YmxpYyB7CiAgICAgICAgdWludDI1NiBpZCA9IF9jcmVhdGUoMTAsIDEwMCwgMSBkYXlzKTsKICAgICAgICBfYnV5KGlkLCBidXllcik7CiAgICAgICAgdm0ucHJhbmsob3duZXIpOwogICAgICAgIHRpbW8uY2FuY2VsRXZlbnQoaWQpOwogICAgICAgIHZtLndhcnAodDAgKyAzIGRheXMpOwogICAgICAgIHZtLnByYW5rKG93bmVyKTsKICAgICAgICB2bS5leHBlY3RSZXZlcnQoYWJpLmVuY29kZVdpdGhTZWxlY3RvcihUSU1PdjIuRXZlbnRJc0NhbmNlbGxlZC5zZWxlY3RvciwgaWQpKTsKICAgICAgICB0aW1vLndpdGhkcmF3KGlkKTsKICAgIH0KCiAgICAvLyDilIDilIAgSW52YXJpYW50LXN0eWxlIGFjY291bnRpbmcg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACgogICAgZnVuY3Rpb24gdGVzdF9Fc2Nyb3dBY2NvdW50aW5nX0Fjcm9zc0V2ZW50cygpIHB1YmxpYyB7CiAgICAgICAgdWludDI1NiBhID0gX2NyZWF0ZSgxMCwgMTAwLCAxIGRheXMpOwogICAgICAgIHVpbnQyNTYgYiA9IF9jcmVhdGUoMTAsIDI1MCwgMSBkYXlzKTsKICAgICAgICBfYnV5KGEsIGJ1eWVyKTsKICAgICAgICBfYnV5KGEsIGJ1eWVyMik7CiAgICAgICAgX2J1eShiLCBidXllcik7CiAgICAgICAgdWludDI1NiBzdW0gPSB0aW1vLmV2ZW50T2YoYSkuZXNjcm93ICsgdGltby5ldmVudE9mKGIpLmVzY3JvdzsKICAgICAgICBhc3NlcnRFcSh1c2QuYmFsYW5jZU9mKGFkZHJlc3ModGltbykpLCBzdW0pOwogICAgICAgIHZtLnByYW5rKG93bmVyKTsKICAgICAgICB0aW1vLmNhbmNlbEV2ZW50KGIpOwogICAgICAgIHZtLnByYW5rKGJ1eWVyKTsKICAgICAgICB0aW1vLmNsYWltUmVmdW5kKDMpOwogICAgICAgIHN1bSA9IHRpbW8uZXZlbnRPZihhKS5lc2Nyb3cgKyB0aW1vLmV2ZW50T2YoYikuZXNjcm93OwogICAgICAgIGFzc2VydEVxKHVzZC5iYWxhbmNlT2YoYWRkcmVzcyh0aW1vKSksIHN1bSk7CiAgICB9Cn0K
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
+
+import {Test} from "forge-std/Test.sol";
+import {TIMOv2} from "../src/TIMOv2.sol";
+import {MockUSD8} from "../src/mocks/MockUSD8.sol";
+import {Signing} from "./Signing.sol";
+import {MessageHashUtils} from "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol";
+
+contract TIMOv2Test is Test {
+    TIMOv2 timo;
+    MockUSD8 usd;
+
+    uint256 ownerPk = 0x0A11CE;
+    address owner = vm.addr(ownerPk);
+    address feeRecipient = makeAddr("fundwallet");
+    address boss = makeAddr("boss");
+    address buyer;
+    uint256 buyerPk = 0xB0B;
+    address buyer2 = makeAddr("buyer2");
+    uint256 guardPk = 0x600D;
+    uint256 adminPk = 0xAD011;
+
+    address[] admins;
+    address[] guards;
+
+    uint256 constant PRICE = 1e6; // 1 tUSD8
+    uint64 t0;
+
+    function setUp() public {
+        vm.warp(1_766_000_000);
+        buyer = vm.addr(buyerPk);
+        usd = new MockUSD8();
+        vm.prank(owner);
+        timo = new TIMOv2(usd, feeRecipient);
+        t0 = uint64(block.timestamp);
+        admins = new address[](2);
+        admins[0] = vm.addr(adminPk);
+        admins[1] = makeAddr("admin2");
+        guards = new address[](5);
+        guards[0] = vm.addr(guardPk);
+        for (uint256 i = 1; i < 5; i++) guards[i] = vm.addr(0x6000 + i);
+        usd.mint(buyer, 100e6);
+        usd.mint(buyer2, 100e6);
+        usd.mint(owner, 100e6);
+    }
+
+
+    function _params(uint32 capacity, uint16 feeBps, uint64 salesEnd, uint64 doors, uint64 startsAt)
+        internal
+        view
+        returns (TIMOv2.CreateEventParams memory)
+    {
+        return TIMOv2.CreateEventParams({
+            price: PRICE,
+            capacity: capacity,
+            feeBps: feeBps,
+            salesEnd: salesEnd,
+            checkInOpensAt: doors,
+            startsAt: startsAt,
+            boss: boss,
+            name: "Launch Night",
+            imageUrl: "https://img.example/x.png",
+            metadataURI: "ipfs://meta",
+            admins: admins,
+            guards: guards
+        });
+    }
+
+    function _create(uint32 capacity, uint16 feeBps, uint64 startsIn) internal returns (uint256 id) {
+        uint64 doors = t0 + startsIn - 2 hours > t0 ? t0 + startsIn - 2 hours : t0;
+        vm.prank(owner);
+        id = timo.createEvent(_params(capacity, feeBps, t0 + startsIn - 1 hours, doors, t0 + startsIn));
+    }
+
+    function _buy(uint256 id, address who) internal returns (uint256 tokenId) {
+        vm.startPrank(who);
+        usd.approve(address(timo), PRICE);
+        tokenId = timo.buyTicket(id);
+        vm.stopPrank();
+    }
+
+    function _signMsg(uint256 pk, string memory message) internal view returns (bytes memory) {
+        (uint8 v, bytes32 r, bytes32 s) = vm.sign(pk, MessageHashUtils.toEthSignedMessageHash(bytes(message)));
+        return abi.encodePacked(r, s, v);
+    }
+
+    // ── Creation & roles ─────────────────────────────────────────────────────
+
+    function test_CreateEvent_StoresRolesAndData() public {
+        uint256 id = _create(100, 100, 3 days);
+        (address b, address[] memory a, address[] memory g) = timo.eventRoles(id);
+        assertEq(b, boss);
+        assertEq(a.length, 2);
+        assertEq(g.length, 5);
+        assertEq(timo.roleOf(id, admins[0]), 1);
+        assertEq(timo.roleOf(id, guards[0]), 2);
+        assertEq(timo.roleOf(id, buyer), 0);
+        TIMOv2.EventInfo memory ev = timo.eventOf(id);
+        assertEq(ev.price, PRICE);
+        assertEq(ev.feeBps, 100);
+        assertEq(ev.boss, boss);
+    }
+
+    function test_CreateEvent_OnlyOwner() public {
+        vm.prank(buyer);
+        vm.expectRevert();
+        timo.createEvent(_params(10, 100, t0 + 1 days, t0, t0 + 2 days));
+    }
+
+    function test_CreateEvent_RoleCountBounds() public {
+        address[] memory noAdmins = new address[](0);
+        vm.prank(owner);
+        vm.expectRevert(TIMOv2.InvalidRoles.selector);
+        TIMOv2.CreateEventParams memory p = _params(10, 100, t0 + 1 days, t0, t0 + 2 days);
+        p.admins = noAdmins;
+        timo.createEvent(p);
+
+        address[] memory fourGuards = new address[](4);
+        for (uint256 i = 0; i < 4; i++) fourGuards[i] = guards[i];
+        vm.prank(owner);
+        vm.expectRevert(TIMOv2.InvalidRoles.selector);
+        TIMOv2.CreateEventParams memory p2 = _params(10, 100, t0 + 1 days, t0, t0 + 2 days);
+        p2.guards = fourGuards;
+        timo.createEvent(p2);
+    }
+
+    function test_CreateEvent_DuplicateAndBossRolesRevert() public {
+        address[] memory dup = new address[](5);
+        dup[0] = guards[0];
+        dup[1] = guards[0];
+        dup[2] = guards[1];
+        dup[3] = guards[2];
+        dup[4] = guards[3];
+        vm.prank(owner);
+        vm.expectRevert(abi.encodeWithSelector(TIMOv2.DuplicateRole.selector, guards[0]));
+        TIMOv2.CreateEventParams memory p3 = _params(10, 100, t0 + 1 days, t0, t0 + 2 days);
+        p3.guards = dup;
+        timo.createEvent(p3);
+
+        address[] memory bossGuard = new address[](5);
+        bossGuard[0] = boss;
+        for (uint256 i = 1; i < 5; i++) bossGuard[i] = guards[i];
+        vm.prank(owner);
+        vm.expectRevert(TIMOv2.InvalidRoles.selector);
+        TIMOv2.CreateEventParams memory p4 = _params(10, 100, t0 + 1 days, t0, t0 + 2 days);
+        p4.guards = bossGuard;
+        timo.createEvent(p4);
+    }
+
+    function test_CreateEvent_FeeCapAndPriceImmutable() public {
+        vm.prank(owner);
+        vm.expectRevert(TIMOv2.FeeTooHigh.selector);
+        timo.createEvent(_params(10, 1001, t0 + 1 days, t0, t0 + 2 days));
+        // No function exists to change price/capacity/fee/roles: immutability is structural.
+    }
+
+    // ── Buying ───────────────────────────────────────────────────────────────
+
+    function test_BuyTicket_EscrowAndNft() public {
+        uint256 id = _create(2, 100, 3 days);
+        uint256 tokenId = _buy(id, buyer);
+        assertEq(timo.ownerOf(tokenId), buyer);
+        assertEq(usd.balanceOf(address(timo)), PRICE);
+        assertEq(timo.eventOf(id).escrow, PRICE);
+        string memory uri = timo.tokenURI(tokenId);
+        assertTrue(bytes(uri).length > 100);
+    }
+
+    function test_BuyTicketGasless_RelayedByThirdParty() public {
+        uint256 id = _create(2, 100, 3 days);
+        bytes32 nonce = timo.authorizationNonce(id, buyer);
+        Signing.Auth memory a = Signing.Auth({
+            from: buyer,
+            to: address(timo),
+            value: PRICE,
+            validAfter: 0,
+            validBefore: block.timestamp + 1 hours,
+            nonce: nonce
+        });
+        (uint8 v, bytes32 r, bytes32 s) = Signing.signReceive(vm, buyerPk, usd.DOMAIN_SEPARATOR(), a);
+        address relayer = makeAddr("relayer");
+        vm.prank(relayer); // relayer has no tUSD8 and pays only gas
+        uint256 tokenId = timo.buyTicketGasless(id, buyer, 0, block.timestamp + 1 hours, v, r, s);
+        assertEq(timo.ownerOf(tokenId), buyer);
+        // Replay of the same signature must fail (nonce has moved on).
+        vm.prank(relayer);
+        vm.expectRevert();
+        timo.buyTicketGasless(id, buyer, 0, block.timestamp + 1 hours, v, r, s);
+    }
+
+    function test_Buy_SoldOutAndSalesClosed() public {
+        uint256 id = _create(1, 100, 3 days);
+        _buy(id, buyer);
+        vm.startPrank(buyer2);
+        usd.approve(address(timo), PRICE);
+        vm.expectRevert(abi.encodeWithSelector(TIMOv2.SoldOut.selector, id));
+        timo.buyTicket(id);
+        vm.stopPrank();
+
+        uint256 id2 = _create(5, 100, 3 days);
+        vm.warp(t0 + 3 days - 30 minutes);
+        vm.startPrank(buyer2);
+        vm.expectRevert(abi.encodeWithSelector(TIMOv2.SalesClosed.selector, id2));
+        timo.buyTicket(id2);
+        vm.stopPrank();
+    }
+
+    // ── Check-in ─────────────────────────────────────────────────────────────
+
+    function test_CheckIn_DirectByGuard() public {
+        uint256 id = _create(10, 100, 1 hours);
+        uint256 tokenId = _buy(id, buyer);
+        uint256 expiry = block.timestamp + 60;
+        bytes memory ownerSig = _signMsg(buyerPk, timo.checkInMessage(tokenId, expiry));
+        vm.prank(guards[0]);
+        timo.checkIn(tokenId, expiry, ownerSig);
+        assertTrue(timo.ticketOf(tokenId).checkedIn);
+        // Checked-in tickets are locked against transfer.
+        vm.prank(buyer);
+        vm.expectRevert(abi.encodeWithSelector(TIMOv2.TicketLocked.selector, tokenId));
+        timo.transferFrom(buyer, buyer2, tokenId);
+    }
+
+    function test_CheckIn_RelayedDualSignature() public {
+        uint256 id = _create(10, 100, 1 hours);
+        uint256 tokenId = _buy(id, buyer);
+        uint256 expiry = block.timestamp + 60;
+        bytes memory ownerSig = _signMsg(buyerPk, timo.checkInMessage(tokenId, expiry));
+        bytes memory staffSig = _signMsg(guardPk, timo.staffCheckInMessage(tokenId, expiry));
+        address relayer = makeAddr("relayer");
+        vm.prank(relayer);
+        timo.checkInRelayed(tokenId, expiry, ownerSig, staffSig);
+        assertTrue(timo.ticketOf(tokenId).checkedIn);
+    }
+
+    function test_CheckIn_RogueGuardAndForgedOwnerFail() public {
+        uint256 id = _create(10, 100, 1 hours);
+        uint256 tokenId = _buy(id, buyer);
+        uint256 expiry = block.timestamp + 60;
+        // Buyer2 (no role) tries to check in with a valid owner signature.
+        bytes memory ownerSig = _signMsg(buyerPk, timo.checkInMessage(tokenId, expiry));
+        vm.prank(buyer2);
+        vm.expectRevert(abi.encodeWithSelector(TIMOv2.NotStaff.selector, id, buyer2));
+        timo.checkIn(tokenId, expiry, ownerSig);
+        // Guard with a forged owner signature (signed by guard, not the owner).
+        bytes memory forged = _signMsg(guardPk, timo.checkInMessage(tokenId, expiry));
+        vm.prank(guards[0]);
+        vm.expectRevert(abi.encodeWithSelector(TIMOv2.BadOwnerSignature.selector, tokenId));
+        timo.checkIn(tokenId, expiry, forged);
+        // Stale signature (expiry in the past).
+        bytes memory stale = _signMsg(buyerPk, timo.checkInMessage(tokenId, block.timestamp - 1));
+        vm.prank(guards[0]);
+        vm.expectRevert(TIMOv2.SignatureStale.selector);
+        timo.checkIn(tokenId, block.timestamp - 1, stale);
+    }
+
+    function test_CheckIn_TooEarlyAndDouble() public {
+        uint256 id = _create(10, 100, 3 days); // doors open at start - 2h
+        uint256 tokenId = _buy(id, buyer);
+        uint256 expiry = block.timestamp + 60;
+        bytes memory ownerSig = _signMsg(buyerPk, timo.checkInMessage(tokenId, expiry));
+        vm.prank(guards[0]);
+        vm.expectRevert(abi.encodeWithSelector(TIMOv2.CheckInTooEarly.selector, tokenId));
+        timo.checkIn(tokenId, expiry, ownerSig);
+
+        vm.warp(t0 + 3 days - 2 hours);
+        uint256 expiry2 = block.timestamp + 60;
+        bytes memory sig2 = _signMsg(buyerPk, timo.checkInMessage(tokenId, expiry2));
+        vm.prank(guards[0]);
+        timo.checkIn(tokenId, expiry2, sig2);
+        uint256 expiry3 = block.timestamp + 60;
+        bytes memory sig3 = _signMsg(buyerPk, timo.checkInMessage(tokenId, expiry3));
+        vm.prank(guards[0]);
+        vm.expectRevert(abi.encodeWithSelector(TIMOv2.AlreadyCheckedIn.selector, tokenId));
+        timo.checkIn(tokenId, expiry3, sig3);
+    }
+
+    // ── Reschedule & refunds ─────────────────────────────────────────────────
+
+    function test_Reschedule_OpensVoluntaryRefundWindow() public {
+        uint256 id = _create(10, 100, 3 days);
+        uint256 tokenId = _buy(id, buyer);
+        // Not refundable before any reschedule.
+        vm.prank(buyer);
+        vm.expectRevert(abi.encodeWithSelector(TIMOv2.NotRefundable.selector, tokenId));
+        timo.claimRefund(tokenId);
+
+        vm.prank(owner);
+        timo.updateEventTimes(id, t0 + 6 days, t0 + 7 days - 2 hours, t0 + 7 days);
+        uint256 balBefore = usd.balanceOf(buyer);
+        vm.prank(buyer);
+        timo.claimRefund(tokenId);
+        assertEq(usd.balanceOf(buyer), balBefore + PRICE);
+        assertEq(timo.eventOf(id).escrow, 0);
+        // NFT date attribute follows the new schedule.
+        uint256 token2 = _buy(id, buyer2);
+        assertTrue(bytes(timo.tokenURI(token2)).length > 100);
+    }
+
+    function test_Cancel_ThenFullRefund_OnlyOwnerCancels() public {
+        uint256 id = _create(10, 100, 3 days);
+        uint256 tokenId = _buy(id, buyer);
+        vm.prank(buyer);
+        vm.expectRevert(); // buyers/organizers cannot cancel; owner only
+        timo.cancelEvent(id);
+        vm.prank(owner);
+        timo.cancelEvent(id);
+        uint256 balBefore = usd.balanceOf(buyer);
+        vm.prank(buyer);
+        timo.claimRefund(tokenId);
+        assertEq(usd.balanceOf(buyer), balBefore + PRICE);
+        // Double refund impossible (ticket burned).
+        vm.prank(buyer);
+        vm.expectRevert();
+        timo.claimRefund(tokenId);
+    }
+
+    // ── Withdraw & fee split ─────────────────────────────────────────────────
+
+    function test_Withdraw_SplitsFeeToFundwallet() public {
+        uint256 id = _create(100, 100, 1 days); // 1% fee
+        for (uint256 i = 0; i < 4; i++) _buy(id, i % 2 == 0 ? buyer : buyer2);
+        // Too early.
+        vm.prank(owner);
+        vm.expectRevert(TIMOv2.TooEarlyToWithdraw.selector);
+        timo.withdraw(id);
+        vm.warp(t0 + 1 days + 24 hours);
+        uint256 bossBefore = usd.balanceOf(boss);
+        uint256 feeBefore = usd.balanceOf(feeRecipient);
+        vm.prank(owner);
+        timo.withdraw(id);
+        assertEq(usd.balanceOf(boss), bossBefore + 4 * PRICE - (4 * PRICE) / 100);
+        assertEq(usd.balanceOf(feeRecipient), feeBefore + (4 * PRICE) / 100);
+        assertEq(usd.balanceOf(address(timo)), 0);
+        // Second withdraw reverts.
+        vm.prank(owner);
+        vm.expectRevert(abi.encodeWithSelector(TIMOv2.AlreadyWithdrawn.selector, id));
+        timo.withdraw(id);
+    }
+
+    function test_Withdraw_CancelledEventReverts() public {
+        uint256 id = _create(10, 100, 1 days);
+        _buy(id, buyer);
+        vm.prank(owner);
+        timo.cancelEvent(id);
+        vm.warp(t0 + 3 days);
+        vm.prank(owner);
+        vm.expectRevert(abi.encodeWithSelector(TIMOv2.EventIsCancelled.selector, id));
+        timo.withdraw(id);
+    }
+
+    // ── Invariant-style accounting ───────────────────────────────────────────
+
+    function test_EscrowAccounting_AcrossEvents() public {
+        uint256 a = _create(10, 100, 1 days);
+        uint256 b = _create(10, 250, 1 days);
+        _buy(a, buyer);
+        _buy(a, buyer2);
+        _buy(b, buyer);
+        uint256 sum = timo.eventOf(a).escrow + timo.eventOf(b).escrow;
+        assertEq(usd.balanceOf(address(timo)), sum);
+        vm.prank(owner);
+        timo.cancelEvent(b);
+        vm.prank(buyer);
+        timo.claimRefund(3);
+        sum = timo.eventOf(a).escrow + timo.eventOf(b).escrow;
+        assertEq(usd.balanceOf(address(timo)), sum);
+    }
+}
