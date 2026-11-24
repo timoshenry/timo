@@ -19,19 +19,34 @@ export function parseTUSD8(text: string): bigint {
 export const EVENT_STATUS_LABELS = ["Open", "Cancelled", "Completed"] as const;
 export type EventStatusLabel = (typeof EVENT_STATUS_LABELS)[number];
 
+/** Display metadata carried in the event's metadataURI document (JSON, URL, or data URI). */
+export interface EventMeta {
+  venue: string;
+  description: string;
+  link: string;
+}
+
 export interface TimoEvent {
   id: bigint;
-  organizer: Address;
+  /** BossOrganizer: event owner and sole payout recipient (not an operator). */
+  boss: Address;
   price: bigint;
   escrow: bigint;
   capacity: number;
   sold: number;
+  /** Service fee in basis points (100 = 1%), fixed at creation. */
+  feeBps: number;
   salesEnd: bigint;
+  checkInOpensAt: bigint;
   startsAt: bigint;
+  /** End of the voluntary refund window opened by a reschedule; 0 = none. */
+  refundWindowUntil: bigint;
   /** 0 = Open, 1 = Cancelled, 2 = Completed (mirrors the contract enum). */
   status: number;
   statusLabel: EventStatusLabel;
   withdrawn: boolean;
+  name: string;
+  imageUrl: string;
   metadataURI: string;
 }
 
@@ -45,22 +60,29 @@ export interface TimoTicket {
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-/** eventOf returns a struct; viem exposes it with both positional and named fields. Read defensively. */
+/** eventOf returns a struct; viem exposes it with both positional and named fields. Read defensively.
+ *  Struct order: boss, price, escrow, capacity, sold, feeBps, salesEnd, checkInOpensAt, startsAt,
+ *  refundWindowUntil, status, withdrawn, name, imageUrl, metadataURI. */
 function toTimoEvent(id: bigint, raw: any): TimoEvent {
-  const status = Number(raw.status ?? raw[7] ?? 0);
+  const status = Number(raw.status ?? raw[10] ?? 0);
   return {
     id,
-    organizer: (raw.organizer ?? raw[0]) as Address,
+    boss: (raw.boss ?? raw[0]) as Address,
     price: BigInt(raw.price ?? raw[1]),
     escrow: BigInt(raw.escrow ?? raw[2]),
     capacity: Number(raw.capacity ?? raw[3]),
     sold: Number(raw.sold ?? raw[4]),
-    salesEnd: BigInt(raw.salesEnd ?? raw[5]),
-    startsAt: BigInt(raw.startsAt ?? raw[6]),
+    feeBps: Number(raw.feeBps ?? raw[5]),
+    salesEnd: BigInt(raw.salesEnd ?? raw[6]),
+    checkInOpensAt: BigInt(raw.checkInOpensAt ?? raw[7]),
+    startsAt: BigInt(raw.startsAt ?? raw[8]),
+    refundWindowUntil: BigInt(raw.refundWindowUntil ?? raw[9] ?? 0),
     status,
     statusLabel: EVENT_STATUS_LABELS[status] ?? "Open",
-    withdrawn: Boolean(raw.withdrawn ?? raw[8]),
-    metadataURI: String(raw.metadataURI ?? raw[9] ?? ""),
+    withdrawn: Boolean(raw.withdrawn ?? raw[11]),
+    name: String(raw.name ?? raw[12] ?? ""),
+    imageUrl: String(raw.imageUrl ?? raw[13] ?? ""),
+    metadataURI: String(raw.metadataURI ?? raw[14] ?? ""),
   };
 }
 
@@ -76,6 +98,12 @@ export async function readTicket(client: PublicClient, timo: Address, tokenId: b
     checkedIn: Boolean(raw.checkedIn ?? raw[1]),
     refunded: Boolean(raw.refunded ?? raw[2]),
   };
+}
+
+/** 0 = no role, 1 = AdminOrganizer, 2 = GuardOrganizer for `account` at `eventId`. */
+export async function readRole(client: PublicClient, timo: Address, eventId: bigint, account: Address): Promise<number> {
+  const raw = await client.readContract({ address: timo, abi: timoAbi, functionName: "roleOf", args: [eventId, account] });
+  return Number(raw);
 }
 
 /**
@@ -106,18 +134,32 @@ export async function fetchEvents(client: PublicClient, timo: Address, deployBlo
 
 /**
  * Tickets the wallet currently owns. Found from TicketPurchased logs where it was the buyer,
- * then confirmed with ownerOf — a ticket that was resold or refunded (burned) drops out.
+ * plus ERC-721 Transfer logs where it received a ticket, then confirmed with ownerOf — a ticket
+ * that was transferred away or refunded (burned) drops out.
  */
 export async function fetchMyTickets(client: PublicClient, timo: Address, owner: Address, deployBlock?: bigint): Promise<TimoTicket[]> {
   const head = await client.getBlockNumber();
-  const logs = await getLogsChunked(client, {
+  const fromBlock = scanFromBlock(head, deployBlock);
+  const buyLogs = await getLogsChunked(client, {
     address: timo,
     event: getAbiItem({ abi: timoAbi, name: "TicketPurchased" }),
     args: { buyer: owner },
-    fromBlock: scanFromBlock(head, deployBlock),
+    fromBlock,
     toBlock: head,
   });
-  const tokenIds = [...new Set(logs.map((l) => (l.args as any).tokenId as bigint))];
+  const inLogs = await getLogsChunked(client, {
+    address: timo,
+    event: getAbiItem({ abi: timoAbi, name: "Transfer" }),
+    args: { to: owner },
+    fromBlock,
+    toBlock: head,
+  });
+  const tokenIds = [
+    ...new Set([
+      ...buyLogs.map((l) => (l.args as any).tokenId as bigint),
+      ...inLogs.map((l) => (l.args as any).tokenId as bigint),
+    ]),
+  ];
   const tickets: TimoTicket[] = [];
   for (const tokenId of tokenIds) {
     try {
@@ -132,28 +174,49 @@ export async function fetchMyTickets(client: PublicClient, timo: Address, owner:
   return tickets;
 }
 
-/**
- * Display title for an event. A plain-string metadataURI *is* the title (that is what the
- * Organizer form stores). An http(s)/ipfs URI is fetched and its JSON `name`/`title` used;
- * anything that fails falls back to "Event #<id>".
- */
-export async function resolveEventTitle(metadataURI: string, eventId: bigint): Promise<string> {
-  const fallback = `Event #${eventId.toString()}`;
-  const uri = metadataURI.trim();
-  if (!uri) return fallback;
-  if (/^(https?:\/\/|ipfs:\/\/)/i.test(uri)) {
-    try {
+/** Parse the event's metadataURI into venue/description/link. Accepts raw JSON, a data URI, or an http(s)/ipfs URL. */
+export async function resolveEventMeta(ev: TimoEvent): Promise<EventMeta> {
+  const empty: EventMeta = { venue: "", description: "", link: "" };
+  const uri = ev.metadataURI.trim();
+  if (!uri) return empty;
+  const pick = (d: any): EventMeta => ({
+    venue: typeof d?.venue === "string" ? d.venue : "",
+    description: typeof d?.description === "string" ? d.description : "",
+    link: typeof d?.link === "string" ? d.link : "",
+  });
+  try {
+    if (uri.startsWith("{")) return pick(JSON.parse(uri));
+    if (uri.startsWith("data:application/json;base64,")) {
+      return pick(JSON.parse(atob(uri.slice("data:application/json;base64,".length))));
+    }
+    if (/^(https?:\/\/|ipfs:\/\/)/i.test(uri)) {
       const url = uri.startsWith("ipfs://") ? `https://ipfs.io/ipfs/${uri.slice("ipfs://".length)}` : uri;
       const res = await fetch(url, { signal: AbortSignal.timeout(5_000) });
-      if (!res.ok) return fallback;
-      const data = (await res.json()) as { name?: unknown; title?: unknown };
-      const name = typeof data.name === "string" ? data.name : typeof data.title === "string" ? data.title : "";
-      return name.trim() || fallback;
-    } catch {
-      return fallback;
+      if (res.ok) return pick(await res.json());
     }
+  } catch {
+    // Fall through to empty metadata.
   }
-  return uri;
+  return empty;
+}
+
+/** Decode the on-chain base64 tokenURI into its NFT metadata. */
+export async function readTicketNft(client: PublicClient, timo: Address, tokenId: bigint): Promise<{ name: string; image: string; status: string } | null> {
+  try {
+    const uri = (await client.readContract({ address: timo, abi: timoAbi, functionName: "tokenURI", args: [tokenId] })) as string;
+    const json = JSON.parse(atob(uri.split(",")[1])) as any;
+    const statusAttr = (json.attributes as any[] | undefined)?.find((a) => a.trait_type === "Status");
+    return { name: String(json.name ?? ""), image: String(json.image ?? ""), status: String(statusAttr?.value ?? "") };
+  } catch {
+    return null;
+  }
+}
+
+/** Whether tickets on this event can currently be refunded (cancelled, or inside the reschedule window). */
+export function isRefundable(ev: TimoEvent, nowSeconds: number): boolean {
+  if (ev.withdrawn) return false;
+  if (ev.status === 1) return true;
+  return ev.refundWindowUntil > 0n && BigInt(Math.floor(nowSeconds)) <= ev.refundWindowUntil;
 }
 
 export function formatDateTime(unixSeconds: bigint): string {
@@ -162,12 +225,17 @@ export function formatDateTime(unixSeconds: bigint): string {
 
 /* ---------- Check-in payloads (dynamic QR) ---------- */
 
-/** How long a signed check-in payload stays valid, in seconds. */
-export const CHECK_IN_TTL_SECONDS = 90;
+/** How long a signed check-in payload stays valid, in seconds (the contract enforces <= 60). */
+export const CHECK_IN_TTL_SECONDS = 60;
 
-/** The canonical message the ticket owner's wallet signs with personal_sign. */
+/** The canonical message the ticket owner's wallet signs with personal_sign. Must match TIMOv2.checkInMessage. */
 export function checkInMessage(tokenId: bigint, expiry: number): string {
   return `TIMO check-in\nToken: ${tokenId.toString()}\nExpires: ${expiry}`;
+}
+
+/** The canonical message a staff wallet signs to authorize a relayed check-in. Must match TIMOv2.staffCheckInMessage. */
+export function staffCheckInMessage(tokenId: bigint, expiry: number): string {
+  return `TIMO staff check-in\nToken: ${tokenId.toString()}\nExpires: ${expiry}`;
 }
 
 export interface CheckInPayload {
