@@ -1,1 +1,177 @@
-IyBUSU1PIOKAlCBUaWNrZXQgJiBJbnZvaWNlIE1hbmFnZW1lbnQgT25jaGFpbgoKKipFdmVudCB0aWNrZXRzIHBhaWQgaW4gdFVTRDggb24gdGhlIEFldnVtIHRlc3RuZXQsIHNvbGQgYnkgYW4gb2ZmaWNpYWwgdGlja2V0IGFnZW50IHdpdGggZXNjcm93LXByb3RlY3RlZCByZWZ1bmRzLioqCgpCdWlsdCBmb3IgdGhlIFtBZXZ1bSBCdWlsZGVyIENoYWxsZW5nZSAjMV0oaHR0cHM6Ly9kb3JhaGFja3MuaW8vaGFja2F0aG9uL3FkYXkpIChRRGF5KS4KCioqTGl2ZSBkZW1vOioqIGh0dHBzOi8vdGltby1ibHVzaC52ZXJjZWwuYXBwIOKAlCBjb25uZWN0IGEgd2FsbGV0IG9uIHRoZSBBZXZ1bSB0ZXN0bmV0IHRvIGV4cGxvcmUgZXZlbnRzIGFuZCBidXkgYSB0aWNrZXQgZ2FzLWZyZWUuCgojIyBUaGUgcHJvYmxlbQoKQnV5aW5nIGFuIGV2ZW50IHRpY2tldCB3aXRoIGNyeXB0byB0b2RheSB1c3VhbGx5IG1lYW5zIHNlbmRpbmcgbW9uZXkgc3RyYWlnaHQgdG8gdGhlCm9yZ2FuaXplcidzIHdhbGxldC4gSWYgdGhlIGV2ZW50IGlzIGNhbmNlbGxlZCwgcmVmdW5kcyBkZXBlbmQgb24gdGhlIG9yZ2FuaXplcidzIGdvb2R3aWxsIOKAlApidXllcnMgY2hhc2UgY2hhdHMgYW5kIHNwcmVhZHNoZWV0cywgYW5kIHRoZXJlIGlzIG5vIHZlcmlmaWFibGUgcmVjb3JkIG9mIHdobyBwYWlkIHdoYXQuClBhcGVyL1FSIHRpY2tldHMgYXJlIGp1c3QgYXMgZnJhZ2lsZTogYSBzdGF0aWMgYmFyY29kZSBjYW4gYmUgc2NyZWVuc2hvdHRlZCBhbmQgcmV1c2VkLgpBbmQgYW55b25lIGJlaW5nIGFibGUgdG8gcHVibGlzaCBldmVudHMgb24gYSBwbGF0Zm9ybSBpbnZpdGVzIGZyYXVkLgoKIyMgVGhlIHNvbHV0aW9uIOKAlCBUSU1PIHYyLCBhbiBvZmZpY2lhbCB0aWNrZXQgYWdlbnQKClRJTU8gaXMgbm90IGFuIG9wZW4gbWFya2V0cGxhY2UuIFRJTU8gaXMgdGhlICoqb2ZmaWNpYWwgdGlja2V0IGFnZW50Kio6IG9yZ2FuaXplcnMgYXJlCnZldHRlZCAqKm9mZmxpbmUqKiBieSB0aGUgVElNTyB0ZWFtICh2ZW51ZSwgZGF0ZSwgcHJpY2UsIGNhcGFjaXR5LCBkZWFsKSwgYW5kIG9ubHkgVElNTwpwdWJsaXNoZXMgdGhlaXIgZXZlbnRzIG9uLWNoYWluLiBBIHNpbmdsZSBzbWFydCBjb250cmFjdCBob2xkcyBhbGwgc2FsZXMgbW9uZXkgaW4KKipwZXItZXZlbnQgZXNjcm93KiogYW5kIGVuZm9yY2VzIHRoZSBydWxlcyBmb3IgZXZlcnlvbmU6CgoxLiAqKkV2ZW50IGNyZWF0aW9uIChwbGF0Zm9ybSBvbmx5KS4qKiBgY3JlYXRlRXZlbnRgIGlzIGBvbmx5T3duZXJgLiBFYWNoIGV2ZW50IHJlY29yZHMsCiAgIGltbXV0YWJseTogcHJpY2UgYW5kIGNhcGFjaXR5ICh0aGUgZGVhbCdzIGFsbG9jYXRpb24g4oCUIHRoZXkgY2FuIG5ldmVyIGJlIGNoYW5nZWQpLAogICBhIHNlcnZpY2UgZmVlIChkZWZhdWx0IDElKSwgb25lICoqQm9zc09yZ2FuaXplcioqIHdhbGxldCAoZXZlbnQgb3duZXIgYW5kIHNvbGUgcGF5b3V0CiAgIHJlY2lwaWVudCDigJQgbm90IGFuIG9wZXJhdG9yKSwgKiox4oCTMyBBZG1pbk9yZ2FuaXplcioqIHdhbGxldHMgKHNhbGVzL3RyYW5zYWN0aW9uLwogICBjaGVjay1pbiBsaXN0cyArIHNjYW5uaW5nKSBhbmQgKio14oCTMjUgR3VhcmRPcmdhbml6ZXIqKiB3YWxsZXRzIChzY2FubmluZyBvbmx5KS4KICAgUm9sZXMgYXJlIHBlciBldmVudCBhbmQgY2FuIG5ldmVyIGJlIHJlcGxhY2VkLgoyLiAqKkJ1eWluZyBpcyByZWxheWVkLioqIFRoZSBidXllciBzaWducyBvbmUgRUlQLTMwMDkgYXV0aG9yaXphdGlvbjsgdGhlIFRJTU8gcmVsYXllcgogICBzdWJtaXRzIGBidXlUaWNrZXRHYXNsZXNzYCBhbmQgcGF5cyB0aGUgZ2FzIOKAlCBidXllcnMgbmVlZCBubyB0UURBWSBhdCBhbGwuIFRoZSBzaWduZWQKICAgbm9uY2UgYmluZHMgZXZlbnQgKyBidXllciArIHB1cmNoYXNlIGNvdW50LCBzbyBhIHJlbGF5ZXIgY2Fubm90IHJlcGxheSBpdCwgY2hhbmdlIHRoZQogICBhbW91bnQgKGFsd2F5cyB0aGUgZXZlbnQncyBpbW11dGFibGUgcHJpY2UpIG9yIHJlZGlyZWN0IGl0LiBBIHN0YW5kYXJkIGFwcHJvdmUgKyBidXkKICAgZmxvdyByZW1haW5zIGFzIGZhbGxiYWNrLiBFdmVyeSBwdXJjaGFzZSBtaW50cyBhbiAqKkVSQy03MjEgdGlja2V0Kiogd2hvc2UgbWV0YWRhdGEgaXMKICAgZ2VuZXJhdGVkICoqb24tY2hhaW4qKiAoYmFzZTY0IGB0b2tlblVSSWA6IGV2ZW50IG5hbWUsIGltYWdlLCBkYXRlLCBsaXZlIHN0YXR1cykgYW5kCiAgIGVtaXRzIGBUaWNrZXRQdXJjaGFzZWRgLCB0aGUgb25jaGFpbiBpbnZvaWNlL3JlY2VpcHQuCjMuICoqQ2hlY2staW4gaXMgcmVsYXllZCBhbmQgdmVyaWZpZWQgb24tY2hhaW4uKiogVGhlIGF0dGVuZGVlIHNob3dzIGEgKipkeW5hbWljIFFSKioKICAgKG93bmVyLXNpZ25lZCBwYXlsb2FkLCA2MC1zZWNvbmQgZXhwaXJ5KS4gU3RhZmYgc2NhbiBpdCBhbmQgc2lnbiB0aGUgY2hlY2staW47IHRoZQogICByZWxheWVyIHN1Ym1pdHMgYGNoZWNrSW5SZWxheWVkYC4gVGhlIGNvbnRyYWN0IHZlcmlmaWVzICoqYm90aCoqIHNpZ25hdHVyZXMg4oCUIHRoZQogICBvd25lcidzIGFnYWluc3QgYG93bmVyT2ZgLCBhbmQgdGhlIHN0YWZmIG1lbWJlcidzIHJvbGUgZm9yIHRoYXQgZXZlbnQg4oCUIHNvIG5vIG9uZSBjYW4KICAgbG9jayBhIHRpY2tldCB3aXRob3V0IHRoZSBhdHRlbmRlZSBwcmVzZW50LCBhbmQgc3RhZmYgb2Ygb25lIGV2ZW50IGFyZSBwb3dlcmxlc3MgYXQKICAgYW5vdGhlci4gQ2hlY2tlZC1pbiB0aWNrZXRzIGFyZSBsb2NrZWQgYWdhaW5zdCB0cmFuc2Zlci4KNC4gKipSZWZ1bmRzIGFsd2F5cyB3b3JrLioqIElmIFRJTU8gY2FuY2VscyBhbiBldmVudCAodGhlIG9yZ2FuaXplcidzIG9mZi1jaGFpbiBkZWNpc2lvbiksCiAgIGV2ZXJ5ICpjdXJyZW50KiB0aWNrZXQgb3duZXIgY2xhaW1zIGEgZnVsbCByZWZ1bmQg4oCUIHB1bGwtYmFzZWQsIG9uZSBjbGFpbSBidXJucyB0aGUKICAgdGlja2V0LiBJZiBhbiBldmVudCBpcyAqKnJlc2NoZWR1bGVkKiogKHNjaGVkdWxlIGVkaXRzIGtlZXAgdGhlIHNhbWUgZXZlbnQgYW5kIHRoZSBzYW1lCiAgIHRpY2tldHM7IHRoZSBORlQgZGF0ZSB1cGRhdGVzIGF1dG9tYXRpY2FsbHkpLCBhICoqNy1kYXkgdm9sdW50YXJ5IHJlZnVuZCB3aW5kb3cqKiBvcGVucwogICBmb3IgYnV5ZXJzIHdobyBjYW5ub3QgYXR0ZW5kIHRoZSBuZXcgZGF0ZS4KNS4gKipTZXR0bGVtZW50LioqIEFmdGVyIGEgc3VjY2Vzc2Z1bCBldmVudCAoc3RhcnQgKyAyNGgpLCB0aGUgcGxhdGZvcm0gd2l0aGRyYXdzIHRoZQogICBlc2Nyb3cgaW4gb25lIHRyYW5zYWN0aW9uLCBzcGxpdCBieSB0aGUgZXZlbnQncyBmZWU6ICoqOTklIHRvIHRoZSBCb3NzT3JnYW5pemVyCiAgIHdhbGxldCwgMSUgdG8gdGhlIFRJTU8gZnVuZHdhbGxldCoqIChkZWZhdWx0cykuIFRoZSBmZWUgaXMgdGFrZW4gYXQgd2l0aGRyYXcgdGltZSBvbmx5LAogICBzbyByZWZ1bmRzIGFyZSBhbHdheXMgcGF5YWJsZSBpbiBmdWxsLgoKVGlja2V0cyBhcmUgRVJDLTcyMSBhbmQgdHJhbnNmZXJhYmxlIG91dHNpZGUgdGhlIGFwcCAoVElNTyBzaG93cyBubyB0cmFuc2ZlciBidXR0b24g4oCUCm9mZi1wbGF0Zm9ybSB0cmFuc2ZlcnMgYXJlIHRoZSBvd25lcidzIG93biBidXNpbmVzcyk7IE15IFRpY2tldHMgYWx3YXlzIHJlZmxlY3RzIGxpdmUKb3duZXJzaGlwLCBhbmQgcmVmdW5kcyBmb2xsb3cgdGhlIGN1cnJlbnQgb3duZXIuCgojIyBMaXZlIG9uIEFldnVtIHRlc3RuZXQKCnwgSXRlbSB8IFZhbHVlIHwKfC0tLXwtLS18CnwgTmV0d29yayB8IFFEYXkgQWV2dW0gVGVzdG5ldCwgY2hhaW4gSUQgYDQ0MDA1YCB8CnwgUlBDIHwgYGh0dHBzOi8vcnBjLXRlc3QucWRheS5pbmZvYCB8CnwgRXhwbG9yZXIgfCBodHRwczovL2V4cGxvcmVyLXRlc3QucWRheS5pbmZvIHwKfCB0VVNEOCB8IGAweDQ1NjU2OTgzOGYxZDQzMDA5QTkxZWJBNDI2MzE0N0FmZDcyMzM0ODNgICg2IGRlY2ltYWxzKSB8CnwgKipUSU1PIHYyIGNvbnRyYWN0KiogfCAqKmAweDhGRTliMWI1Zjc3NjlkYWY5OTczN2U0OTI0QTA0ZTg5ZDEzMjYwYTFgKiogfAp8IHYyIGRlcGxveSB0eCB8IGAweDMxNTcyNGMyMTkwMGFjMGE0Y2UzZDZlMTBmYjJlNzlhMGQ2NzU2ZTM3YzU3MmRiZmQ0YjZiMzA4N2YwZGE2ODdgIChibG9jayA0MDE0MjUyKSB8CnwgRmVlIHJlY2lwaWVudCAoZnVuZHdhbGxldCkgfCBgMHg3NTgwZDFDMjM0ZDcwQTg1ODNENDNjNWU0NTRCNDJlYzc4MDMyRDUwYCB8CnwgUmVsYXllciB8IGAweENEY2U2ODQ0YkExOWU0YTg1QWQ2NTNhMGVBRjcyODQ4NUU2N0U5ODFgIHwKfCBUSU1PIHYxIGNvbnRyYWN0IChzdXBlcnNlZGVkKSB8IGAweEY2NkI4MmUxRDhhYTVDODg4QTk4NkEwODIzOGQ5MGQ5RDYyRjMwQjZgIHwKCj4gQ29udHJhY3QgdmVyaWZpY2F0aW9uIG9uIHRoZSBBZXZ1bSBleHBsb3JlciBpcyBub3QgYXZhaWxhYmxlIHlldCAoc2VlIHRoZSBzdGFydGVyLWtpdAo+IGRvY3MpLCBzbyB0aGUgZGVwbG95ZWQgc291cmNlIGlzIGV4YWN0bHkgYGNvbnRyYWN0cy9zcmMvVElNT3YyLnNvbGAgaW4gdGhpcyByZXBvc2l0b3J5LgoKIyMjIFByb29mIHRyYW5zYWN0aW9ucyDigJQgdjIgbGl2ZSBmbG93IChhbGwgcmVsYXllZCB3aGVyZSB0aGUgbW9kZWwgc2F5cyBzbykKCnwgU3RlcCB8IFR4IGhhc2ggfAp8LS0tfC0tLXwKfCBDcmVhdGUgZXZlbnQgMSDigJxUSU1PIHYyIExhdW5jaCBOaWdodOKAnSAocm9sZXMgbG9ja2VkIGluKSB8IGAweDMwNjg2MTg4MzZlMGRhMzNhYjM0MTkxMWY4OWJiMWU2YmU5NmNmOGM1N2YwODhlMGQwMDZlYmQ1YTA5OTEyNDJgIHwKfCBDcmVhdGUgZXZlbnRzIDIgKHJlc2NoZWR1bGUgcHJvb2YpIC8gMyAoY2FuY2VsIHByb29mKSB8IGAweDZjNzVlNGZkYTZmYTJmMjk0MTQ5ZDNmNGIxYTIxNjc0Y2M0ZmU3MDMyNmI4ODhlZWU2ODExOGY2Zjc4ZWM4ZWVgIC8gYDB4ZjQzMDRhMTRhNGYwYWY3ZTg1Nzg1MDFlYjUwM2UwYTNlMmRkMjQxYzNmOWY0ZDU1ZjQ2YzUwMzEzNWIwNDIwN2AgfAp8IEJ1eSB0aWNrZXQgMSDigJQgKipyZWxheWVkKiogKGJ1eWVyIG9ubHkgc2lnbmVkKSB8IGAweGUzYmZiOWRhMjFjZTJlOTdiMDJiYThhZDEyZDBhYmVmMDc1YWE2ODc0MTdlY2JmYWFhMDJlN2Q3NjVhMjQzZjFgIHwKfCBDaGVjayBpbiB0aWNrZXQgMSDigJQgKipyZWxheWVkLCBkdWFsIHNpZ25hdHVyZSB2ZXJpZmllZCBvbi1jaGFpbioqIHwgYDB4MjUwYjU2OGJlZjIyZGUyNTI0Mzk4YmFlZWVlZTIzMGU0YTI0YjdmZjRlNWM1ZjBkZTZkYTRiN2ZiZDgxMGJmOGAgfAp8IFJlc2NoZWR1bGUgZXZlbnQgMiAoc2FtZSB0aWNrZXRzIHN0YXkgdmFsaWQpIHwgYDB4MzQyY2IwNGNhNTA5MDE3YzhjOTdhY2RlYjJmNzZhYWFlM2MwODA4ZmQyOGZjNmYzYmJlNmYwMjc2NmM5MTliOWAgfAp8IFZvbHVudGFyeSByZWZ1bmQgaW5zaWRlIHRoZSA3LWRheSB3aW5kb3cgfCBgMHg4MTEyZjQ0MzZlN2NjZWJjM2FlMmQ3ZWEyMGUwOGM5NGUxYmQ4MjJiODMxZDFkOTI4M2QzNzY1ZDM3NGUyNDE2YCB8CnwgQ2FuY2VsIGV2ZW50IDMg4oaSIGNsYWltIGZ1bGwgcmVmdW5kIHwgYDB4NjFjZjQzNDhhNjBiOTZjNmMyYzM5NzI4OWYyNmU5ZGMzZWNlMzIzNjcwYWFkNmM2Yjc1MTlkZDFmM2YxYmQ4M2AgLyBgMHhlZDA2ZWVjYTNiZDIzYmJlMzMwOWU0YjcxZTU0MDFhNmNjMzdhMDVmYzVhMjgxYjRkMzcxMzZhMzg2OGI2MmNlYCB8CgpXaXRoZHJhdyBzcGxpdHRpbmcgKDk5JSBib3NzIC8gMSUgZmVlKSBpcyBjb3ZlcmVkIGJ5IHRoZSBGb3VuZHJ5IHN1aXRlIHdpdGggdGltZSB0cmF2ZWwKKGB0ZXN0X1dpdGhkcmF3X1NwbGl0c0ZlZVRvRnVuZHdhbGxldGApIOKAlCBvbiB0aGUgbGl2ZSB0ZXN0bmV0IGl0IHVubG9ja3MgMjRoIGFmdGVyIGFuCmV2ZW50IHN0YXJ0cy4KCiMjIEFyY2hpdGVjdHVyZQoKYGBgCkJ1eWVyIOKUgOKUgEVJUC0zMDA5IHNpZ25hdHVyZeKUgOKUgOKWuiBUSU1PIFJlbGF5ZXIg4pSA4pSA4pa6IGJ1eVRpY2tldEdhc2xlc3Mg4pSA4pSA4pa6IEVSQy03MjEgdGlja2V0IChvbi1jaGFpbiBtZXRhZGF0YSkKQnV5ZXIg4pSA4pSAYXBwcm92ZSArIGJ1eVRpY2tldCAoZmFsbGJhY2sp4pSA4pSA4pSA4pSA4pSA4pa6IFRJTU8gKGVzY3JvdyBwZXIgZXZlbnQpCkF0dGVuZGVlIFFSIOKUgOKUgOKWuiBTdGFmZiBzaWducyDilIDilIDilrogVElNTyBSZWxheWVyIOKUgOKUgOKWuiBjaGVja0luUmVsYXllZCAoZHVhbC1zaWduYXR1cmUsIG9uLWNoYWluIHZlcmlmaWVkKQpQbGF0Zm9ybSDilIDilIBjcmVhdGVFdmVudCAvIHJlc2NoZWR1bGUgLyBjYW5jZWwgKG93bmVyIG9ubHksIHBlciBvcmdhbml6ZXIncyBvZmYtY2hhaW4gZGVjaXNpb24pClBsYXRmb3JtIOKUgOKUgHdpdGhkcmF3IGF0IHN0YXJ0ICsgMjRoIOKUgOKUgOKWuiA5OSUgQm9zc09yZ2FuaXplciDCtyAxJSBmdW5kd2FsbGV0CmBgYAoKLSBgY29udHJhY3RzL3NyYy9USU1PdjIuc29sYCDigJQgdGhlIHByb2R1Y3Q6IHBlci1ldmVudCBlc2Nyb3csIGltbXV0YWJsZSBwcmljZS9jYXBhY2l0eS8KICByb2xlcy9mZWUsIHJlbGF5ZWQgcHVyY2hhc2VzIGFuZCBjaGVjay1pbnMsIG9uLWNoYWluIE5GVCBtZXRhZGF0YSwgcmVzY2hlZHVsZSByZWZ1bmQKICB3aW5kb3csIHNwbGl0IHNldHRsZW1lbnQuIChgVElNTy5zb2xgIGlzIHRoZSBzdXBlcnNlZGVkIHYxLikKLSBgY29udHJhY3RzL3Rlc3QvVElNT3YyLnQuc29sYCDigJQgMTcgdGVzdHM6IHJvbGUgYm91bmRzLCByZXBsYXkgcHJvdGVjdGlvbiwgcm9ndWUtZ3VhcmQKICBhbmQgZm9yZ2VkLXNpZ25hdHVyZSByZWplY3Rpb24sIHJlZnVuZCB3aW5kb3dzLCBmZWUtc3BsaXQgbWF0aCwgY3Jvc3MtZXZlbnQgZXNjcm93CiAgYWNjb3VudGluZy4gRnVsbCBzdWl0ZTogNDggdW5pdCB0ZXN0cyArIDMgQWV2dW0gZm9yayB0ZXN0cywgYWxsIHBhc3NpbmcuCi0gYGNvbnRyYWN0cy9zY3JpcHQvRGVwbG95VElNT3YyLnMuc29sYCwgYGNvbnRyYWN0cy9zY3JpcHQvUHJvb2ZWMi5zLnNvbGAg4oCUIGRlcGxveW1lbnQKICBhbmQgdGhlIGxpdmUgcHJvb2YgZmxvdyBhYm92ZS4KLSBgd2ViL2Ag4oCUIE5leHQuanMgYXBwIG9uIHRoZSBvZmZpY2lhbCBBZXZ1bSBzdGFydGVyIGtpdDogRXhwbG9yZSAoZmlsdGVycywgdGlja2V0LXN0dWIKICBjYXJkcyksIEV2ZW50IERldGFpbCAocmVsYXllZCBwdXJjaGFzZSksIE15IFRpY2tldHMgKGV2ZW50IOKGkiB0aWNrZXRzIOKGkiBORlQsIGR5bmFtaWMKICBRUiksIEFjdGl2aXR5LCBhbmQgYSByb2xlLXNlcGFyYXRlZCAqKk9yZ2FuaXplciBTdHVkaW8qKiB3aXRoIGEgY2FtZXJhIFFSIHNjYW5uZXIuCiAgYHdlYi9zcmMvYXBwL2FwaS9yZWxheS10aW1vL3JvdXRlLnRzYCBpcyB0aGUgcmVsYXllciBlbmRwb2ludCAod2hpdGVsaXN0ZWQgZnVuY3Rpb25zLAogIHNpbXVsYXRpb24gZmlyc3QsIHJhdGUgbGltaXRzLCBkYWlseSBjYXApLgoKIyMjIFNhZmV0eSBwcm9wZXJ0aWVzCgotICoqRXNjcm93IGhhcyBleGFjdGx5IHR3byBleGl0cyoqIOKAlCBgY2xhaW1SZWZ1bmRgICh0byB0aGUgY3VycmVudCB0aWNrZXQgb3duZXIsIGV4YWN0CiAgcHJpY2UsIG9uY2UpIGFuZCBgd2l0aGRyYXdgIChvbmNlLCBmaXhlZCBzcGxpdCkuIFRoZXJlIGlzIGRlbGliZXJhdGVseSAqKm5vIGFkbWluCiAgc3dlZXAgb3IgZW1lcmdlbmN5IGRyYWluKiosIG5vdCBldmVuIGZvciB0aGUgcGxhdGZvcm0gb3duZXIuCi0gUmVsYXllciBoYXJkZW5pbmc6IHNpZ25lZCBwYXlsb2FkcyBvbmx5IChhbW91bnQvcmVjaXBpZW50L25vbmNlIGJvdW5kIGJ5IEVJUC0zMDA5KSwKICBmdW5jdGlvbiB3aGl0ZWxpc3QsIG9uLWNoYWluLXN0YXRlIHJldmFsaWRhdGlvbiwgcGVyLUlQL3NpZ25lciByYXRlIGxpbWl0cywgaW4tZmxpZ2h0CiAgZ3VhcmQsIGRhaWx5IGNhcCwgc21hbGwgZ2FzIGZsb2F0LgotIENoZWNrcy1lZmZlY3RzLWludGVyYWN0aW9ucyArIGBSZWVudHJhbmN5R3VhcmRgICsgYFNhZmVFUkMyMGAgb24gYWxsIGZ1bmQgcGF0aHMuCi0gKipObyB1bmJvdW5kZWQgbG9vcHMgYW55d2hlcmUqKiAocHVsbCByZWZ1bmRzOyByb2xlIGFycmF5cyBjYXBwZWQgYXQgMyBhZG1pbnMgLyAyNQogIGd1YXJkcyksIHNvIGdhcyBzdGF5cyBib3VuZGVkIGFuZCBwcmVkaWN0YWJsZSDigJQgbm8gZ2FzIGV4cGxvc2lvbnMuCi0gQWNjb3VudGluZyBpbnZhcmlhbnQgKHRlc3RlZCk6IGNvbnRyYWN0IHRVU0Q4IGJhbGFuY2UgPT0gc3VtIG9mIGFsbCBldmVudHMnCiAgdW4td2l0aGRyYXduLCB1bi1yZWZ1bmRlZCBlc2Nyb3cuCi0gU2hhbmdoYWkgRVZNIG9ubHkg4oCUIGJ5dGVjb2RlIGlzIGNoZWNrZWQgd2l0aCB0aGUgc3RhcnRlciBraXQncyBTaGFuZ2hhaSBjaGVja2VyLgoKIyMgRGVwbG95bWVudCBnb3Zlcm5hbmNlCgotICoqVGllciAxIOKAlCBQbGF0Zm9ybSAocmFyZSwgcGVyIHZlcnNpb24pOioqIGRlcGxveSB0aGUgY29udHJhY3QsIGNvbmZpZ3VyZSB0aGUgZmVlCiAgcmVjaXBpZW50IGFuZCByZWxheWVyLCBwb2ludCB0aGUgd2ViIGFwcCBhdCB0aGUgbmV3IGFkZHJlc3MsIHJlcGVhdCBwcm9vZgogIHRyYW5zYWN0aW9ucywgdXBkYXRlIHRoaXMgUkVBRE1FIGFuZCB0aGUgRG9yYUhhY2tzIEJ1aWxkIHBhZ2UuCi0gKipUaWVyIDIg4oCUIEV2ZW50IChyb3V0aW5lLCBwZXIgZGVhbCk6Kiogb25lIGBjcmVhdGVFdmVudGAgdHJhbnNhY3Rpb24gb24gdGhlIGxpdmUKICBjb250cmFjdCBjYXJyeWluZyB0aGUgdmV0dGVkIG9yZ2FuaXplcidzIGRhdGEgcGFja2FnZSBhbmQgcm9sZSB3YWxsZXRzLiBFdmVyeSBuZXcKICBvcmdhbml6ZXIgaXMgVGllciAyIG9ubHk7IFRpZXIgMSBuZXZlciBjaGFuZ2VzIGZvciB0aGVtLgoKIyMgUnVuIGl0IGxvY2FsbHkKClJlcXVpcmVtZW50czogTm9kZSAyMissIHBucG0sIEZvdW5kcnkuCgpgYGBiYXNoCmdpdCBjbG9uZSBodHRwczovL2dpdGh1Yi5jb20vdGltb3NoZW5yeS90aW1vLmdpdCAmJiBjZCB0aW1vCgojIENvbnRyYWN0IGRlcGVuZGVuY2llcyAobm90IHZlbmRvcmVkKTogT3BlblplcHBlbGluICsgZm9yZ2Utc3RkCmdpdCBjbG9uZSAtLWRlcHRoIDEgLS1icmFuY2ggdjUuMS4wIGh0dHBzOi8vZ2l0aHViLmNvbS9PcGVuWmVwcGVsaW4vb3BlbnplcHBlbGluLWNvbnRyYWN0cyBjb250cmFjdHMvbGliL29wZW56ZXBwZWxpbi1jb250cmFjdHMKZ2l0IGNsb25lIC0tZGVwdGggMSBodHRwczovL2dpdGh1Yi5jb20vZm91bmRyeS1ycy9mb3JnZS1zdGQgY29udHJhY3RzL2xpYi9mb3JnZS1zdGQKCnBucG0gaW5zdGFsbApjZCBjb250cmFjdHMgJiYgZm9yZ2UgdGVzdCAgICAjIDQ4IHVuaXQgdGVzdHMgKGluY2wuIDE3IFRJTU92Mikg4oCUIGZvcmsgdGVzdHM6IGZvcmdlIHRlc3QgLS1mb3JrLXVybCBodHRwczovL3JwYy10ZXN0LnFkYXkuaW5mbwpjZCAuLgoKY3Agd2ViLy5lbnYuZXhhbXBsZSB3ZWIvLmVudi5sb2NhbCAgICMgc2V0IE5FWFRfUFVCTElDX1RJTU9fQUVWVU0sIE5FWFRfUFVCTElDX0RFUExPWV9CTE9DS19BRVZVTSwgUkVMQVlFUl9QUklWQVRFX0tFWQpwbnBtIC0tZmlsdGVyIHdlYiBkZXYKYGBgCgojIyMgRW52aXJvbm1lbnQgdmFyaWFibGVzICh3ZWIpCgp8IFZhcmlhYmxlIHwgTWVhbmluZyB8CnwtLS18LS0tfAp8IGBORVhUX1BVQkxJQ19ORVRXT1JLU2AgfCBgYWV2dW1gLCBgZm9ya2AsIGBsb2NhbGAgKGNvbW1hLXNlcGFyYXRlZCkgfAp8IGBORVhUX1BVQkxJQ19USU1PX0FFVlVNYCAvIGBfRk9SS2AgLyBgX0xPQ0FMYCB8IFRJTU8gY29udHJhY3QgYWRkcmVzcyBwZXIgbmV0d29yayB8CnwgYE5FWFRfUFVCTElDX0RFUExPWV9CTE9DS19BRVZVTWAgfCBGaXJzdCBibG9jayB0byBzY2FuIGZvciBUSU1PIGV2ZW50cyB8CnwgYE5FWFRfUFVCTElDX0NIRUNLT1VUXypgIHwgU3RhcnRlci1raXQgQ2hlY2tvdXQgYWRkcmVzc2VzIChraXQgcGFnZXMpIHwKfCBgUkVMQVlFUl9QUklWQVRFX0tFWWAgfCBUSU1PIHJlbGF5ZXIgd2FsbGV0IGtleSAoc2VydmVyLW9ubHk7IHNtYWxsIHRRREFZIGZsb2F0KS4gUG93ZXJzIGdhcy1mcmVlIGJ1eXMgYW5kIGNoZWNrLWlucyB2aWEgYC9hcGkvcmVsYXktdGltb2AgfAoKIyMgUm9hZG1hcAoKLSBUaWVyZWQgdGlja2V0cyAoVklQL3JlZ3VsYXIpIGFuZCBzZWF0IG1hcHMuCi0geDQwMiBhZ2VudCBwdXJjaGFzZXMgd2l0aCBzZXR0bGVtZW50IG9uIEFldnVtLgotIFJlc2FsZSBwcmljZSBjYXBzIC8gb3JnYW5pemVyIHJveWFsdGllcyBhcyBhIHBlci1ldmVudCBvcHRpb24uCi0gUHVzaCBub3RpZmljYXRpb25zIGZvciBjYW5jZWxsYXRpb24gYW5kIHJlc2NoZWR1bGVzLCBwb3dlcmVkIGJ5IGNvbnRyYWN0IGV2ZW50cy4KCiMjIExpY2Vuc2UgJiBjcmVkaXRzCgpNSVQuIEJ1aWx0IG9uIHRoZSBNSVQtbGljZW5zZWQgW0FldnVtIHN0YXJ0ZXIga2l0XShodHRwczovL2dpdGh1Yi5jb20vcWRheS1pby9hZXZ1bS1zdGFydGVyLWtpdCkKYnkgUURheTsgT3BlblplcHBlbGluIENvbnRyYWN0cyAoTUlUKSBmb3IgRVJDLTcyMSBhbmQgc2VjdXJpdHkgcHJpbWl0aXZlcy4K
+# TIMO — Ticket & Invoice Management Onchain
+
+**Event tickets paid in tUSD8 on the Aevum testnet, sold by an official ticket agent with escrow-protected refunds.**
+
+Built for the [Aevum Builder Challenge #1](https://dorahacks.io/hackathon/qday) (QDay).
+
+**Live demo:** https://timo-blush.vercel.app — connect a wallet on the Aevum testnet to explore events and buy a ticket gas-free.
+
+## The problem
+
+Buying an event ticket with crypto today usually means sending money straight to the
+organizer's wallet. If the event is cancelled, refunds depend on the organizer's goodwill —
+buyers chase chats and spreadsheets, and there is no verifiable record of who paid what.
+Paper/QR tickets are just as fragile: a static barcode can be screenshotted and reused.
+And anyone being able to publish events on a platform invites fraud.
+
+## The solution — TIMO v2, an official ticket agent
+
+TIMO is not an open marketplace. TIMO is the **official ticket agent**: organizers are
+vetted **offline** by the TIMO team (venue, date, price, capacity, deal), and only TIMO
+publishes their events on-chain. A single smart contract holds all sales money in
+**per-event escrow** and enforces the rules for everyone:
+
+1. **Event creation (platform only).** `createEvent` is `onlyOwner`. Each event records,
+   immutably: price and capacity (the deal's allocation — they can never be changed),
+   a service fee (default 1%), one **BossOrganizer** wallet (event owner and sole payout
+   recipient — not an operator), **1–3 AdminOrganizer** wallets (sales/transaction/
+   check-in lists + scanning) and **5–25 GuardOrganizer** wallets (scanning only).
+   Roles are per event and can never be replaced.
+2. **Buying is relayed.** The buyer signs one EIP-3009 authorization; the TIMO relayer
+   submits `buyTicketGasless` and pays the gas — buyers need no tQDAY at all. The signed
+   nonce binds event + buyer + purchase count, so a relayer cannot replay it, change the
+   amount (always the event's immutable price) or redirect it. A standard approve + buy
+   flow remains as fallback. Every purchase mints an **ERC-721 ticket** whose metadata is
+   generated **on-chain** (base64 `tokenURI`: event name, image, date, live status) and
+   emits `TicketPurchased`, the onchain invoice/receipt.
+3. **Check-in is relayed and verified on-chain.** The attendee shows a **dynamic QR**
+   (owner-signed payload, 60-second expiry). Staff scan it and sign the check-in; the
+   relayer submits `checkInRelayed`. The contract verifies **both** signatures — the
+   owner's against `ownerOf`, and the staff member's role for that event — so no one can
+   lock a ticket without the attendee present, and staff of one event are powerless at
+   another. Checked-in tickets are locked against transfer.
+4. **Refunds always work.** If TIMO cancels an event (the organizer's off-chain decision),
+   every *current* ticket owner claims a full refund — pull-based, one claim burns the
+   ticket. If an event is **rescheduled** (schedule edits keep the same event and the same
+   tickets; the NFT date updates automatically), a **7-day voluntary refund window** opens
+   for buyers who cannot attend the new date.
+5. **Settlement.** After a successful event (start + 24h), the platform withdraws the
+   escrow in one transaction, split by the event's fee: **99% to the BossOrganizer
+   wallet, 1% to the TIMO fundwallet** (defaults). The fee is taken at withdraw time only,
+   so refunds are always payable in full.
+
+Tickets are ERC-721 and transferable outside the app (TIMO shows no transfer button —
+off-platform transfers are the owner's own business); My Tickets always reflects live
+ownership, and refunds follow the current owner.
+
+## Live on Aevum testnet
+
+| Item | Value |
+|---|---|
+| Network | QDay Aevum Testnet, chain ID `44005` |
+| RPC | `https://rpc-test.qday.info` |
+| Explorer | https://explorer-test.qday.info |
+| tUSD8 | `0x456569838f1d43009A91ebA4263147Afd7233483` (6 decimals) |
+| **TIMO v2 contract** | **`0x8FE9b1b5f7769daf99737e4924A04e89d13260a1`** |
+| v2 deploy tx | `0x315724c21900ac0a4ce3d6e10fb2e79a0d6756e37c572dbfd4b6b3087f0da687` (block 4014252) |
+| Fee recipient (fundwallet) | `0x7580d1C234d70A8583D43c5e454B42ec78032D50` |
+| Relayer | `0xCDce6844bA19e4a85Ad653a0eAF728485E67E981` |
+| TIMO v1 contract (superseded) | `0xF66B82e1D8aa5C888A986A08238d90d9D62F30B6` |
+
+> Contract verification on the Aevum explorer is not available yet (see the starter-kit
+> docs), so the deployed source is exactly `contracts/src/TIMOv2.sol` in this repository.
+
+### Proof transactions — v2 live flow (all relayed where the model says so)
+
+| Step | Tx hash |
+|---|---|
+| Create event 1 “TIMO v2 Launch Night” (roles locked in) | `0x3068618836e0da33ab341911f89bb1e6be96cf8c57f088e0d006ebd5a0991242` |
+| Create events 2 (reschedule proof) / 3 (cancel proof) | `0x6c75e4fda6fa2f294149d3f4b1a21674cc4fe70326b888eee68118f6f78ec8ee` / `0xf4304a14a4f0af7e8578501eb503e0a3e2dd241c3f9f4d55f46c503135b04207` |
+| Buy ticket 1 — **relayed** (buyer only signed) | `0xe3bfb9da21ce2e97b02ba8ad12d0abef075aa687417ecbfaaa02e7d765a243f1` |
+| Check in ticket 1 — **relayed, dual signature verified on-chain** | `0x250b568bef22de2524398baeeeee230e4a24b7ff4e5c5f0de6da4b7fbd810bf8` |
+| Reschedule event 2 (same tickets stay valid) | `0x342cb04ca509017c8c97acdeb2f76aaae3c0808fd28fc6f3bbe6f02766c919b9` |
+| Voluntary refund inside the 7-day window | `0x8112f4436e7ccebc3ae2d7ea20e08c94e1bd822b831d1d9283d3765d374e2416` |
+| Cancel event 3 → claim full refund | `0x61cf4348a60b96c6c2c397289f26e9dc3ece323670aad6c6b7519dd1f3f1bd83` / `0xed06eeca3bd23bbe3309e4b71e5401a6cc37a05fc5a281b4d37136a3868b62ce` |
+
+Withdraw splitting (99% boss / 1% fee) is covered by the Foundry suite with time travel
+(`test_Withdraw_SplitsFeeToFundwallet`) — on the live testnet it unlocks 24h after an
+event starts.
+
+## Architecture
+
+```
+Buyer ──EIP-3009 signature──► TIMO Relayer ──► buyTicketGasless ──► ERC-721 ticket (on-chain metadata)
+Buyer ──approve + buyTicket (fallback)─────► TIMO (escrow per event)
+Attendee QR ──► Staff signs ──► TIMO Relayer ──► checkInRelayed (dual-signature, on-chain verified)
+Platform ──createEvent / reschedule / cancel (owner only, per organizer's off-chain decision)
+Platform ──withdraw at start + 24h ──► 99% BossOrganizer · 1% fundwallet
+```
+
+- `contracts/src/TIMOv2.sol` — the product: per-event escrow, immutable price/capacity/
+  roles/fee, relayed purchases and check-ins, on-chain NFT metadata, reschedule refund
+  window, split settlement. (`TIMO.sol` is the superseded v1.)
+- `contracts/test/TIMOv2.t.sol` — 17 tests: role bounds, replay protection, rogue-guard
+  and forged-signature rejection, refund windows, fee-split math, cross-event escrow
+  accounting. Full suite: 48 unit tests + 3 Aevum fork tests, all passing.
+- `contracts/script/DeployTIMOv2.s.sol`, `contracts/script/ProofV2.s.sol` — deployment
+  and the live proof flow above.
+- `web/` — Next.js app on the official Aevum starter kit: Explore (filters, ticket-stub
+  cards), Event Detail (relayed purchase), My Tickets (event → tickets → NFT, dynamic
+  QR), Activity, and a role-separated **Organizer Studio** with a camera QR scanner.
+  `web/src/app/api/relay-timo/route.ts` is the relayer endpoint (whitelisted functions,
+  simulation first, rate limits, daily cap).
+
+### Safety properties
+
+- **Escrow has exactly two exits** — `claimRefund` (to the current ticket owner, exact
+  price, once) and `withdraw` (once, fixed split). There is deliberately **no admin
+  sweep or emergency drain**, not even for the platform owner.
+- Relayer hardening: signed payloads only (amount/recipient/nonce bound by EIP-3009),
+  function whitelist, on-chain-state revalidation, per-IP/signer rate limits, in-flight
+  guard, daily cap, small gas float.
+- Checks-effects-interactions + `ReentrancyGuard` + `SafeERC20` on all fund paths.
+- **No unbounded loops anywhere** (pull refunds; role arrays capped at 3 admins / 25
+  guards), so gas stays bounded and predictable — no gas explosions.
+- Accounting invariant (tested): contract tUSD8 balance == sum of all events'
+  un-withdrawn, un-refunded escrow.
+- Shanghai EVM only — bytecode is checked with the starter kit's Shanghai checker.
+
+## Deployment governance
+
+- **Tier 1 — Platform (rare, per version):** deploy the contract, configure the fee
+  recipient and relayer, point the web app at the new address, repeat proof
+  transactions, update this README and the DoraHacks Build page.
+- **Tier 2 — Event (routine, per deal):** one `createEvent` transaction on the live
+  contract carrying the vetted organizer's data package and role wallets. Every new
+  organizer is Tier 2 only; Tier 1 never changes for them.
+
+## Run it locally
+
+Requirements: Node 22+, pnpm, Foundry.
+
+```bash
+git clone https://github.com/timoshenry/timo.git && cd timo
+
+# Contract dependencies (not vendored): OpenZeppelin + forge-std
+git clone --depth 1 --branch v5.1.0 https://github.com/OpenZeppelin/openzeppelin-contracts contracts/lib/openzeppelin-contracts
+git clone --depth 1 https://github.com/foundry-rs/forge-std contracts/lib/forge-std
+
+pnpm install
+cd contracts && forge test    # 48 unit tests (incl. 17 TIMOv2) — fork tests: forge test --fork-url https://rpc-test.qday.info
+cd ..
+
+cp web/.env.example web/.env.local   # set NEXT_PUBLIC_TIMO_AEVUM, NEXT_PUBLIC_DEPLOY_BLOCK_AEVUM, RELAYER_PRIVATE_KEY
+pnpm --filter web dev
+```
+
+### Environment variables (web)
+
+| Variable | Meaning |
+|---|---|
+| `NEXT_PUBLIC_NETWORKS` | `aevum`, `fork`, `local` (comma-separated) |
+| `NEXT_PUBLIC_TIMO_AEVUM` / `_FORK` / `_LOCAL` | TIMO contract address per network |
+| `NEXT_PUBLIC_DEPLOY_BLOCK_AEVUM` | First block to scan for TIMO events |
+| `NEXT_PUBLIC_CHECKOUT_*` | Starter-kit Checkout addresses (kit pages) |
+| `RELAYER_PRIVATE_KEY` | TIMO relayer wallet key (server-only; small tQDAY float). Powers gas-free buys and check-ins via `/api/relay-timo` |
+
+## Roadmap
+
+- Tiered tickets (VIP/regular) and seat maps.
+- x402 agent purchases with settlement on Aevum.
+- Resale price caps / organizer royalties as a per-event option.
+- Push notifications for cancellation and reschedules, powered by contract events.
+
+## License & credits
+
+MIT. Built on the MIT-licensed [Aevum starter kit](https://github.com/qday-io/aevum-starter-kit)
+by QDay; OpenZeppelin Contracts (MIT) for ERC-721 and security primitives.
