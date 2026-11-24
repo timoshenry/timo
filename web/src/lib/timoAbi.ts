@@ -1,6 +1,4 @@
-import type { Abi } from "viem";
-
-/** TIMO ABI, generated from contracts/out/TIMO.sol/TIMO.json (forge build). Do not edit by hand. */
+// ABI of TIMOv2 (generated from contracts/out/TIMOv2.sol/TIMOv2.json). Do not edit by hand.
 export const timoAbi = [
   {
     "type": "constructor",
@@ -9,9 +7,79 @@ export const timoAbi = [
         "name": "token_",
         "type": "address",
         "internalType": "contract IERC20"
+      },
+      {
+        "name": "feeRecipient_",
+        "type": "address",
+        "internalType": "address"
       }
     ],
     "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "MAX_FEE_BPS",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "RESCHEDULE_REFUND_WINDOW",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "ROLE_ADMIN",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint8",
+        "internalType": "uint8"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "ROLE_GUARD",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint8",
+        "internalType": "uint8"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "SIG_TTL",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
   },
   {
     "type": "function",
@@ -176,6 +244,68 @@ export const timoAbi = [
         "name": "tokenId",
         "type": "uint256",
         "internalType": "uint256"
+      },
+      {
+        "name": "expiry",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "ownerSignature",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "checkInMessage",
+    "inputs": [
+      {
+        "name": "tokenId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "expiry",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "string",
+        "internalType": "string"
+      }
+    ],
+    "stateMutability": "pure"
+  },
+  {
+    "type": "function",
+    "name": "checkInRelayed",
+    "inputs": [
+      {
+        "name": "tokenId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "expiry",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "ownerSignature",
+        "type": "bytes",
+        "internalType": "bytes"
+      },
+      {
+        "name": "staffSignature",
+        "type": "bytes",
+        "internalType": "bytes"
       }
     ],
     "outputs": [],
@@ -199,29 +329,71 @@ export const timoAbi = [
     "name": "createEvent",
     "inputs": [
       {
-        "name": "price",
-        "type": "uint256",
-        "internalType": "uint256"
-      },
-      {
-        "name": "capacity",
-        "type": "uint32",
-        "internalType": "uint32"
-      },
-      {
-        "name": "salesEnd",
-        "type": "uint64",
-        "internalType": "uint64"
-      },
-      {
-        "name": "startsAt",
-        "type": "uint64",
-        "internalType": "uint64"
-      },
-      {
-        "name": "metadataURI",
-        "type": "string",
-        "internalType": "string"
+        "name": "p",
+        "type": "tuple",
+        "internalType": "struct TIMOv2.CreateEventParams",
+        "components": [
+          {
+            "name": "price",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "capacity",
+            "type": "uint32",
+            "internalType": "uint32"
+          },
+          {
+            "name": "feeBps",
+            "type": "uint16",
+            "internalType": "uint16"
+          },
+          {
+            "name": "salesEnd",
+            "type": "uint64",
+            "internalType": "uint64"
+          },
+          {
+            "name": "checkInOpensAt",
+            "type": "uint64",
+            "internalType": "uint64"
+          },
+          {
+            "name": "startsAt",
+            "type": "uint64",
+            "internalType": "uint64"
+          },
+          {
+            "name": "boss",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "internalType": "string"
+          },
+          {
+            "name": "imageUrl",
+            "type": "string",
+            "internalType": "string"
+          },
+          {
+            "name": "metadataURI",
+            "type": "string",
+            "internalType": "string"
+          },
+          {
+            "name": "admins",
+            "type": "address[]",
+            "internalType": "address[]"
+          },
+          {
+            "name": "guards",
+            "type": "address[]",
+            "internalType": "address[]"
+          }
+        ]
       }
     ],
     "outputs": [
@@ -247,10 +419,10 @@ export const timoAbi = [
       {
         "name": "",
         "type": "tuple",
-        "internalType": "struct TIMO.EventInfo",
+        "internalType": "struct TIMOv2.EventInfo",
         "components": [
           {
-            "name": "organizer",
+            "name": "boss",
             "type": "address",
             "internalType": "address"
           },
@@ -275,7 +447,17 @@ export const timoAbi = [
             "internalType": "uint32"
           },
           {
+            "name": "feeBps",
+            "type": "uint16",
+            "internalType": "uint16"
+          },
+          {
             "name": "salesEnd",
+            "type": "uint64",
+            "internalType": "uint64"
+          },
+          {
+            "name": "checkInOpensAt",
             "type": "uint64",
             "internalType": "uint64"
           },
@@ -285,9 +467,14 @@ export const timoAbi = [
             "internalType": "uint64"
           },
           {
+            "name": "refundWindowUntil",
+            "type": "uint64",
+            "internalType": "uint64"
+          },
+          {
             "name": "status",
             "type": "uint8",
-            "internalType": "enum TIMO.EventStatus"
+            "internalType": "enum TIMOv2.EventStatus"
           },
           {
             "name": "withdrawn",
@@ -295,11 +482,63 @@ export const timoAbi = [
             "internalType": "bool"
           },
           {
+            "name": "name",
+            "type": "string",
+            "internalType": "string"
+          },
+          {
+            "name": "imageUrl",
+            "type": "string",
+            "internalType": "string"
+          },
+          {
             "name": "metadataURI",
             "type": "string",
             "internalType": "string"
           }
         ]
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "eventRoles",
+    "inputs": [
+      {
+        "name": "eventId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "boss",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "admins",
+        "type": "address[]",
+        "internalType": "address[]"
+      },
+      {
+        "name": "guards",
+        "type": "address[]",
+        "internalType": "address[]"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "feeRecipient",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
       }
     ],
     "stateMutability": "view"
@@ -388,6 +627,19 @@ export const timoAbi = [
   },
   {
     "type": "function",
+    "name": "owner",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
     "name": "ownerOf",
     "inputs": [
       {
@@ -401,6 +653,37 @@ export const timoAbi = [
         "name": "",
         "type": "address",
         "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "renounceOwnership",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "roleOf",
+    "inputs": [
+      {
+        "name": "eventId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "account",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint8",
+        "internalType": "uint8"
       }
     ],
     "stateMutability": "view"
@@ -476,6 +759,30 @@ export const timoAbi = [
   },
   {
     "type": "function",
+    "name": "staffCheckInMessage",
+    "inputs": [
+      {
+        "name": "tokenId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "expiry",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "string",
+        "internalType": "string"
+      }
+    ],
+    "stateMutability": "pure"
+  },
+  {
+    "type": "function",
     "name": "supportsInterface",
     "inputs": [
       {
@@ -520,7 +827,7 @@ export const timoAbi = [
       {
         "name": "",
         "type": "tuple",
-        "internalType": "struct TIMO.TicketInfo",
+        "internalType": "struct TIMOv2.TicketInfo",
         "components": [
           {
             "name": "eventId",
@@ -599,6 +906,75 @@ export const timoAbi = [
   },
   {
     "type": "function",
+    "name": "transferOwnership",
+    "inputs": [
+      {
+        "name": "newOwner",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "updateEventMetadata",
+    "inputs": [
+      {
+        "name": "eventId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "internalType": "string"
+      },
+      {
+        "name": "imageUrl",
+        "type": "string",
+        "internalType": "string"
+      },
+      {
+        "name": "metadataURI",
+        "type": "string",
+        "internalType": "string"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "updateEventTimes",
+    "inputs": [
+      {
+        "name": "eventId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "salesEnd",
+        "type": "uint64",
+        "internalType": "uint64"
+      },
+      {
+        "name": "checkInOpensAt",
+        "type": "uint64",
+        "internalType": "uint64"
+      },
+      {
+        "name": "startsAt",
+        "type": "uint64",
+        "internalType": "uint64"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
     "name": "withdraw",
     "inputs": [
       {
@@ -669,6 +1045,12 @@ export const timoAbi = [
         "type": "uint256",
         "indexed": true,
         "internalType": "uint256"
+      },
+      {
+        "name": "staff",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
       }
     ],
     "anonymous": false
@@ -697,7 +1079,7 @@ export const timoAbi = [
         "internalType": "uint256"
       },
       {
-        "name": "organizer",
+        "name": "boss",
         "type": "address",
         "indexed": true,
         "internalType": "address"
@@ -719,6 +1101,75 @@ export const timoAbi = [
         "type": "uint64",
         "indexed": false,
         "internalType": "uint64"
+      },
+      {
+        "name": "feeBps",
+        "type": "uint16",
+        "indexed": false,
+        "internalType": "uint16"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "EventMetadataUpdated",
+    "inputs": [
+      {
+        "name": "eventId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "EventRescheduled",
+    "inputs": [
+      {
+        "name": "eventId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "salesEnd",
+        "type": "uint64",
+        "indexed": false,
+        "internalType": "uint64"
+      },
+      {
+        "name": "checkInOpensAt",
+        "type": "uint64",
+        "indexed": false,
+        "internalType": "uint64"
+      },
+      {
+        "name": "startsAt",
+        "type": "uint64",
+        "indexed": false,
+        "internalType": "uint64"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "OwnershipTransferred",
+    "inputs": [
+      {
+        "name": "previousOwner",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "newOwner",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
       }
     ],
     "anonymous": false
@@ -815,13 +1266,19 @@ export const timoAbi = [
         "internalType": "uint256"
       },
       {
-        "name": "organizer",
+        "name": "boss",
         "type": "address",
         "indexed": true,
         "internalType": "address"
       },
       {
         "name": "amount",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "fee",
         "type": "uint256",
         "indexed": false,
         "internalType": "uint256"
@@ -864,12 +1321,72 @@ export const timoAbi = [
   },
   {
     "type": "error",
+    "name": "BadOwnerSignature",
+    "inputs": [
+      {
+        "name": "tokenId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "BadStaffSignature",
+    "inputs": [
+      {
+        "name": "eventId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "error",
     "name": "CheckInTooEarly",
     "inputs": [
       {
         "name": "tokenId",
         "type": "uint256",
         "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "DuplicateRole",
+    "inputs": [
+      {
+        "name": "account",
+        "type": "address",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "ECDSAInvalidSignature",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "ECDSAInvalidSignatureLength",
+    "inputs": [
+      {
+        "name": "length",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "ECDSAInvalidSignatureS",
+    "inputs": [
+      {
+        "name": "s",
+        "type": "bytes32",
+        "internalType": "bytes32"
       }
     ]
   },
@@ -1011,17 +1528,43 @@ export const timoAbi = [
   },
   {
     "type": "error",
+    "name": "FeeTooHigh",
+    "inputs": []
+  },
+  {
+    "type": "error",
     "name": "InvalidEventParams",
     "inputs": []
   },
   {
     "type": "error",
-    "name": "NotOrganizer",
+    "name": "InvalidRoles",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "NotRefundable",
+    "inputs": [
+      {
+        "name": "tokenId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "NotStaff",
     "inputs": [
       {
         "name": "eventId",
         "type": "uint256",
         "internalType": "uint256"
+      },
+      {
+        "name": "account",
+        "type": "address",
+        "internalType": "address"
       }
     ]
   },
@@ -1033,6 +1576,28 @@ export const timoAbi = [
         "name": "tokenId",
         "type": "uint256",
         "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "OwnableInvalidOwner",
+    "inputs": [
+      {
+        "name": "owner",
+        "type": "address",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "OwnableUnauthorizedAccount",
+    "inputs": [
+      {
+        "name": "account",
+        "type": "address",
+        "internalType": "address"
       }
     ]
   },
@@ -1062,6 +1627,11 @@ export const timoAbi = [
         "internalType": "uint256"
       }
     ]
+  },
+  {
+    "type": "error",
+    "name": "SignatureStale",
+    "inputs": []
   },
   {
     "type": "error",
@@ -1097,7 +1667,18 @@ export const timoAbi = [
   },
   {
     "type": "error",
+    "name": "TooLateToEdit",
+    "inputs": [
+      {
+        "name": "eventId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "error",
     "name": "ZeroAddress",
     "inputs": []
   }
-] as const satisfies Abi;
+] as const;
