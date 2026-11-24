@@ -1,1 +1,173 @@
-aW1wb3J0IHsgTmV4dFJlc3BvbnNlIH0gZnJvbSAibmV4dC9zZXJ2ZXIiOwppbXBvcnQgewogIEJhc2VFcnJvciwKICBjcmVhdGVQdWJsaWNDbGllbnQsCiAgY3JlYXRlV2FsbGV0Q2xpZW50LAogIGh0dHAsCiAgaXNBZGRyZXNzLAogIGlzSGV4LAogIHBhcnNlU2lnbmF0dXJlLAogIHR5cGUgSGV4LAp9IGZyb20gInZpZW0iOwppbXBvcnQgeyBub25jZU1hbmFnZXIsIHByaXZhdGVLZXlUb0FjY291bnQsIHR5cGUgUHJpdmF0ZUtleUFjY291bnQgfSBmcm9tICJ2aWVtL2FjY291bnRzIjsKaW1wb3J0IHsgYWV2dW1Gb3JrLCBpc0FudmlsQWNjb3VudCwgbG9jYWxBbnZpbCB9IGZyb20gIkBhZXZ1bS1raXQvYWV2dW0iOwppbXBvcnQgeyBkZWZhdWx0TmV0d29yaywgbmV0d29ya0J5Q2hhaW5JZCwgdHlwZSBOZXR3b3JrIH0gZnJvbSAiQC9saWIvZW52IjsKaW1wb3J0IHsgZXhwbGFpbiB9IGZyb20gIkAvbGliL2Vycm9ycyI7CmltcG9ydCB7IHRpbW9BYmkgfSBmcm9tICJAL2xpYi90aW1vQWJpIjsKCi8qKgogKiBUaGUgVElNTyByZWxheWVyLiBCdXllcnMgYW5kIGRvb3Igc3RhZmYgb25seSBzaWduOyB0aGlzIHJvdXRlIHN1Ym1pdHMKICogVElNT3YyLmJ1eVRpY2tldEdhc2xlc3MgLyBUSU1PdjIuY2hlY2tJblJlbGF5ZWQgYW5kIHBheXMgdGhlIGdhcyBmcm9tIFJFTEFZRVJfUFJJVkFURV9LRVkuCiAqCiAqIEFueW9uZSBvbiB0aGUgaW50ZXJuZXQgY2FuIGNhbGwgdGhpcyByb3V0ZSwgYW5kIGV2ZXJ5IHRyYW5zYWN0aW9uIGl0IHNlbmRzIGNvc3RzIGdhcy4KICogVGhlIHJhaWxzLCBpbiB0aGUgb3JkZXIgdGhleSBydW46CiAqICAxLiBPbmx5IHRoZSBjb25maWd1cmVkIFRJTU8gY29udHJhY3QsIG9ubHkgdGhvc2UgdHdvIGZ1bmN0aW9ucy4gTmV2ZXIgYXJiaXRyYXJ5IGNhbGxzLgogKiAgMi4gQnV5czogdGhlIEVJUC0zMDA5IGF1dGhvcml6YXRpb24gYmluZHMgcGF5ZXIsIGFtb3VudCAodGhlIGV2ZW50J3MgaW1tdXRhYmxlIHByaWNlKSwKICogICAgIHJlY2lwaWVudCAodGhlIFRJTU8gY29udHJhY3QpIGFuZCBhIG9uZS10aW1lIG5vbmNlIOKAlCB0aGUgcmVsYXllciBjYW5ub3QgYWx0ZXIgYW55IG9mIGl0LgogKiAgMy4gQ2hlY2staW5zOiBib3RoIHNpZ25hdHVyZXMgYXJlIHZlcmlmaWVkIGJ5IHRoZSBjb250cmFjdCBpdHNlbGYgKG93bmVyICsgc3RhZmYgcm9sZSkuCiAqICA0LiBTaW11bGF0ZWQgZmlyc3QsIHNvIGEgYmFkIG9yIGV4cGlyZWQgc2lnbmF0dXJlIGNvc3RzIG5vdGhpbmcuCiAqICA1LiBSYXRlIGxpbWl0cyBwZXIgSVAgYW5kIHBlciBzaWduZXIsIGFuIGluLWZsaWdodCBndWFyZCwgYW5kIGEgZGFpbHkgdHJhbnNhY3Rpb24gY2FwLgogKgogKiBUaGUgbGltaXRzIGxpdmUgaW4gdGhpcyBwcm9jZXNzJ3MgbWVtb3J5OyBvbiBzZXJ2ZXJsZXNzIGVhY2ggaW5zdGFuY2UgaGFzIGl0cyBvd24gY29weS4KICogS2VlcCBvbmx5IGEgc21hbGwgdFFEQVkgZmxvYXQgaW4gdGhlIHJlbGF5ZXIgd2FsbGV0LgogKi8KZXhwb3J0IGNvbnN0IHJ1bnRpbWUgPSAibm9kZWpzIjsKCmNvbnN0IE1BWF9XSU5ET1dfU0VDT05EUyA9IDM2MDBuOwpjb25zdCBQRVJfSVBfUEVSX01JTlVURSA9IDIwOwpjb25zdCBQRVJfU0lHTkVSX1BFUl9NSU5VVEUgPSA2Owpjb25zdCBEQUlMWV9UWF9MSU1JVCA9IE51bWJlcihwcm9jZXNzLmVudi5SRUxBWUVSX0RBSUxZX1RYX0xJTUlUID8/IDUwMCk7CmNvbnN0IElOX0ZMSUdIVF9NUyA9IDEyMF8wMDA7CmNvbnN0IExPQ0FMX0NIQUlOUyA9IG5ldyBTZXQ8bnVtYmVyPihbbG9jYWxBbnZpbC5pZCwgYWV2dW1Gb3JrLmlkXSk7CgpsZXQgY2FjaGVkQWNjb3VudDogUHJpdmF0ZUtleUFjY291bnQgfCBudWxsIHwgdW5kZWZpbmVkOwpmdW5jdGlvbiByZWxheWVyKCk6IFByaXZhdGVLZXlBY2NvdW50IHwgdW5kZWZpbmVkIHsKICBpZiAoY2FjaGVkQWNjb3VudCAhPT0gdW5kZWZpbmVkKSByZXR1cm4gY2FjaGVkQWNjb3VudCA/PyB1bmRlZmluZWQ7CiAgY29uc3QgcmF3ID0gcHJvY2Vzcy5lbnYuUkVMQVlFUl9QUklWQVRFX0tFWT8udHJpbSgpOwogIGNvbnN0IGtleSA9IChyYXc/LnN0YXJ0c1dpdGgoIjB4IikgPyByYXcgOiBgMHgke3JhdyA/PyAiIn1gKSBhcyBIZXg7CiAgY2FjaGVkQWNjb3VudCA9IHJhdyAmJiBpc0hleChrZXkpICYmIGtleS5sZW5ndGggPT09IDY2ID8gcHJpdmF0ZUtleVRvQWNjb3VudChrZXksIHsgbm9uY2VNYW5hZ2VyIH0pIDogbnVsbDsKICByZXR1cm4gY2FjaGVkQWNjb3VudCA/PyB1bmRlZmluZWQ7Cn0KCmZ1bmN0aW9uIHVzYWJsZShhY2NvdW50OiBQcml2YXRlS2V5QWNjb3VudCB8IHVuZGVmaW5lZCwgbmV0OiBOZXR3b3JrKTogUHJpdmF0ZUtleUFjY291bnQgfCB1bmRlZmluZWQgewogIGlmICghYWNjb3VudCkgcmV0dXJuIHVuZGVmaW5lZDsKICBpZiAoaXNBbnZpbEFjY291bnQoYWNjb3VudC5hZGRyZXNzKSAmJiAhTE9DQUxfQ0hBSU5TLmhhcyhuZXQuY2hhaW4uaWQpKSByZXR1cm4gdW5kZWZpbmVkOwogIHJldHVybiBhY2NvdW50Owp9Cgpjb25zdCBoaXRzID0gbmV3IE1hcDxzdHJpbmcsIG51bWJlcltdPigpOwpmdW5jdGlvbiBsaW1pdGVkKGJ1Y2tldDogc3RyaW5nLCBtYXg6IG51bWJlcik6IGJvb2xlYW4gewogIGNvbnN0IG5vdyA9IERhdGUubm93KCk7CiAgY29uc3QgcmVjZW50ID0gKGhpdHMuZ2V0KGJ1Y2tldCkgPz8gW10pLmZpbHRlcigodCkgPT4gbm93IC0gdCA8IDYwXzAwMCk7CiAgcmVjZW50LnB1c2gobm93KTsKICBoaXRzLnNldChidWNrZXQsIHJlY2VudCk7CiAgaWYgKGhpdHMuc2l6ZSA+IDEwXzAwMCkgewogICAgZm9yIChjb25zdCBbaywgdGltZXNdIG9mIGhpdHMpIGlmICh0aW1lcy5ldmVyeSgodCkgPT4gbm93IC0gdCA+PSA2MF8wMDApKSBoaXRzLmRlbGV0ZShrKTsKICB9CiAgcmV0dXJuIHJlY2VudC5sZW5ndGggPiBtYXg7Cn0KCmxldCBkYXkgPSAiIjsKbGV0IHNlbnRUb2RheSA9IDA7CmZ1bmN0aW9uIG92ZXJEYWlseUxpbWl0KCk6IGJvb2xlYW4gewogIGNvbnN0IHRvZGF5ID0gbmV3IERhdGUoKS50b0lTT1N0cmluZygpLnNsaWNlKDAsIDEwKTsKICBpZiAodG9kYXkgIT09IGRheSkgewogICAgZGF5ID0gdG9kYXk7CiAgICBzZW50VG9kYXkgPSAwOwogIH0KICByZXR1cm4gc2VudFRvZGF5ID49IERBSUxZX1RYX0xJTUlUOwp9Cgpjb25zdCBpbkZsaWdodCA9IG5ldyBNYXA8c3RyaW5nLCBudW1iZXI+KCk7CmZ1bmN0aW9uIGNsYWltSW5GbGlnaHQoa2V5OiBzdHJpbmcpOiBib29sZWFuIHsKICBjb25zdCBub3cgPSBEYXRlLm5vdygpOwogIGZvciAoY29uc3QgW2ssIHRdIG9mIGluRmxpZ2h0KSBpZiAobm93IC0gdCA+IElOX0ZMSUdIVF9NUykgaW5GbGlnaHQuZGVsZXRlKGspOwogIGlmIChpbkZsaWdodC5oYXMoa2V5KSkgcmV0dXJuIGZhbHNlOwogIGluRmxpZ2h0LnNldChrZXksIG5vdyk7CiAgcmV0dXJuIHRydWU7Cn0KCmZ1bmN0aW9uIGNsaWVudElwKHJlcTogUmVxdWVzdCk6IHN0cmluZyB7CiAgY29uc3QgdHJ1c3RlZCA9IHByb2Nlc3MuZW52LlRSVVNURURfSVBfSEVBREVSPy50cmltKCkudG9Mb3dlckNhc2UoKTsKICBpZiAodHJ1c3RlZCkgcmV0dXJuIHJlcS5oZWFkZXJzLmdldCh0cnVzdGVkKT8uc3BsaXQoIiwiKVswXT8udHJpbSgpIHx8ICJ1bmtub3duIjsKICBjb25zdCB4ZmYgPSByZXEuaGVhZGVycy5nZXQoIngtZm9yd2FyZGVkLWZvciIpOwogIGlmICh4ZmYpIHJldHVybiB4ZmYuc3BsaXQoIiwiKS5hdCgtMSk/LnRyaW0oKSB8fCAidW5rbm93biI7CiAgcmV0dXJuIHJlcS5oZWFkZXJzLmdldCgieC1yZWFsLWlwIik/LnRyaW0oKSB8fCAidW5rbm93biI7Cn0KCmNvbnN0IGlzVWludCA9ICh2OiB1bmtub3duKTogdiBpcyBzdHJpbmcgPT4gdHlwZW9mIHYgPT09ICJzdHJpbmciICYmIC9eXGR7MSw3OH0kLy50ZXN0KHYpOwpjb25zdCBpc1NpZyA9ICh2OiB1bmtub3duKTogdiBpcyBIZXggPT4gdHlwZW9mIHYgPT09ICJzdHJpbmciICYmIGlzSGV4KHYpICYmIHYubGVuZ3RoID09PSAxMzI7CmNvbnN0IGZhaWwgPSAoZXJyb3I6IHN0cmluZywgc3RhdHVzID0gNDAwKSA9PiBOZXh0UmVzcG9uc2UuanNvbih7IGVycm9yIH0sIHsgc3RhdHVzIH0pOwoKZnVuY3Rpb24gbmV0d29ya0ZvcihjaGFpbklkOiB1bmtub3duKTogTmV0d29yayB8IHVuZGVmaW5lZCB7CiAgaWYgKGNoYWluSWQgPT09IHVuZGVmaW5lZCB8fCBjaGFpbklkID09PSBudWxsIHx8IGNoYWluSWQgPT09ICIiKSByZXR1cm4gZGVmYXVsdE5ldHdvcms7CiAgcmV0dXJuIG5ldHdvcmtCeUNoYWluSWQoTnVtYmVyKGNoYWluSWQpKTsKfQoKLyoqIEdFVCAvYXBpL3JlbGF5LXRpbW8/Y2hhaW5JZD3igKYgdGVsbHMgdGhlIGFwcCB3aGV0aGVyIHJlbGF5ZWQgbW9kZSBpcyBhdmFpbGFibGUuICovCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBHRVQocmVxOiBSZXF1ZXN0KSB7CiAgY29uc3QgbmV0ID0gbmV0d29ya0ZvcihuZXcgVVJMKHJlcS51cmwpLnNlYXJjaFBhcmFtcy5nZXQoImNoYWluSWQiKSk7CiAgY29uc3QgYWNjb3VudCA9IG5ldCA/IHVzYWJsZShyZWxheWVyKCksIG5ldCkgOiB1bmRlZmluZWQ7CiAgcmV0dXJuIE5leHRSZXNwb25zZS5qc29uKHsgZW5hYmxlZDogQm9vbGVhbihhY2NvdW50ICYmIG5ldD8udGltbyksIHJlbGF5ZXI6IGFjY291bnQ/LmFkZHJlc3MgPz8gbnVsbCB9KTsKfQoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIFBPU1QocmVxOiBSZXF1ZXN0KSB7CiAgaWYgKGxpbWl0ZWQoYGlwOiR7Y2xpZW50SXAocmVxKX1gLCBQRVJfSVBfUEVSX01JTlVURSkpIHJldHVybiBmYWlsKCJUb28gbWFueSByZXF1ZXN0cy4gV2FpdCBhIG1pbnV0ZS4iLCA0MjkpOwogIGlmIChvdmVyRGFpbHlMaW1pdCgpKSByZXR1cm4gZmFpbCgiVGhlIHJlbGF5ZXIgcmVhY2hlZCBpdHMgZGFpbHkgbGltaXQuIFRyeSB0aGUgc3RhbmRhcmQgZmxvdy4iLCA1MDMpOwoKICBsZXQgYm9keTogUmVjb3JkPHN0cmluZywgdW5rbm93bj47CiAgdHJ5IHsKICAgIGJvZHkgPSBhd2FpdCByZXEuanNvbigpOwogIH0gY2F0Y2ggewogICAgcmV0dXJuIGZhaWwoIkludmFsaWQgSlNPTiBib2R5LiIpOwogIH0KCiAgY29uc3QgbmV0ID0gbmV0d29ya0Zvcihib2R5LmNoYWluSWQpOwogIGlmICghbmV0Py50aW1vKSByZXR1cm4gZmFpbCgiVElNTyBpcyBub3QgY29uZmlndXJlZCBvbiB0aGlzIG5ldHdvcmsuIiwgNDA0KTsKICBjb25zdCBhY2NvdW50ID0gdXNhYmxlKHJlbGF5ZXIoKSwgbmV0KTsKICBpZiAoIWFjY291bnQpIHJldHVybiBmYWlsKCJSZWxheWVyIGlzIG5vdCBhdmFpbGFibGUuIiwgNTAzKTsKCiAgY29uc3QgcHViID0gY3JlYXRlUHVibGljQ2xpZW50KHsgY2hhaW46IG5ldC5jaGFpbiwgdHJhbnNwb3J0OiBodHRwKCkgfSk7CiAgY29uc3Qgd2FsbGV0ID0gY3JlYXRlV2FsbGV0Q2xpZW50KHsgYWNjb3VudCwgY2hhaW46IG5ldC5jaGFpbiwgdHJhbnNwb3J0OiBodHRwKCkgfSk7CiAgY29uc3QgdGltbyA9IG5ldC50aW1vOwoKICB0cnkgewogICAgaWYgKGJvZHkua2luZCA9PT0gImJ1eSIpIHsKICAgICAgY29uc3QgeyBldmVudElkLCBmcm9tLCB2YWxpZEFmdGVyLCB2YWxpZEJlZm9yZSwgc2lnbmF0dXJlIH0gPSBib2R5OwogICAgICBpZiAoIWlzVWludChldmVudElkKSB8fCB0eXBlb2YgZnJvbSAhPT0gInN0cmluZyIgfHwgIWlzQWRkcmVzcyhmcm9tKSkgcmV0dXJuIGZhaWwoIkJhZCBidXkgcmVxdWVzdC4iKTsKICAgICAgaWYgKCFpc1VpbnQodmFsaWRBZnRlcikgfHwgIWlzVWludCh2YWxpZEJlZm9yZSkgfHwgIWlzU2lnKHNpZ25hdHVyZSkpIHJldHVybiBmYWlsKCJCYWQgYXV0aG9yaXphdGlvbi4iKTsKICAgICAgY29uc3Qgbm93ID0gQmlnSW50KE1hdGguZmxvb3IoRGF0ZS5ub3coKSAvIDEwMDApKTsKICAgICAgaWYgKEJpZ0ludCh2YWxpZEJlZm9yZSkgPD0gbm93IHx8IEJpZ0ludCh2YWxpZEJlZm9yZSkgLSBub3cgPiBNQVhfV0lORE9XX1NFQ09ORFMpIHsKICAgICAgICByZXR1cm4gZmFpbCgiQXV0aG9yaXphdGlvbiB3aW5kb3cgaXMgaW52YWxpZCBvciB0b28gbG9uZy4iKTsKICAgICAgfQogICAgICBpZiAobGltaXRlZChgc2lnbmVyOiR7ZnJvbS50b0xvd2VyQ2FzZSgpfWAsIFBFUl9TSUdORVJfUEVSX01JTlVURSkpIHJldHVybiBmYWlsKCJUb28gbWFueSByZWxheXMgZm9yIHRoaXMgd2FsbGV0LiIsIDQyOSk7CiAgICAgIGNvbnN0IGZsaWdodEtleSA9IGBidXk6JHtldmVudElkfToke2Zyb20udG9Mb3dlckNhc2UoKX06JHt2YWxpZEJlZm9yZX1gOwogICAgICBpZiAoIWNsYWltSW5GbGlnaHQoZmxpZ2h0S2V5KSkgcmV0dXJuIGZhaWwoIlRoaXMgcHVyY2hhc2UgaXMgYWxyZWFkeSBiZWluZyBzdWJtaXR0ZWQuIiwgNDA5KTsKICAgICAgY29uc3QgeyB2LCByLCBzIH0gPSBwYXJzZVNpZ25hdHVyZShzaWduYXR1cmUpOwogICAgICBjb25zdCBhcmdzID0gW0JpZ0ludChldmVudElkKSwgZnJvbSwgQmlnSW50KHZhbGlkQWZ0ZXIpLCBCaWdJbnQodmFsaWRCZWZvcmUpLCBOdW1iZXIodiksIHIsIHNdIGFzIGNvbnN0OwogICAgICBhd2FpdCBwdWIuc2ltdWxhdGVDb250cmFjdCh7IGFkZHJlc3M6IHRpbW8sIGFiaTogdGltb0FiaSwgZnVuY3Rpb25OYW1lOiAiYnV5VGlja2V0R2FzbGVzcyIsIGFyZ3MsIGFjY291bnQ6IGFjY291bnQuYWRkcmVzcyB9KTsKICAgICAgY29uc3QgaGFzaCA9IGF3YWl0IHdhbGxldC53cml0ZUNvbnRyYWN0KHsgYWRkcmVzczogdGltbywgYWJpOiB0aW1vQWJpLCBmdW5jdGlvbk5hbWU6ICJidXlUaWNrZXRHYXNsZXNzIiwgYXJncyB9KTsKICAgICAgc2VudFRvZGF5Kys7CiAgICAgIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbih7IGhhc2ggfSk7CiAgICB9CgogICAgaWYgKGJvZHkua2luZCA9PT0gImNoZWNraW4iKSB7CiAgICAgIGNvbnN0IHsgdG9rZW5JZCwgZXhwaXJ5LCBvd25lclNpZ25hdHVyZSwgc3RhZmZTaWduYXR1cmUgfSA9IGJvZHk7CiAgICAgIGlmICghaXNVaW50KHRva2VuSWQpIHx8IHR5cGVvZiBleHBpcnkgIT09ICJudW1iZXIiIHx8ICFOdW1iZXIuaXNGaW5pdGUoZXhwaXJ5KSkgcmV0dXJuIGZhaWwoIkJhZCBjaGVjay1pbiByZXF1ZXN0LiIpOwogICAgICBpZiAoIWlzU2lnKG93bmVyU2lnbmF0dXJlKSB8fCAhaXNTaWcoc3RhZmZTaWduYXR1cmUpKSByZXR1cm4gZmFpbCgiQmFkIHNpZ25hdHVyZXMuIik7CiAgICAgIGNvbnN0IG5vdyA9IE1hdGguZmxvb3IoRGF0ZS5ub3coKSAvIDEwMDApOwogICAgICBpZiAoZXhwaXJ5IDw9IG5vdyB8fCBleHBpcnkgPiBub3cgKyA2MCkgcmV0dXJuIGZhaWwoIkNoZWNrLWluIHNpZ25hdHVyZXMgbXVzdCBiZSBmcmVzaCAoNjAgc2Vjb25kcykuIik7CiAgICAgIGlmICghY2xhaW1JbkZsaWdodChgY2hlY2tpbjoke3Rva2VuSWR9YCkpIHJldHVybiBmYWlsKCJUaGlzIGNoZWNrLWluIGlzIGFscmVhZHkgYmVpbmcgc3VibWl0dGVkLiIsIDQwOSk7CiAgICAgIGNvbnN0IGFyZ3MgPSBbQmlnSW50KHRva2VuSWQpLCBCaWdJbnQoZXhwaXJ5KSwgb3duZXJTaWduYXR1cmUsIHN0YWZmU2lnbmF0dXJlXSBhcyBjb25zdDsKICAgICAgYXdhaXQgcHViLnNpbXVsYXRlQ29udHJhY3QoeyBhZGRyZXNzOiB0aW1vLCBhYmk6IHRpbW9BYmksIGZ1bmN0aW9uTmFtZTogImNoZWNrSW5SZWxheWVkIiwgYXJncywgYWNjb3VudDogYWNjb3VudC5hZGRyZXNzIH0pOwogICAgICBjb25zdCBoYXNoID0gYXdhaXQgd2FsbGV0LndyaXRlQ29udHJhY3QoeyBhZGRyZXNzOiB0aW1vLCBhYmk6IHRpbW9BYmksIGZ1bmN0aW9uTmFtZTogImNoZWNrSW5SZWxheWVkIiwgYXJncyB9KTsKICAgICAgc2VudFRvZGF5Kys7CiAgICAgIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbih7IGhhc2ggfSk7CiAgICB9CgogICAgcmV0dXJuIGZhaWwoIlVua25vd24gcmVsYXkga2luZC4iKTsKICB9IGNhdGNoIChlKSB7CiAgICBpZiAoZSBpbnN0YW5jZW9mIEJhc2VFcnJvcikgcmV0dXJuIGZhaWwoZXhwbGFpbihlKSwgNDIyKTsKICAgIHJldHVybiBmYWlsKCJSZWxheSBmYWlsZWQuIiwgNTAwKTsKICB9Cn0K
+import { NextResponse } from "next/server";
+import {
+  BaseError,
+  createPublicClient,
+  createWalletClient,
+  http,
+  isAddress,
+  isHex,
+  parseSignature,
+  type Hex,
+} from "viem";
+import { nonceManager, privateKeyToAccount, type PrivateKeyAccount } from "viem/accounts";
+import { aevumFork, isAnvilAccount, localAnvil } from "@aevum-kit/aevum";
+import { defaultNetwork, networkByChainId, type Network } from "@/lib/env";
+import { explain } from "@/lib/errors";
+import { timoAbi } from "@/lib/timoAbi";
+
+/**
+ * The TIMO relayer. Buyers and door staff only sign; this route submits
+ * TIMOv2.buyTicketGasless / TIMOv2.checkInRelayed and pays the gas from RELAYER_PRIVATE_KEY.
+ *
+ * Anyone on the internet can call this route, and every transaction it sends costs gas.
+ * The rails, in the order they run:
+ *  1. Only the configured TIMO contract, only those two functions. Never arbitrary calls.
+ *  2. Buys: the EIP-3009 authorization binds payer, amount (the event's immutable price),
+ *     recipient (the TIMO contract) and a one-time nonce — the relayer cannot alter any of it.
+ *  3. Check-ins: both signatures are verified by the contract itself (owner + staff role).
+ *  4. Simulated first, so a bad or expired signature costs nothing.
+ *  5. Rate limits per IP and per signer, an in-flight guard, and a daily transaction cap.
+ *
+ * The limits live in this process's memory; on serverless each instance has its own copy.
+ * Keep only a small tQDAY float in the relayer wallet.
+ */
+export const runtime = "nodejs";
+
+const MAX_WINDOW_SECONDS = 3600n;
+const PER_IP_PER_MINUTE = 20;
+const PER_SIGNER_PER_MINUTE = 6;
+const DAILY_TX_LIMIT = Number(process.env.RELAYER_DAILY_TX_LIMIT ?? 500);
+const IN_FLIGHT_MS = 120_000;
+const LOCAL_CHAINS = new Set<number>([localAnvil.id, aevumFork.id]);
+
+let cachedAccount: PrivateKeyAccount | null | undefined;
+function relayer(): PrivateKeyAccount | undefined {
+  if (cachedAccount !== undefined) return cachedAccount ?? undefined;
+  const raw = process.env.RELAYER_PRIVATE_KEY?.trim();
+  const key = (raw?.startsWith("0x") ? raw : `0x${raw ?? ""}`) as Hex;
+  cachedAccount = raw && isHex(key) && key.length === 66 ? privateKeyToAccount(key, { nonceManager }) : null;
+  return cachedAccount ?? undefined;
+}
+
+function usable(account: PrivateKeyAccount | undefined, net: Network): PrivateKeyAccount | undefined {
+  if (!account) return undefined;
+  if (isAnvilAccount(account.address) && !LOCAL_CHAINS.has(net.chain.id)) return undefined;
+  return account;
+}
+
+const hits = new Map<string, number[]>();
+function limited(bucket: string, max: number): boolean {
+  const now = Date.now();
+  const recent = (hits.get(bucket) ?? []).filter((t) => now - t < 60_000);
+  recent.push(now);
+  hits.set(bucket, recent);
+  if (hits.size > 10_000) {
+    for (const [k, times] of hits) if (times.every((t) => now - t >= 60_000)) hits.delete(k);
+  }
+  return recent.length > max;
+}
+
+let day = "";
+let sentToday = 0;
+function overDailyLimit(): boolean {
+  const today = new Date().toISOString().slice(0, 10);
+  if (today !== day) {
+    day = today;
+    sentToday = 0;
+  }
+  return sentToday >= DAILY_TX_LIMIT;
+}
+
+const inFlight = new Map<string, number>();
+function claimInFlight(key: string): boolean {
+  const now = Date.now();
+  for (const [k, t] of inFlight) if (now - t > IN_FLIGHT_MS) inFlight.delete(k);
+  if (inFlight.has(key)) return false;
+  inFlight.set(key, now);
+  return true;
+}
+
+function clientIp(req: Request): string {
+  const trusted = process.env.TRUSTED_IP_HEADER?.trim().toLowerCase();
+  if (trusted) return req.headers.get(trusted)?.split(",")[0]?.trim() || "unknown";
+  const xff = req.headers.get("x-forwarded-for");
+  if (xff) return xff.split(",").at(-1)?.trim() || "unknown";
+  return req.headers.get("x-real-ip")?.trim() || "unknown";
+}
+
+const isUint = (v: unknown): v is string => typeof v === "string" && /^\d{1,78}$/.test(v);
+const isSig = (v: unknown): v is Hex => typeof v === "string" && isHex(v) && v.length === 132;
+const fail = (error: string, status = 400) => NextResponse.json({ error }, { status });
+
+function networkFor(chainId: unknown): Network | undefined {
+  if (chainId === undefined || chainId === null || chainId === "") return defaultNetwork;
+  return networkByChainId(Number(chainId));
+}
+
+/** GET /api/relay-timo?chainId=… tells the app whether relayed mode is available. */
+export async function GET(req: Request) {
+  const net = networkFor(new URL(req.url).searchParams.get("chainId"));
+  const account = net ? usable(relayer(), net) : undefined;
+  return NextResponse.json({ enabled: Boolean(account && net?.timo), relayer: account?.address ?? null });
+}
+
+export async function POST(req: Request) {
+  if (limited(`ip:${clientIp(req)}`, PER_IP_PER_MINUTE)) return fail("Too many requests. Wait a minute.", 429);
+  if (overDailyLimit()) return fail("The relayer reached its daily limit. Try the standard flow.", 503);
+
+  let body: Record<string, unknown>;
+  try {
+    body = await req.json();
+  } catch {
+    return fail("Invalid JSON body.");
+  }
+
+  const net = networkFor(body.chainId);
+  if (!net?.timo) return fail("TIMO is not configured on this network.", 404);
+  const account = usable(relayer(), net);
+  if (!account) return fail("Relayer is not available.", 503);
+
+  const pub = createPublicClient({ chain: net.chain, transport: http() });
+  const wallet = createWalletClient({ account, chain: net.chain, transport: http() });
+  const timo = net.timo;
+
+  try {
+    if (body.kind === "buy") {
+      const { eventId, from, validAfter, validBefore, signature } = body;
+      if (!isUint(eventId) || typeof from !== "string" || !isAddress(from)) return fail("Bad buy request.");
+      if (!isUint(validAfter) || !isUint(validBefore) || !isSig(signature)) return fail("Bad authorization.");
+      const now = BigInt(Math.floor(Date.now() / 1000));
+      if (BigInt(validBefore) <= now || BigInt(validBefore) - now > MAX_WINDOW_SECONDS) {
+        return fail("Authorization window is invalid or too long.");
+      }
+      if (limited(`signer:${from.toLowerCase()}`, PER_SIGNER_PER_MINUTE)) return fail("Too many relays for this wallet.", 429);
+      const flightKey = `buy:${eventId}:${from.toLowerCase()}:${validBefore}`;
+      if (!claimInFlight(flightKey)) return fail("This purchase is already being submitted.", 409);
+      const { v, r, s } = parseSignature(signature);
+      const args = [BigInt(eventId), from, BigInt(validAfter), BigInt(validBefore), Number(v), r, s] as const;
+      await pub.simulateContract({ address: timo, abi: timoAbi, functionName: "buyTicketGasless", args, account: account.address });
+      const hash = await wallet.writeContract({ address: timo, abi: timoAbi, functionName: "buyTicketGasless", args });
+      sentToday++;
+      return NextResponse.json({ hash });
+    }
+
+    if (body.kind === "checkin") {
+      const { tokenId, expiry, ownerSignature, staffSignature } = body;
+      if (!isUint(tokenId) || typeof expiry !== "number" || !Number.isFinite(expiry)) return fail("Bad check-in request.");
+      if (!isSig(ownerSignature) || !isSig(staffSignature)) return fail("Bad signatures.");
+      const now = Math.floor(Date.now() / 1000);
+      if (expiry <= now || expiry > now + 60) return fail("Check-in signatures must be fresh (60 seconds).");
+      if (!claimInFlight(`checkin:${tokenId}`)) return fail("This check-in is already being submitted.", 409);
+      const args = [BigInt(tokenId), BigInt(expiry), ownerSignature, staffSignature] as const;
+      await pub.simulateContract({ address: timo, abi: timoAbi, functionName: "checkInRelayed", args, account: account.address });
+      const hash = await wallet.writeContract({ address: timo, abi: timoAbi, functionName: "checkInRelayed", args });
+      sentToday++;
+      return NextResponse.json({ hash });
+    }
+
+    return fail("Unknown relay kind.");
+  } catch (e) {
+    if (e instanceof BaseError) return fail(explain(e), 422);
+    return fail("Relay failed.", 500);
+  }
+}
