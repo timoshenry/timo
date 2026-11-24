@@ -1,29 +1,29 @@
 /*
  * Theme. Every color and font the app uses is defined here, so rebranding = editing this block.
- * QDay brand: blue #0257FF, cyan #60F2FF, peach #FFA768.
+ * TIMO Bold Brand: navy #0A0F1E + orange #F59E0B (matches the TIMO logo and demo video).
  */
 :root {
-  --bg: #0e0f12;
-  --bg-bar: #121317;
-  --surface: #15171c;
-  --surface-2: #1c1f26;
-  --surface-info: #121a2c;
-  --line: #23262e;
-  --line-strong: #2f3440;
-  --line-info: #22345c;
+  --bg: #0a0f1e;
+  --bg-bar: #0d1326;
+  --surface: #111830;
+  --surface-2: #182242;
+  --surface-info: #14203f;
+  --line: #22305a;
+  --line-strong: #2f4479;
+  --line-info: #2a3f6e;
 
-  --text: #f4f4f4;
-  --text-2: #c9ccd4;
-  --text-muted: #a4a8b3;
-  --text-faint: #6b7080;
+  --text: #f5f6fa;
+  --text-2: #ccd3e4;
+  --text-muted: #a3adc4;
+  --text-faint: #6e7891;
 
-  --accent: #0257ff;
-  --accent-soft: #0f1a33;
-  --accent-text: #9cc0ff;
-  --focus: #60f2ff;
-  --eyebrow: #60f2ff;
-  --link: #7fa8ff;
-  --link-hover: #b3cbff;
+  --accent: #f59e0b;
+  --accent-soft: #2a1e08;
+  --accent-text: #fbbf24;
+  --focus: #fbbf24;
+  --eyebrow: #f59e0b;
+  --link: #fbbf24;
+  --link-hover: #fcd34d;
 
   --good: #3dd68c;
   --good-bg: #10221b;
@@ -76,7 +76,7 @@ main.shell { padding-top: 48px; padding-bottom: 72px; display: flex; flex-direct
 .topbar { border-bottom: 1px solid var(--line); background: var(--bg-bar); }
 .topbar .shell { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; padding-top: 14px; padding-bottom: 14px; }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; }
-.brand-mark { width: 26px; height: 26px; border-radius: 7px; background: linear-gradient(135deg, #60f2ff 0%, #0257ff 55%, #ffa768 100%); }
+.brand-mark { width: 26px; height: 26px; border-radius: 7px; display: block; }
 .brand-name { font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: -0.01em; }
 .nav { display: flex; flex-wrap: wrap; gap: 4px; flex: 1 1 auto; }
 .nav a { padding: 8px 12px; border-radius: 8px; text-decoration: none; color: var(--text-muted); font-weight: 500; }
@@ -116,7 +116,7 @@ dl.kv dd { margin: 0; font-family: var(--font-mono); overflow-wrap: anywhere; }
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   font: inherit; font-weight: 600; padding: 11px 18px; min-height: 44px;
   border-radius: var(--radius-sm); border: 1px solid transparent; cursor: pointer; text-decoration: none;
-  background: var(--accent); color: #fff;
+  background: var(--accent); color: #0a0f1e; font-weight: 600;
 }
 .btn:hover { color: #fff; filter: brightness(1.1); }
 .btn:disabled { opacity: 0.5; cursor: not-allowed; filter: none; }
@@ -274,3 +274,98 @@ dl.faq dd { margin: 0; color: var(--text-2); line-height: 1.65; }
   content: ""; position: absolute; left: 0; top: 0.3em; width: 14px; height: 14px;
   border: 1.5px solid var(--text-faint); border-radius: 4px;
 }
+
+/* ---------- TIMO v2: Bold Brand components ---------- */
+.hero {
+  background: linear-gradient(135deg, #101a38 0%, #0a0f1e 60%);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 36px 32px;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.hero h1 { font-size: clamp(28px, 4.5vw, 42px); line-height: 1.12; letter-spacing: -0.02em; }
+.hero-lede { color: var(--text-2); max-width: 62ch; }
+.eyebrow.light { color: var(--accent); }
+.hero-stats { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 8px; }
+.hero-stats > div { display: flex; flex-direction: column; }
+.hero-stat-num { font-family: var(--font-display); font-size: 28px; font-weight: 700; color: var(--accent); }
+.hero-stat-label { font-size: 13px; color: var(--text-muted); }
+
+.filter-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.filter-chip {
+  padding: 8px 16px; border-radius: 999px; border: 1px solid var(--line-strong);
+  background: var(--surface); color: var(--text-2); cursor: pointer; font: inherit; font-size: 14px;
+}
+.filter-chip:hover { border-color: var(--accent); color: var(--text); }
+.filter-chip.active { background: var(--accent); border-color: var(--accent); color: #0a0f1e; font-weight: 600; }
+
+.ticket-card {
+  display: flex; background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); overflow: hidden;
+}
+.ticket-main { flex: 1 1 auto; display: flex; gap: 16px; padding: 18px; min-width: 0; }
+.ticket-img { width: 96px; height: 96px; object-fit: cover; border-radius: var(--radius-sm); flex: none; background: var(--surface-2); }
+.ticket-img.placeholder {
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 700; color: var(--accent); letter-spacing: 0.08em;
+}
+.ticket-body { display: flex; flex-direction: column; gap: 8px; min-width: 0; flex: 1; }
+.ticket-body h2 { font-size: 19px; }
+.ticket-stub {
+  flex: 0 0 148px; display: flex; flex-direction: column; justify-content: center; gap: 10px;
+  padding: 18px 16px; text-align: center;
+  border-left: 2px dashed var(--line-strong);
+  background:
+    radial-gradient(circle at 0 0, var(--bg) 7px, transparent 7.5px),
+    radial-gradient(circle at 0 100%, var(--bg) 7px, transparent 7.5px),
+    var(--surface-2);
+}
+.stub-price { font-family: var(--font-display); font-weight: 700; font-size: 17px; color: var(--accent); }
+@media (max-width: 560px) {
+  .ticket-card { flex-direction: column; }
+  .ticket-stub { border-left: none; border-top: 2px dashed var(--line-strong); flex-basis: auto; }
+}
+
+.event-img { width: 100%; max-height: 260px; object-fit: cover; border-radius: var(--radius-sm); }
+.nft-img { width: 100%; max-height: 220px; object-fit: cover; border-radius: var(--radius-sm); }
+.qr-img { width: 240px; height: 240px; border-radius: var(--radius-sm); background: #fff; padding: 6px; align-self: center; }
+.ticket-nft { gap: 12px; }
+
+.verified-badge {
+  display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 12px; font-weight: 600;
+  background: var(--accent-soft); color: var(--accent-text); border: 1px solid var(--accent);
+  vertical-align: middle; margin-left: 6px;
+}
+
+.mode-toggle { display: inline-flex; border: 1px solid var(--line-strong); border-radius: 999px; overflow: hidden; }
+.mode-toggle button {
+  padding: 7px 16px; background: transparent; border: none; color: var(--text-muted);
+  cursor: pointer; font: inherit; font-size: 14px;
+}
+.mode-toggle button.active { background: var(--accent); color: #0a0f1e; font-weight: 600; }
+
+.studio-link {
+  padding: 8px 16px; border-radius: 999px; border: 1px solid var(--accent);
+  color: var(--accent-text); text-decoration: none; font-weight: 600; font-size: 14px; white-space: nowrap;
+}
+.studio-link:hover { background: var(--accent-soft); color: var(--accent-text); }
+.studio-link[aria-current="page"] { background: var(--accent); color: #0a0f1e; }
+
+.studio-band {
+  background: var(--accent); color: #0a0f1e; border-radius: var(--radius-sm);
+  padding: 12px 16px; display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: baseline;
+}
+.studio-band h3 { color: #0a0f1e; }
+.studio-band .fine.light { color: #3a2c07; }
+.scan-video { width: 100%; max-height: 340px; border-radius: var(--radius-sm); background: #000; object-fit: cover; }
+.sales-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.sales-table th, .sales-table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+.sales-table th { color: var(--text-muted); font-weight: 600; }
+
+.footer-info { margin-top: 12px; }
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.info-grid details { border-top: 1px solid var(--line); padding: 10px 0 2px; }
+.info-grid summary { cursor: pointer; font-weight: 600; padding-bottom: 6px; }
+.status-pill.bad { background: var(--bad-chip); color: var(--bad); }
+textarea.input { width: 100%; font-family: var(--font-mono); font-size: 13px; }
