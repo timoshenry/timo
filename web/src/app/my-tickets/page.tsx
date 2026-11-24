@@ -14,20 +14,14 @@ import {
   checkInMessage,
   encodeCheckInPayload,
   fetchMyTickets,
+  formatDateTime,
   formatTUSD8,
-  resolveEventTitle,
+  isRefundable,
+  readTicketNft,
   timoAbi,
+  type TimoEvent,
   type TimoTicket,
 } from "@/lib/timo";
-
-function TicketTitle({ ticket }: { ticket: TimoTicket }) {
-  const title = useQuery({
-    queryKey: ["timo-title", ticket.eventId.toString(), ticket.event.metadataURI],
-    queryFn: () => resolveEventTitle(ticket.event.metadataURI, ticket.eventId),
-    staleTime: 60_000,
-  });
-  return <>{title.data ?? `Event #${ticket.eventId.toString()}`}</>;
-}
 
 function CheckInQr({ ticket }: { ticket: TimoTicket }) {
   const config = useConfig();
@@ -39,8 +33,8 @@ function CheckInQr({ ticket }: { ticket: TimoTicket }) {
 
   async function show() {
     if (!address) return;
-    setError(null);
     setBusy(true);
+    setError(null);
     try {
       const expiry = Math.floor(Date.now() / 1000) + CHECK_IN_TTL_SECONDS;
       const signature = await signMessage(config, { account: address, message: checkInMessage(ticket.tokenId, expiry) });
@@ -54,76 +48,68 @@ function CheckInQr({ ticket }: { ticket: TimoTicket }) {
     }
   }
 
-  // Every 30 seconds, re-check the signed payload: drop it once its signature has expired so the
-  // owner signs a fresh one. A 1-second countdown runs alongside for display.
   useEffect(() => {
     if (!qr) return;
-    const check = () => {
-      const left = qr.expiry - Math.floor(Date.now() / 1000);
-      setSecondsLeft(Math.max(0, left));
-      if (left <= 0) setQr(null);
-    };
-    check();
-    const refresh = setInterval(check, 30_000);
-    const countdown = setInterval(() => setSecondsLeft(Math.max(0, qr.expiry - Math.floor(Date.now() / 1000))), 1_000);
-    return () => {
-      clearInterval(refresh);
-      clearInterval(countdown);
-    };
+    const tick = () => setSecondsLeft(Math.max(0, qr.expiry - Math.floor(Date.now() / 1000)));
+    tick();
+    const id = setInterval(tick, 1_000);
+    return () => clearInterval(id);
   }, [qr]);
 
-  if (ticket.checkedIn) {
-    return (
-      <div className="notice good" role="status">
-        <strong>Checked in</strong>
-        <span>This ticket was locked at the door and can no longer be transferred or refunded.</span>
-      </div>
-    );
-  }
+  if (ticket.checkedIn) return <p className="fine">This ticket has been checked in. It is locked and cannot be transferred or refunded.</p>;
+  if (ticket.event.status === 1) return <p className="fine">Event cancelled — claim your refund below instead of checking in.</p>;
 
   return (
-    <div className="stack" style={{ gap: 12 }}>
+    <div className="stack" style={{ gap: 8 }}>
+      <p className="fine">Check-in in 3 steps: 1) Open this ticket at the door. 2) Show the QR to the organizer&apos;s staff. 3) They scan it — done.</p>
       {qr ? (
         <>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={qr.dataUrl} alt={`Check-in QR for ticket #${ticket.tokenId.toString()}`} width={240} height={240} style={{ borderRadius: 12, background: "#fff" }} />
-          <p className="fine">
-            Show this to the organizer. It proves wallet ownership and expires in {secondsLeft}s — a screenshot is useless once it lapses.
+          <img className="qr-img" src={qr.dataUrl} alt={`Check-in QR for ticket ${ticket.tokenId.toString()}`} />
+          <p className="fine" role="status">
+            Expires in {secondsLeft}s — a screenshot is useless once it lapses.
           </p>
+          <button type="button" className="btn ghost small" onClick={show} disabled={busy}>
+            Generate a fresh QR
+          </button>
         </>
       ) : (
-        <>
-          <button type="button" className="btn secondary block" disabled={busy} onClick={show}>
-            {busy ? "Check your wallet…" : "Show check-in QR"}
-          </button>
-          <p className="fine">You sign a short-lived message (no gas). The organizer verifies it against the on-chain owner, then locks the ticket.</p>
-        </>
+        <button type="button" className="btn block" onClick={show} disabled={busy}>
+          {busy ? "Check your wallet…" : "Show QR for check-in"}
+        </button>
       )}
       {error && (
-        <div className="notice bad" role="alert">
-          <span>{error}</span>
-        </div>
+        <p className="fine" role="alert">
+          {error}
+        </p>
       )}
     </div>
   );
 }
 
 function TicketCard({ ticket, onChanged }: { ticket: TimoTicket; onChanged: () => void }) {
-  const { net } = useNetwork();
   const config = useConfig();
-  const { address } = useAccount();
+  const { net } = useNetwork();
   const timo = net.timo;
+  const client = usePublicClient({ chainId: net.chain.id }) as PublicClient | undefined;
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const cancelled = ticket.event.status === 1;
+  const now = Math.floor(Date.now() / 1000);
+  const refundable = isRefundable(ticket.event, now) && !ticket.refunded && !ticket.checkedIn;
+
+  const nft = useQuery({
+    queryKey: ["timo-nft", net.chain.id, timo, ticket.tokenId.toString()],
+    enabled: Boolean(client && timo),
+    queryFn: () => readTicketNft(client!, timo!, ticket.tokenId),
+    staleTime: 30_000,
+  });
 
   async function claimRefund() {
-    if (!address || !timo) return;
-    setError(null);
+    if (!timo) return;
     setBusy(true);
+    setError(null);
     try {
       const { request } = await simulateContract(config, {
-        account: address,
         address: timo,
         abi: timoAbi,
         functionName: "claimRefund",
@@ -132,7 +118,7 @@ function TicketCard({ ticket, onChanged }: { ticket: TimoTicket; onChanged: () =
       });
       const hash = await writeContract(config, request);
       const receipt = await waitForTransactionReceipt(config, { hash, chainId: net.chain.id });
-      if (receipt.status !== "success") throw new Error("The transaction reverted on chain. No refund was paid.");
+      if (receipt.status !== "success") throw new Error("The transaction reverted on chain.");
       onChanged();
     } catch (e) {
       setError(explain(e));
@@ -142,42 +128,36 @@ function TicketCard({ ticket, onChanged }: { ticket: TimoTicket; onChanged: () =
   }
 
   return (
-    <article className="card stack" style={{ gap: 14 }}>
+    <article className="card stack ticket-nft">
+      {nft.data?.image ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img className="nft-img" src={nft.data.image} alt="" />
+      ) : ticket.event.imageUrl ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img className="nft-img" src={ticket.event.imageUrl} alt="" />
+      ) : null}
       <div className="check-top" style={{ alignItems: "baseline" }}>
-        <h2>
-          <TicketTitle ticket={ticket} />
-        </h2>
-        <span className={`status-pill ${ticket.checkedIn ? "good" : cancelled ? "warn" : ""}`} style={ticket.checkedIn || cancelled ? undefined : { background: "var(--surface-2)", color: "var(--text-2)" }}>
-          {ticket.checkedIn ? "Checked in" : cancelled ? "Event cancelled" : "Valid"}
+        <h3>Ticket #{ticket.tokenId.toString()}</h3>
+        <span className={`status-pill ${ticket.checkedIn ? "warn" : ticket.event.status === 1 ? "bad" : "good"}`}>
+          {ticket.checkedIn ? "Checked in" : ticket.event.status === 1 ? "Event cancelled" : (nft.data?.status ?? "Active")}
         </span>
       </div>
-      <dl className="kv">
-        <dt>Ticket</dt>
-        <dd>#{ticket.tokenId.toString()}</dd>
-        <dt>Event</dt>
-        <dd>
-          <Link href={`/event/${ticket.eventId.toString()}`}>#{ticket.eventId.toString()}</Link>
-        </dd>
-        <dt>Paid</dt>
-        <dd>{formatTUSD8(ticket.event.price)} tUSD8</dd>
-      </dl>
-      {cancelled && !ticket.checkedIn ? (
-        <div className="stack" style={{ gap: 12 }}>
-          <div className="notice warn" role="status">
-            <strong>Refund available</strong>
-            <span>Claim the full {formatTUSD8(ticket.event.price)} tUSD8 back from escrow. The ticket is burned when you claim.</span>
-          </div>
-          <button type="button" className="btn block" disabled={busy} onClick={claimRefund}>
+      <p className="fine">
+        NFT · ERC-721 #{ticket.tokenId.toString()} · {formatTUSD8(ticket.event.price)} tUSD8
+      </p>
+      <CheckInQr ticket={ticket} />
+      {refundable && (
+        <div className="stack" style={{ gap: 8 }}>
+          <button type="button" className="btn warn block" onClick={claimRefund} disabled={busy}>
             {busy ? "Check your wallet…" : `Claim refund · ${formatTUSD8(ticket.event.price)} tUSD8`}
           </button>
+          <p className="fine">Claiming burns the ticket NFT and returns the full price from escrow to your wallet.</p>
         </div>
-      ) : (
-        <CheckInQr ticket={ticket} />
       )}
       {error && (
-        <div className="notice bad" role="alert">
-          <span>{error}</span>
-        </div>
+        <p className="fine" role="alert">
+          {error}
+        </p>
       )}
     </article>
   );
@@ -186,54 +166,68 @@ function TicketCard({ ticket, onChanged }: { ticket: TimoTicket; onChanged: () =
 export default function MyTicketsPage() {
   const { net } = useNetwork();
   const timo = net.timo;
-  const { address, isConnected } = useAccount();
+  const { address, isConnected, chainId } = useAccount();
+  const onChain = isConnected && chainId === net.chain.id;
   const client = usePublicClient({ chainId: net.chain.id }) as PublicClient | undefined;
 
   const tickets = useQuery({
     queryKey: ["timo-my-tickets", net.chain.id, timo, address],
-    enabled: Boolean(client && timo && address),
+    enabled: Boolean(client && timo && onChain && address),
     queryFn: () => fetchMyTickets(client!, timo!, address!, net.deployBlock),
   });
+
+  const groups = new Map<string, { event: TimoEvent; items: TimoTicket[] }>();
+  for (const t of tickets.data ?? []) {
+    const key = t.eventId.toString();
+    if (!groups.has(key)) groups.set(key, { event: t.event, items: [] });
+    groups.get(key)!.items.push(t);
+  }
 
   return (
     <main className="shell">
       <div className="page-head">
         <div>
-          <p className="eyebrow">TIMO · Wallet tickets</p>
-          <h1>My Tickets</h1>
-          <p className="lede">Tickets owned by your connected wallet, with a dynamic check-in QR and refund claims for cancelled events.</p>
+          <p className="eyebrow">TIMO · My Tickets</p>
+          <h1>My tickets</h1>
+          <p className="lede">Your tickets are ERC-721 NFTs, grouped by event. This page always shows what your wallet owns right now.</p>
         </div>
-        {tickets.data && (
-          <div className="score">
-            <span className="score-num">{tickets.data.length}</span>
-            <span className="fine">tickets owned</span>
-          </div>
-        )}
       </div>
 
       {!timo ? (
-        <div className="card empty">
-          No TIMO contract configured for {net.label}. Set <code>NEXT_PUBLIC_TIMO_{net.key.toUpperCase()}</code> in <code>web/.env.local</code>.
-        </div>
+        <div className="card empty">No TIMO contract configured for {net.label}.</div>
       ) : !isConnected ? (
         <div className="card empty">Connect your wallet to see your tickets.</div>
+      ) : !onChain ? (
+        <div className="card empty">Switch your wallet to {net.chain.name} to see your tickets.</div>
       ) : tickets.isLoading ? (
         <div className="card empty">Loading your tickets…</div>
       ) : tickets.isError ? (
         <div className="notice bad" role="alert">
           <strong>Couldn&apos;t load your tickets</strong>
-          <span>Reading TicketPurchased logs failed. Check the network and contract address, then reload.</span>
+          <span>Reading your ticket logs failed. Check the network and reload.</span>
         </div>
-      ) : (tickets.data?.length ?? 0) === 0 ? (
+      ) : (tickets.data ?? []).length === 0 ? (
         <div className="card empty">
-          No tickets yet. Find an event on the <Link href="/">Explore</Link> page.
+          No tickets yet. Browse <Link href="/">events</Link> to buy your first one.
         </div>
       ) : (
-        <section className="grid-2" aria-label="Your tickets">
-          {tickets.data!.map((t) => (
-            <TicketCard key={t.tokenId.toString()} ticket={t} onChanged={() => void tickets.refetch()} />
-          ))}
-        </section>
+        [...groups.values()].map(({ event, items }) => (
+          <section key={event.id.toString()} className="stack" style={{ marginBottom: 28 }} aria-label={event.name}>
+            <div className="check-top" style={{ alignItems: "baseline" }}>
+              <h2>
+                <Link href={`/event/${event.id.toString()}`}>{event.name || `Event #${event.id.toString()}`}</Link>
+              </h2>
+              <span className="fine">
+                {formatDateTime(event.startsAt)} · {items.length} ticket{items.length > 1 ? "s" : ""}
+              </span>
+            </div>
+            <div className="grid-2">
+              {items.map((t) => (
+                <TicketCard key={t.tokenId.toString()} ticket={t} onChanged={() => void tickets.refetch()} />
+              ))}
+            </div>
+          </section>
+        ))
       )}
     </main>
   );
