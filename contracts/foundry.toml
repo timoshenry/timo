@@ -2,6 +2,8 @@
 src = "src"
 out = "out"
 libs = ["lib"]
+# Proof/deploy scripts may read public JSON inputs (e.g. role address lists) from script/.
+fs_permissions = [{ access = "read", path = "./script" }]
 # Aevum runs the Shanghai EVM: no MCOPY, TSTORE/TLOAD or blob opcodes.
 # Never raise this to "cancun", or contracts that pass tests will fail on chain.
 solc_version = "0.8.24"
