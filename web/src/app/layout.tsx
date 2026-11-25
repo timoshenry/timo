@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, Inter_Tight, JetBrains_Mono } from "next/font/google";
+import Link from "next/link";
 import type { ReactNode } from "react";
 import { Header } from "@/components/Header";
+import { GitHubIcon } from "@/components/Icons";
+import { repoUrl } from "@/lib/env";
 import { Providers } from "./providers";
 import "./globals.css";
 
@@ -21,6 +24,21 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Providers>
           <Header />
           {children}
+          <footer className="site-footer">
+            <div className="shell site-footer-inner">
+              <span className="site-footer-brand">TIMO — Ticket &amp; Invoice Management Onchain · Aevum testnet</span>
+              <nav className="site-footer-links" aria-label="Footer">
+                <a href={repoUrl} target="_blank" rel="noreferrer" title="Source code on GitHub">
+                  <GitHubIcon />
+                  <span>GitHub</span>
+                </a>
+                <Link href="/docs">Docs</Link>
+                <a href="https://t.me/Nyollo1" target="_blank" rel="noreferrer">
+                  Telegram
+                </a>
+              </nav>
+            </div>
+          </footer>
         </Providers>
       </body>
     </html>
