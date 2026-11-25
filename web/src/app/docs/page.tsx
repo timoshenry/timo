@@ -9,6 +9,7 @@ const TELEGRAM_URL = "https://t.me/Nyollo1";
 
 const sections = [
   { id: "what", label: "What is TIMO" },
+  { id: "notice", label: "Testnet demo notice" },
   { id: "buying", label: "Buying a ticket" },
   { id: "refunds", label: "Refunds & schedule changes" },
   { id: "checkin", label: "Check-in at the door" },
@@ -61,6 +62,20 @@ export default function DocsPage() {
               the event has taken place — so buyers can always be refunded if an event is cancelled, and organizers are
               paid once their event actually happens. Organizers on TIMO are verified clients: every event is reviewed
               and published by TIMO, never self-published.
+            </p>
+          </section>
+
+          <section id="notice">
+            <h2>Testnet demo notice</h2>
+            <p>
+              TIMO is an <strong>independent project</strong> built for the Aevum Builder Challenge #1, and this website
+              is a working demo on the Aevum testnet. Everything shown here — event names, banners, images, ticket prices
+              and balances — was created by the TIMO team <strong>purely for development and testing</strong>.
+            </p>
+            <p>
+              Any resemblance to real events, brands or organizations is coincidental and unintentional; TIMO is not
+              affiliated with, and does not represent, any real event or organizer. <strong>No real tickets are sold on
+              this site</strong>, and the tUSD8 and tQDAY used here are test tokens with no real-world value.
             </p>
           </section>
 
