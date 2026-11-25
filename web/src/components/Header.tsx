@@ -4,8 +4,7 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useAccount } from "wagmi";
-import { networks, repoUrl } from "@/lib/env";
-import { GitHubIcon } from "./Icons";
+import { networks } from "@/lib/env";
 import { useNetwork } from "@/lib/network";
 
 const links = [
@@ -43,10 +42,6 @@ export function Header() {
             <Link href="/organizer" className="studio-link" aria-current={pathname.startsWith("/organizer") ? "page" : undefined}>
               Organizer Studio
             </Link>
-            <a className="gh-link" href={repoUrl} target="_blank" rel="noreferrer" title="Source code on GitHub">
-              <GitHubIcon />
-              <span>GitHub</span>
-            </a>
             {networks.length > 1 && (
               <div className="net-switch" role="radiogroup" aria-label="Network">
                 {networks.map((n) => (
