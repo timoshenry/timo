@@ -413,7 +413,7 @@ export default function OrganizerStudioPage() {
             GuardOrganizer wallets) is registered on-chain by TIMO when an event is created — it cannot be requested from inside the app.
           </p>
           <p className="sub">
-            Want to sell tickets for your event through TIMO? Message <strong>@Nyollo1</strong> on Telegram with your event details (venue,
+            Want to sell tickets for your event through TIMO? Message us on Telegram with your event details (venue,
             date, price, capacity) and your team&apos;s wallet addresses: 1 boss wallet, 1–3 admin wallets, and 5–25 guard wallets.
           </p>
           <a className="btn ghost" href="https://t.me/Nyollo1" target="_blank" rel="noreferrer">
