@@ -27,6 +27,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <footer className="site-footer">
             <div className="shell site-footer-inner">
               <span className="site-footer-brand">TIMO — Ticket &amp; Invoice Management Onchain · Aevum testnet</span>
+              <span className="site-footer-note">
+                Testnet demo — all events, names and funds on this site are fictional test content. No real tickets are
+                sold, and test tokens have no value.
+              </span>
               <nav className="site-footer-links" aria-label="Footer">
                 <a href={repoUrl} target="_blank" rel="noreferrer" title="Source code on GitHub">
                   <GitHubIcon />
