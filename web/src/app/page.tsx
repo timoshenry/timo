@@ -182,12 +182,9 @@ export default function ExplorePage() {
               Questions about a ticket, or want to sell tickets for your event through TIMO? Message us on Telegram — the same contact is our
               help center and the organizer intake.
             </p>
-            <p className="sub">
-              <strong>Telegram: @Nyollo1</strong>
-            </p>
             <p className="sub">Prospective organizers: please include your wallet address and a short description of your event (venue, date, ticket price, capacity).</p>
             <a className="btn ghost" href="https://t.me/Nyollo1" target="_blank" rel="noreferrer">
-              Open Telegram
+              Contact us on Telegram
             </a>
           </article>
         </div>
