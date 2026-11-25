@@ -63,7 +63,7 @@ ownership, and refunds follow the current owner.
 | Explorer | https://explorer-test.qday.info |
 | tUSD8 | `0x456569838f1d43009A91ebA4263147Afd7233483` (6 decimals) |
 | **TIMO v2 contract** | **`0x8FE9b1b5f7769daf99737e4924A04e89d13260a1`** |
-| v2 deploy tx | `0x315724c21900ac0a4ce3d6e10fb2e79a0d6756e37c572dbfd4b6b3087f0da687` (block 4014252) |
+| v2 deploy tx | `0x315724c21900ac0a4ce3d6e10fb2e79a0d6756e37c572dbfd4b6b3087f0da687` (block 4013996) |
 | Fee recipient (fundwallet) | `0x7580d1C234d70A8583D43c5e454B42ec78032D50` |
 | Relayer | `0xCDce6844bA19e4a85Ad653a0eAF728485E67E981` |
 | TIMO v1 contract (superseded) | `0xF66B82e1D8aa5C888A986A08238d90d9D62F30B6` |
